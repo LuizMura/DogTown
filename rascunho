@@ -1,0 +1,72 @@
+<div class="slideshow">
+      <div class="slides">
+        
+        <div class="slide">
+          <img src="img/7.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="img/2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="img/7.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+          <img src="img/4.jpg" alt="Slide 4">
+        </div>
+        <div class="slide">
+          <img src="img/2.jpg" alt="Slide 5">
+        </div>
+        <div class="slide">
+          <img src="img/6.jpg" alt="Slide 6">
+        </div>
+        <div class="slide">
+          <img src="img/7.jpg" alt="Slide 7">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    /*
+.slideshow {
+    width: cover;
+    height: 150%;
+    margin-top: 110px;
+    margin-left: -8px;
+    margin-right: -8px;
+    overflow: hidden;
+    position: relative;
+    z-index: -10;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%; /* 7 imagens, 100% cada */
+    animation: slide 31s infinite; /* Tempo aumentado para incluir pausas */
+  }
+  /*
+  .slide {
+    min-width: 100%;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @keyframes slide {
+    0%, 10% { transform: translateX(0%); }
+    14.28%, 24.28% { transform: translateX(-100%); }
+    28.56%, 38.56% { transform: translateX(-200%); }
+    42.84%, 52.84% { transform: translateX(-300%); }
+    57.12%, 67.12% { transform: translateX(-400%); }
+    71.4%, 81.4% { transform: translateX(-500%); }
+    85.68%, 95.68% { transform: translateX(-600%); }
+    100% { transform: translateX(0%); }
+  }
