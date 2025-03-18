@@ -111,8 +111,11 @@
     .garrafa-lager {
         margin-left: -50px;
     }
-    .titulo-lager {
-        width: 50px;
+    .titulo-lager img {
+        width: 200px;
+    }
+    .chamada-lager {
+        font-size: 20px;
     }
 
 
@@ -126,5 +129,12 @@
     .chamada-apa {
         padding:0px;
     }
+    .titulo-apa img {
+        width: 200px;
+    }
+    .chamada-apa {
+        font-size: 20px;
+    }
+
 
 }
