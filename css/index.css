@@ -113,6 +113,7 @@
     }
     .titulo-lager img {
         width: 200px;
+        margin-left: -70px;
     }
     .chamada-lager {
         font-size: 20px;
@@ -131,6 +132,8 @@
     }
     .titulo-apa img {
         width: 200px;
+        margin-left: -70px;
+
     }
     .chamada-apa {
         font-size: 20px;
