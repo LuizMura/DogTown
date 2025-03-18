@@ -173,17 +173,22 @@ i:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        height: 100px;
+      }
+      .capa img {
+        margin-top: -20px;
       }
       
       .logo img {
-        margin: 0 auto;
+        margin: 2.5px 0px 0 -100px;
         display: block;
-        left: 130px
+        width: 93px;
+        height: 93px;
       }
       
       .social {
         position: absolute;
-        top: px;
+        top: -5px;
         right: -35px;
       }
       
@@ -193,8 +198,14 @@ i:hover {
       
       .whatsapp-button {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 50px;
+        right: 10px;
+        background-color: white;
+        border-radius: 30%;
+        padding: 0 9px;
+        font-size: 40px;
+        color: white;
+        background-image: linear-gradient(rgb(93, 235, 93), rgb(17, 158, 17));
       }
       
       .slides {
@@ -231,8 +242,8 @@ i:hover {
     .mobile-menu {
     display: block;
     position: fixed;
-        top: 75px;
-        left: 20px;
+        top:56px;
+        left: 30px;
         font-size: 30px;
         color: white;
         cursor: pointer;
