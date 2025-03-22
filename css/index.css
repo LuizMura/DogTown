@@ -3,85 +3,103 @@
 
 /*-------------------------------------Principal---------------------------------------*/
 
-
 .capa img {
     width: 100%;
+    margin-top: -9rem;
+    overflow: hidden;
 }
 
 .cervejas {
     display: flex;
-    margin: 20px;
-    gap:20px;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: -18rem 2rem 0 2rem;
+    gap: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+   
 }
 
 .lager {
     width: 50%;
     display: flex;
-    height: 250px;
-    border-radius: 50px;
-    background-color: white;
+    height: 14.5rem;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.753);
 
 }
+.lager:hover {
+    background-color: rgba(252, 184, 57, 0.616);
+    transition: background-color 0.3s ease-in-out;}
 
 .garrafa-lager img {
-    margin-top: 0px;
-    width: 80px;
-    margin-left: 70px;
+    height: 90%;
+    margin-top: 15px;
+    margin-left: 3rem;
 }
 
 .copo-lager img {
-    width: 75px;
-    margin-top: 7rem;
+    width: 3.8rem;
+    margin-top: 7.5rem;
     margin-left: 20px;
 
 }
  
 .titulo-lager img {
-    width: 250px;
+    width: 50%;
     margin-top: 20px;
-    margin-left: -30px;
-    background-color: rgb(235, 206, 42);
-    padding: 5px 20px 2px 20px;
+    margin-left: 20px;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(243, 65, 94)0%, 
+    rgb(151, 55, 71));
+    padding: 2px 20px 2px 20px;
     border-radius: 50px;
 }
 .chamada-lager {
     margin-top: 20px;
     margin-left: 20px;
+    padding-right: 20px;
     font-family: lato;
     font-style: italic;
     font-weight: bold;
     font-size: 25px;
+
 }
 /*-------------------APA---------------*/
 
 .apa {
     width: 50%;
     display: flex;
-    height: 250px;
-    border-radius: 50px;
-    background-color: white;
-
+    height: 14.5rem;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.753);
 }
-
+.apa:hover {
+    background-color: rgba(252, 184, 57, 0.616);
+    transition: background-color 0.3s ease-in-out;
+}
 .garrafa-apa img {
-    margin-top: 0px;
-    width: 80px;
-    margin-left: 70px;
+    height: 90%;
+    margin-top: 15px;
+    margin-left: 3rem;
 }
 
 .copo-apa img {
-    width: 75px;
-    margin-top: 7rem;
+    width: 3.8rem;
+    margin-top: 7.8rem;
     margin-left: 20px;
-
 }
  
 .titulo-apa img {
-    width: 250px;
+    width: 50%;
     margin-top: 20px;
-    margin-left: -30px;
-    background-color: rgb(235, 129, 42);
-    padding: 5px 20px 2px 20px;
+    margin-left: 20px;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(91, 195, 199)0%, 
+    rgb(50, 141, 145));
+    padding: 2px 20px 2px 20px;
     border-radius: 50px;
 }   
 
@@ -95,49 +113,205 @@
     font-size: 25px;
 }
 
+/*-------------------Chope---------------------*/
+.chope {
+    display: flex;
+    max-width: 100%;
+    margin-top: 5rem;
+    height: 450px;
+    background-color: white;
+   
+   }
+   .chopeira img{
+    max-height: 100%;
+    margin-top: px;
+    border-radius: 0 30px 0 0 ;
+   }
+   .barril img {
+    max-height: 100%;
+    margin-top: 5px;
+    margin-left: rem;
+   }
+    .texto-chope {
+     font-family: lato;
+     font-style: italic;
+     font-size: 25px;
+     line-height: 2cap;
+     margin-top: 45px;
+     margin-left: 20px;
+     padding-right: 40px;
+    }
+
+    /*---------------------produção---------------------*/
+    .produ {
+        flex-wrap: nowrap;
+        display: flex;
+        height: 200px;
+        overflow: hidden;
+
+    }
+    .fabrica img{
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+/*-------------------Sobre---------------------*/
+
+
+.sobre {
+    display: flex;
+    max-width: 100%;
+    justify-content:end;
+    background-color: rgb(26, 20, 41);
+}
+.dogtown-sobre {
+    font-family: lato;
+    color: white;
+     font-style: italic;
+     font-size: 25px;
+     line-height: 2cap;
+     margin-left: 40px;
+     padding: 40px;
+}
+.dogtown-logo img {
+    margin-top: 70px;
+    margin-right: 40px;
+    width:350px;
+}
+
+
+   /*-------------------Eventos---------------------*/
+
+.eventos {
+    background-color: black;
+    padding: 40px;
+}
+.titulo-evento {
+    font-family: lato;
+    color: white;
+     font-style: italic;
+     font-size: 20px;
+     line-height: 2cap;
+     margin-left: 40px;
+     
+}
+.ultimas{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 40px;
+    height:400px;
+    gap:30px;
+}
+
+
+
 @media (max-width: 1300px){
     .capa {
-        margin-top: 120px;
+        margin-top: 16.5rem;
     }
     .cervejas {
        flex-direction: column;
-       margin: 0px;
+       margin: 0;
+       gap: 5px;
          
     }
     .lager{
+        height: 10rem;
         width: 100%;
+        margin: 0;
         border-radius: 0px;
     }
     .garrafa-lager {
-        margin-left: -50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: -4rem;
+    }
+    .copo-lager img{
+        width: 2.8em;
+        margin-top: 5rem;
+        margin-left: 0.5rem;
     }
     .titulo-lager img {
-        width: 200px;
-        margin-left: -70px;
+        width: 60%;
+        margin-left: 20px;
     }
     .chamada-lager {
-        font-size: 20px;
+        font-size: 15px;
+        margin-left: 20px;
     }
 
 
-    .apa{
-    width: 100%;
-    border-radius: 0px;
+    .apa {
+        margin-top: 0px;
+        height: 10.9rem;
+        width: 100%;
+        margin: 0;
+        border-radius: 0px;
     }
     .garrafa-apa {
-        margin-left: -50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: -4rem;
+    }
+    .copo-apa img {
+        width: 3rem;
+        margin-top: 5.5rem;
+        margin-left: 0.5rem;
     }
     .chamada-apa {
         padding:0px;
     }
     .titulo-apa img {
-        width: 200px;
-        margin-left: -70px;
+        width: 62%;
+        margin-left: 20px;
 
     }
     .chamada-apa {
-        font-size: 20px;
+        font-size: 15px;
+        margin-left: 20px;
     }
 
 
+
+/*-------------------Chope---------------------*/
+.chope {
+ background-color: white;
+ display: flex;  
+ justify-content: end;
+}
+.barril img {
+    margin: 25px 0 25px 0;
+    
+    
+}
+
+
+/*-------------------Eventos---------------------*/
+
+.eventos {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    background-color: black;
+}
+.ultimas img {
+    margin-top: 5px;
+    margin-left: 5px;
+    width:700px;
+}
+
+/*-------------------Sobre---------------------*/
+
+
+.sobre {
+    display: flex;
+    max-width: 100%;
+    justify-content:end;
+    background-color: white;
+}
+.socios img {
+    margin-top: 5px;
+    margin-left: 5px;
+    width:170px;
+}
 }

@@ -10,55 +10,49 @@
 /*-------------------LAGER---------------*/
 .lager {
     display: flex;
-    margin: 140px 30px 0;
-   
+    margin: 120px 30px 0;
     border-radius: 50px;
     background-color: white;
-
 }
 
 .garrafa-lager img {
     margin-top: 20px;
-    width: 160px;
+    width: 110px;
     margin-left: 90px;
 }
 
 .copo-lager img {
-    width: 130px;
-    margin-top: 16rem;
+    width: 110px;
+    margin-top: 11rem;
     margin-left: 20px;
-
 }
  
 .titulo-lager img {
     width: 350px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 0px;
-    background-color: rgb(235, 206, 42);
-    padding: 5px 90px 2px 20px;
+    background-color: rgb(243, 65, 94);
+    padding: 5px 90px 2px 60px;
     border-radius: 50px;
-    height: 80px;
-
+    height: 70px;
 }
 .chamada-lager {
     font-size: 25px;
     font-style: italic;
     font-family: lato;
-    margin-top: 10px;
     margin-left: 40px;
 }
 .texto-lager {
     color: white;
     font-family: lato;
     font-style: italic;
-    font-weight: bold;
     font-size: 25px;
-    margin-top: 30px;
-    margin-left: 80px;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+    margin-left: 50px;
     background-color: rgb(68, 67, 70);
-    padding: 20px 50px 20px 50px;
+    padding: 10px 50px 10px 50px;
     border-radius: 30px;
-    
 }
 
 
@@ -67,127 +61,161 @@
 
 .apa {
     display: flex;
-    margin: 30px 30px 0;
+    margin: 20px 30px 0;
     border-radius: 50px;
     background-color: white;
 }
 
 .garrafa-apa img {
     margin-top: 20px;
-    width: 160px;
+    width: 110px;
     margin-left: 90px;
 }
 
 .copo-apa img {
-    width: 130px;
-    margin-top: 16rem;
+    width: 110px;
+    margin-top: 11rem;
     margin-left: 20px;
-
 }
 
 .titulo-apa img {
-        width: 350px;
-        margin-top: 40px;
-        margin-left: 0px;
-        background-color: rgb(235, 129, 42);
-        padding: 5px 90px 2px 20px;
-        border-radius: 50px ;
-
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 0px;
+    background-color: rgb(93, 211, 185);
+    padding: 5px 90px 2px 60px;
+    border-radius: 50px;
+    height: 70px;
 }
 
 .chamada-apa {
     font-size: 25px;
     font-style: italic;
     font-family: lato;
-    margin-top: 10px;
     margin-left: 40px;
 }
 .texto-apa {
     color: white;
     font-family: lato;
     font-style: italic;
-    font-weight: bold;
     font-size: 25px;
-    margin-top: 40px;
-    margin-left: 80px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    margin-left: 50px;
     background-color: rgb(68, 67, 70);
-    padding: 20px 50px 20px 50px;
-    border-radius: 30px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 30px 0 30px 30px;
 }
 
 @media (max-width: 1300px){
+    .cervejas {
+      max-width: 100%;  
+      flex-direction: column;
+             
+     }
     
-    .cervejas { 
-       flex-direction: column;
-       max-width: 100%;
-      
+    .lager {
+        display: flex;
+        width: 100%;
+        margin-top: 120px;
+        margin-left: 0;
+        border-radius: 0;
+        background-color: white;
     }
-    .lager{
-        margin: 120px 0 0 0;
-        border-radius: 0px;
+    
+    .garrafa-lager img {
+        margin-top: 20px;
+        width: 70px;
+        margin-left: 30px;
     }
-    .garrafa-lager img{
-        margin-left: 0px;
+    
+    .copo-lager img {
+        width: 60px;
+        margin-top: 8.7rem;
+        margin-left: 20px;
     }
-    .info-lager {
-     flex-direction: column;
-     width: 100%;   
-    }
+     
     .titulo-lager img {
         width: 180px;
-        height: auto;
-        margin: 40px 0px 0 -160px;
-        padding: 5px 20px 2px 20px;
+        margin-top: 20px;
+        margin-left: -60px;
+        background-color: rgb(243, 65, 94);
+        padding: 2px 30px 2px 30px;
+        border-radius: 50px;
+        height: 40px;
     }
     .chamada-lager {
-        margin-top: 10px;
-        margin-left: -160px;
-        
-        font-size: 16px;
+        font-size: 15px;
+        font-style: italic;
+        font-family: lato;
+        margin-left: -50px;
     }
     .texto-lager {
+        width:100%¨;
+        color: rgb(0, 0, 0);
+        font-family: lato;
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        margin-top: 145px;
+        margin-left: -11.2rem;
+        background-color: rgb(255, 255, 255);
+        padding: 5px 10px 15px 15px;
         border-radius: 0;
-        padding: 10px 10px 10px 20px;
-        margin-top: 420px;
-        margin-left: -310px;
-        font-size: 16px;
     }
-
-
-    .apa{
-        margin: 30px 0 0 0;
-        border-radius: 0px;
+    
+    
+    
+    /*-------------------APA---------------*/
+    
+    .apa {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        border-radius: 0;
+        background-color: white;
     }
-    .garrafa-apa img{
-        margin-left: 0px;
+    
+    .garrafa-apa img {
+        margin-top: 20px;
+        width: 70px;
+        margin-left: 30px;
     }
-    .info-apa {
-     flex-direction: column;
-     width: 100%;   
+    
+    .copo-apa img {
+        width: 60px;
+        margin-top: 8.5rem;
+        margin-left: 20px;
     }
-    .info-lager {
-        flex-direction: column;
-        width: 100%;   
-    }
+    
     .titulo-apa img {
         width: 180px;
-        height: auto;
-        margin: 40px 0px 0 -160px;
-        padding: 5px 20px 2px 20px;
+        margin-top: 20px;
+        margin-left: -60px;
+        background-color: rgb(136, 165, 244);
+        padding: 2px 30px 2px 30px;
+        border-radius: 50px;
+        height: 40px;
     }
+    
     .chamada-apa {
-        margin-top: 10px;
-        margin-left: -160px;
-        
-        font-size: 16px;
+        font-size: 15px;
+        font-style: italic;
+        font-family: lato;
+        margin-left: -50px;
     }
     .texto-apa {
+        width:100%¨;
+        color: rgb(0, 0, 0);
+        font-family: lato;
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        margin-top: 145px;
+        margin-left: -11.2rem;
+        background-color: rgb(255, 255, 255);
+        padding: 5px 10px 15px 15px;
         border-radius: 0;
-        padding: 10px 10px 10px 20px;
-        margin-top: 420px;
-        margin-left: -310px;
-        font-size: 16px;
     }
-
-
 }
