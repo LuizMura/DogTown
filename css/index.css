@@ -207,7 +207,7 @@
 
 @media (max-width: 1300px){
     .capa {
-        margin-top: 16.5rem;
+        margin-top: 15.5rem;
     }
     .cervejas {
        flex-direction: column;
@@ -224,7 +224,7 @@
     .garrafa-lager {
         margin-top: 5px;
         margin-bottom: 5px;
-        margin-left: -4rem;
+        margin-left: -1rem;
     }
     .copo-lager img{
         width: 2.8em;
@@ -251,7 +251,7 @@
     .garrafa-apa {
         margin-top: 5px;
         margin-bottom: 5px;
-        margin-left: -4rem;
+        margin-left: -1rem;
     }
     .copo-apa img {
         width: 3rem;
@@ -275,43 +275,93 @@
 
 /*-------------------Chope---------------------*/
 .chope {
- background-color: white;
- display: flex;  
- justify-content: end;
-}
-.barril img {
-    margin: 25px 0 25px 0;
-    
-    
-}
-
-
-/*-------------------Eventos---------------------*/
-
-.eventos {
     display: flex;
     max-width: 100%;
-    justify-content: space-between;
-    background-color: black;
-}
-.ultimas img {
     margin-top: 5px;
-    margin-left: 5px;
-    width:700px;
+    height: 520px;
+    background-color: white;
+    overflow: hidden;
+  
+   
+   }
+   .chopeira img{
+    max-height: 42%;
+    margin-top: 12rem;
+    border-radius: 0 30px 0 0 ;
+   }
+   .barril img {
+    max-height: 42%;
+    margin-top: 12rem;
+    margin-left: rem;
+   }
+    .texto-chope {
+     font-family: lato;
+     font-style: italic;
+     font-size: 15px;
+     line-height: 1.7cap;
+     margin-top: 25px;
+     margin-left: -23rem;
+     padding-right: 10px;
+    }
+
+ /*---------------------produção---------------------*/
+ .produ {
+    margin-top: -6rem;
+    flex-wrap: nowrap;
+    display: flex;
+    height: 51.5px;
+    overflow: hidden;
+
+}
+.fabrica img{
+    max-height: 100%;
+    overflow: hidden;
 }
 
 /*-------------------Sobre---------------------*/
 
 
 .sobre {
-    display: flex;
-    max-width: 100%;
-    justify-content:end;
-    background-color: white;
+display: flex;
+max-width: 100%;
+justify-content:end;
+background-color: rgb(26, 20, 41);
 }
-.socios img {
-    margin-top: 5px;
-    margin-left: 5px;
-    width:170px;
+.dogtown-sobre {
+font-family: lato;
+color: white;
+ font-style: italic;
+ font-size: 15px;
+ line-height: 2cap;
+ margin-left: 0px;
+ padding: 20px;
 }
+.dogtown-logo img {
+    display: none;
+margin-top: 70px;
+margin-right: 40px;
+width:50px;
+}
+
+
+/*-------------------Eventos---------------------*/
+
+.eventos {
+background-color: black;
+padding: 20px;
+}
+.titulo-evento {
+font-family: lato;
+color: white;
+ font-style: italic;
+ font-size: 10px;
+ margin-left: 10px;
+ 
+}
+.ultimas{
+display: flex;
+margin-top: 30px;
+margin-left: 0px;
+height:200px;
+gap:30px;
 }
