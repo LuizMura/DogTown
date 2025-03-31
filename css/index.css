@@ -387,16 +387,16 @@ margin-right: 2vw;
    }
    .barril img {
     max-height: 42%;
-    margin-top: 12rem;
-    margin-left: rem;
+    margin-top: 50vw;
+    margin-left: 3vw;
    }
     .texto-chope {
      font-family: lato;
      font-style: italic;
-     font-size: 15px;
+     font-size: 4vw;
      line-height: 1.7cap;
      margin-top: 3vh;
-     margin-left: -24.5rem;
+     margin-left: -21.5rem;
      padding-right: 10px;
     }
 
