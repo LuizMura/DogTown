@@ -342,7 +342,6 @@ margin-right: 2vw;
 /*-------------------Main---------------------*/
 .main-page {
     display: flex;
-    margin-top: 0.5vh;
 }
 .garrafas-main {
     flex-direction: column;
