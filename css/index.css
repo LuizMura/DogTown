@@ -292,6 +292,7 @@ margin-right: 2vw;
        flex-direction: column;
        background-image:none;
        margin:0;
+       gap:1vw
          
     }
     .lager{
@@ -302,9 +303,13 @@ margin-right: 2vw;
         background-color: white;
         border:none;
     }
+    .garrafa-lager img {
+        margin-top: 2vw;
+        height: 97%;
+    }
     .titulo-lager img {
-        width: 45%;
-        margin-left: 8vw;
+        width: 42%;
+        margin-left: 8.5vw;
         margin-top: 2vh;
     }
     .chamada-lager {
@@ -314,12 +319,16 @@ margin-right: 2vw;
 
 /*-------------------APA---------------*/
     .apa {
-        height: 12.5rem;
+        height: 13rem;
         width: 100%;
         margin: 0;
         border-radius: 0px;
         background-color: white;
         border: 0;
+    }
+    .garrafa-apa img {
+        margin-top: 2vw;
+        height: 97%;
     }
     .titulo-apa img {
         width: 45%;
