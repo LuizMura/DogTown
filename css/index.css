@@ -1,182 +1,248 @@
 @import '../css/global.css';
-
+@import '../css/sobre.css';
 
 /*-------------------------------------Principal---------------------------------------*/
 
 .capa img {
     width: 100%;
-    margin-top: -9rem;
+    margin-top: 8vh;
     overflow: hidden;
+}
+.capa-mobile img {
+ display: none;
 }
 
 .cervejas {
+    background-image: url(../img/index/capa.png);
+    background-size: cover;
+    margin-top: 4vh;
     display: flex;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    margin: -18rem 2rem 0 2rem;
-    gap: 2rem;
     cursor: pointer;
-    overflow: hidden;
-   
-}
-
-.lager {
-    width: 50%;
-    display: flex;
-    height: 14.5rem;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.753);
-
 }
 .lager:hover {
-    background-color: rgba(252, 184, 57, 0.616);
-    transition: background-color 0.3s ease-in-out;}
+    background-color: rgba(255, 253, 122, 0.726);
+}
+.apa:hover {
+    background-color: rgba(255, 253, 122, 0.726);
+}
+.lager {
+    width: 30vw;
+    display: flex;
+    height: 15vw;
+    margin-left: 4vw;
+    margin-top: 58vh;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 30px;
+    margin-bottom: 8vh;
+    border:3px solid rgb(126, 124, 124);
+    transition: background-color 0.3s ease-in-out;
 
+
+}
 .garrafa-lager img {
-    height: 90%;
-    margin-top: 15px;
-    margin-left: 3rem;
+    height:100%;
+    margin-top: 0.5vh;
 }
 
-.copo-lager img {
-    width: 3.8rem;
-    margin-top: 7.5rem;
-    margin-left: 20px;
-
-}
- 
 .titulo-lager img {
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 10vw;
+    margin-top: 1.5vw;
+    margin-left: rem;
     background-image: linear-gradient(
     to bottom,
-    rgb(243, 65, 94)0%, 
-    rgb(151, 55, 71));
+    rgb(199, 75, 75)0%, 
+    rgb(165, 69, 69));
     padding: 2px 20px 2px 20px;
     border-radius: 50px;
+    border:3px solid rgb(82, 76, 76);
 }
 .chamada-lager {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 0.5vw;
+    margin-left: 0.5 rem;
     padding-right: 20px;
     font-family: lato;
     font-style: italic;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.8vw;
+    text-align: center;
 
 }
 /*-------------------APA---------------*/
 
 .apa {
-    width: 50%;
+    width: 30vw;
     display: flex;
-    height: 14.5rem;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.753);
-}
-.apa:hover {
-    background-color: rgba(252, 184, 57, 0.616);
+    height: 15vw;
+    margin-left: 4vw;
+    margin-top: 58vh;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 30px;
+    border:3px solid rgb(126, 124, 124);
     transition: background-color 0.3s ease-in-out;
 }
-.garrafa-apa img {
-    height: 90%;
-    margin-top: 15px;
-    margin-left: 3rem;
-}
 
-.copo-apa img {
-    width: 3.8rem;
-    margin-top: 7.8rem;
-    margin-left: 20px;
+.garrafa-apa img {
+    height: 100%;
+    margin-top: 0.3vw;
 }
- 
 .titulo-apa img {
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 10vw;
+    margin-top: 1.5vw;
+    margin-left: rem;
     background-image: linear-gradient(
-    to bottom,
-    rgb(91, 195, 199)0%, 
-    rgb(50, 141, 145));
+        to bottom,
+        rgba(64, 133, 103, 0.678)0%, 
+        rgb(64, 133, 103));
     padding: 2px 20px 2px 20px;
     border-radius: 50px;
+    border:3px solid rgb(39, 75, 59);;
 }   
 
 .chamada-apa {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 0.5vw;
+    margin-left: -1.rem;
     padding-right: 20px;
     font-family: lato;
     font-style: italic;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.8vw;
+    text-align: center;
 }
-
+/*------------------------logo-capa----------------*/
+.logo-capa img{
+    margin-top: 72vh;
+    width: 9vw;
+    margin-left: 20vw;
+}
+   .logo-capa {
+    opacity: 0.5;    
+    transition: opacity 0.4s ease-in-out;
+   } 
+.logo-capa:hover {
+    opacity: 0.9;
+   
+}
+/*-------------------main-page---------------------*/
+.main-page {
+    display: flex;
+    width:100%;
+    background-color: white;
+    justify-content: space-between;
+}
+.texto-main {
+    font-family: lato;
+    font-style: italic;
+    margin-left: 0vw;
+    font-size: 1.3vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(151, 151, 151, 0.678)0%, 
+        rgb(194, 196, 195));
+    border-radius: 0 50px 50px 0;
+    height: 100%;
+}
+.texto-main h1{
+    margin: 2vw;
+    margin-top: 1vw;
+    text-align: center;
+}
+.texto-main h2{
+    margin: 2vw;
+    text-align: center;
+}
+.texto-main p{
+    margin-left: 3vw;
+    margin-top: 1vw;
+    font-size: 1.8vw;
+}
+.garrafas-main {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 4vw;
+}
+.garrafas-main img {
+width: 25vw;
+}
 /*-------------------Chope---------------------*/
 .chope {
     display: flex;
     max-width: 100%;
-    margin-top: 5rem;
-    height: 450px;
+    margin-top: 0.2rem;
+    height: 25vw;
     background-color: white;
    
    }
    .chopeira img{
-    max-height: 100%;
-    margin-top: px;
-    border-radius: 0 30px 0 0 ;
+    max-height: 97%;
+    margin-top: 0px;
+    border-radius: 0 100px 50px 0;
    }
    .barril img {
-    max-height: 100%;
-    margin-top: 5px;
-    margin-left: rem;
+    height: 100%;
    }
     .texto-chope {
      font-family: lato;
      font-style: italic;
-     font-size: 25px;
+     font-size: 1.8vw;
      line-height: 2cap;
-     margin-top: 45px;
-     margin-left: 20px;
-     padding-right: 40px;
+     margin-top: 3vw;
+     padding-right: 2.5vw;
+     text-align: center;
     }
 
     /*---------------------produção---------------------*/
     .produ {
+        margin-top: 0.5vh;
         flex-wrap: nowrap;
         display: flex;
-        height: 200px;
+        height: 20vw;
         overflow: hidden;
+        
 
     }
     .fabrica img{
         max-height: 100%;
-        overflow: hidden;
     }
 
 /*-------------------Sobre---------------------*/
 
 
-.sobre {
+.adogtown {
     display: flex;
-    max-width: 100%;
-    justify-content:end;
-    background-color: rgb(26, 20, 41);
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 0.5vw;
 }
-.dogtown-sobre {
+.adogtown img{
+width: 20vw;
+height:20vw;
+margin-right: 2vw;
+
+}
+
+.adogtown-texto {
+    margin-top: 0.5vw;
+}
+.adogtown h1{
     font-family: lato;
-    color: white;
-     font-style: italic;
-     font-size: 25px;
-     line-height: 2cap;
-     margin-left: 40px;
-     padding: 40px;
+    font-style: italic;
+    font-size: 2.8vw;
+    color: rgb(0, 0, 0);
+    margin-left: 4rem;
+    padding-top: 5vh;
 }
-.dogtown-logo img {
-    margin-top: 70px;
-    margin-right: 40px;
-    width:350px;
+.adogtown p{
+    
+    font-family: lato;
+    font-style: italic;
+    font-size: 1.8vw;
+    line-height: 1.9cap;
+    text-align: center;
+    color: rgb(0, 0, 0);
+   padding-bottom: 7vh;
+   margin: 2vh;
 }
 
 
@@ -184,7 +250,8 @@
 
 .eventos {
     background-color: black;
-    padding: 40px;
+    padding: 2vw;
+    margin-top: 0.5vw;
 }
 .titulo-evento {
     font-family: lato;
@@ -199,90 +266,111 @@
     display: flex;
     margin-top: 30px;
     margin-left: 40px;
-    height:400px;
+    height:44vh;
     gap:30px;
 }
 
+/*---------------------------------------------Responsivo-------------------------------------------------------*/
 
-
-@media (max-width: 1300px){
+@media (max-width: 700px){
     .capa {
-        margin-top: 15.5rem;
+        display: none;
+    }
+    .logo-capa img {
+        display: none;
+    }
+    .capa-mobile img {
+        display: block;
+        width: 100%;
+        margin-top: 5rem;
+       
+    }
+    .adogtown {
+        display: none;
     }
     .cervejas {
        flex-direction: column;
-       margin: 0;
-       gap: 5px;
+       background-image:none;
+       margin:0;
          
     }
     .lager{
-        height: 10rem;
+        height: 12rem;
         width: 100%;
         margin: 0;
         border-radius: 0px;
-    }
-    .garrafa-lager {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: -1rem;
-    }
-    .copo-lager img{
-        width: 2.8em;
-        margin-top: 5rem;
-        margin-left: 0.5rem;
+        background-color: white;
+        border:none;
     }
     .titulo-lager img {
-        width: 60%;
-        margin-left: 20px;
+        width: 45%;
+        margin-left: 8vw;
+        margin-top: 2vh;
     }
     .chamada-lager {
-        font-size: 15px;
-        margin-left: 20px;
+        font-size: 5vw;
+        margin-top: 3vh;
     }
 
-
+/*-------------------APA---------------*/
     .apa {
-        margin-top: 0px;
-        height: 10.9rem;
+        height: 12.5rem;
         width: 100%;
         margin: 0;
         border-radius: 0px;
-    }
-    .garrafa-apa {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: -1rem;
-    }
-    .copo-apa img {
-        width: 3rem;
-        margin-top: 5.5rem;
-        margin-left: 0.5rem;
-    }
-    .chamada-apa {
-        padding:0px;
+        background-color: white;
+        border: 0;
     }
     .titulo-apa img {
-        width: 62%;
-        margin-left: 20px;
-
+        width: 45%;
+        margin-left: 8vw;
+        margin-top: 2vh;
     }
     .chamada-apa {
-        font-size: 15px;
-        margin-left: 20px;
+        font-size: 5vw;
+        margin-top: 3vh;
     }
-
+/*-------------------Main---------------------*/
+.main-page {
+    display: flex;
+    margin-top: 0.5vh;
+}
+.garrafas-main {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap:2vh;
+}
+.texto-main {
+    font-family: lato;
+    font-style: italic;
+    margin-left: 0vw;
+    font-size: 3vw;
+    margin-top: 5vw;
+    border-radius: 0 30px 30px 0;
+}
+.texto-main h1{
+    margin: 2vw;
+    margin-top: 2vw;
+    text-align: center;
+}
+.texto-main h2{
+    margin: 2vw;
+    text-align: center;
+}
+.texto-main p{
+    margin-top: 1vw;
+    font-size: 3.8vw;
+    text-align: center;
+}
 
 
 /*-------------------Chope---------------------*/
 .chope {
     display: flex;
     max-width: 100%;
-    margin-top: 5px;
+    margin-top: 0.5vh;
     height: 520px;
     background-color: white;
-    overflow: hidden;
-  
-   
    }
    .chopeira img{
     max-height: 42%;
@@ -299,8 +387,8 @@
      font-style: italic;
      font-size: 15px;
      line-height: 1.7cap;
-     margin-top: 25px;
-     margin-left: -23rem;
+     margin-top: 3vh;
+     margin-left: -24.5rem;
      padding-right: 10px;
     }
 
@@ -309,7 +397,7 @@
     margin-top: -6rem;
     flex-wrap: nowrap;
     display: flex;
-    height: 51.5px;
+    height: 100px;
     overflow: hidden;
 
 }
@@ -321,26 +409,9 @@
 /*-------------------Sobre---------------------*/
 
 
-.sobre {
-display: flex;
-max-width: 100%;
-justify-content:end;
-background-color: rgb(26, 20, 41);
-}
-.dogtown-sobre {
-font-family: lato;
-color: white;
- font-style: italic;
- font-size: 15px;
- line-height: 2cap;
- margin-left: 0px;
- padding: 20px;
-}
-.dogtown-logo img {
-    display: none;
-margin-top: 70px;
-margin-right: 40px;
-width:50px;
+.adogtown-mobile img{
+    height: 100%;       
+    margin-top: 1vh;
 }
 
 
@@ -364,4 +435,5 @@ margin-top: 30px;
 margin-left: 0px;
 height:200px;
 gap:30px;
+}
 }

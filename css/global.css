@@ -8,7 +8,7 @@
 
 body {
     width: 100%;
-    background-color: rgb(213, 236, 213);
+    background-color: rgb(107, 107, 107);
 }
 
 a {
@@ -21,7 +21,7 @@ a {
 /*--------------------------------header--------------------------------------------*/
 .container {
     display: flex;
-    position: fixed;
+    position:fixed;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(   
@@ -32,6 +32,7 @@ a {
     black 100%);
     max-width: 100%;
     height: 6.5rem;
+    transition: 0.5s;
    
 }
 
@@ -44,8 +45,8 @@ a {
     width: 100%;
     font-family: lato;
     font-style: italic;
-    font-size: 20px;
-    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    margin-top: 1rem;
     margin-left: 2.5rem;
     margin-right: 2rem;  
     white-space: nowrap;
@@ -60,8 +61,8 @@ a {
 .contato {
     font-family: lato;
     font-style: italic;
-    font-size: 21px;
-    margin-top: 20px;
+    font-size: 1.6rem;
+    margin-top: 1rem;
     margin-right: -10px;
     white-space: nowrap;
     text-overflow:ellipsis;
@@ -69,9 +70,9 @@ a {
 }
 .contatos {
     margin-right: 350px;
-    margin-top: 5px;
+    margin-top: 1px;
     font-family: lato;
-    font-size: 17px;
+    font-size: 1.2rem;
     font-style: italic;
     font-weight: bold;
     white-space: nowrap;
@@ -115,11 +116,12 @@ a {
 .siga {
     width: 150px;
     font-family: lato;
-    font-size: 21px;
+    font-size: 1.4rem;
     font-style: italic;
     margin-top: 3px;
-    line-height: 20px;
+    line-height: 22px;
     margin-right: -20px;
+    text-align: center;
     
 }
 
@@ -171,9 +173,76 @@ i:hover {
    .nav-list a:hover{
     color:rgb(169, 204, 166);
    }
-   /*---------------------------------Efeitos-------------------------------------------*/
+   .nav-list a.active {
+    font-weight: bold;
+    color:rgb(169, 204, 166);
+  }
+  
+/*-------------------------------footer---------------------------------------------*/
+.footer-mobile img{
+    display: none;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.redes-sociais{
+    flex-direction: column;
+    text-align: center;
+p {
+    color: rgb(216, 215, 215);
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2vh;
+    margin-top: 3vh;
+  
+}
+}
+.rede {
+    margin-top: 2vh;
+}
+.rede a{
+    color: rgb(216, 215, 215);
+    font-size: 6vh;
+    margin: 0.3vw;
+}
+
+.footer-logo img {
+    width:100%;
+    margin-bottom: -4px;
+    opacity: 0.7;
+}
+
+.footer-info {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-info p {
+    color: rgb(216, 215, 215);
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2vh;
+    margin-bottom: 0vh;
+}
+.developer p {
+    color: rgb(216, 215, 215);
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2vh;
+    margin-top: 3vh;
+    text-align: center;
+}
+.developer img {
+    width: 23vh;
+    margin-top: 3vh;
+    
+    
+}
+
+ /*-------------------------------------------Efeitos--------------------------------------------------------------------*/
    
-   @media (max-width: 950px) {
+ @media (max-width: 950px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -203,7 +272,7 @@ i:hover {
       
       .whatsapp-button {
         position: fixed;
-        bottom: 50px;
+        bottom: 140px;
         right: 10px;
         background-color: white;
         border-radius: 30%;
@@ -257,7 +326,7 @@ i:hover {
     transform: translateX(0);
     }
     
-    @keyframes navLinkFade {
+@keyframes navLinkFade {
     from { 
         opacity: 0;
         transform: translateX(50px);
@@ -268,7 +337,7 @@ i:hover {
     }
     }
     
-}
+
 
 @keyframes translateY {
     from {
@@ -278,33 +347,51 @@ i:hover {
         transform: translateY(-5px) scale(1.1);
     }
 }
-/*-------------------------------footer---------------------------------------------*/
+
+.redes-sociais {
+    margin-top: -4vh;
+    width:35%;
+    
+    
+}
+.footer-info {
+    margin-top: 2vh;
+}
 
 .footer {
-    margin-top: 630px;
-    bottom: 0;
-    display: flex;
-    
-    justify-content: space-between;
-    background-image: linear-gradient(   
-    to bottom, 
-    rgb(109, 109, 108)0%,
-    rgb(153, 151, 151) 100%);
-    height: 50px;
-
-}
-.footer-logo {
-    display: flex;
+    align-items: center;
     overflow: hidden;
 }
-.footer-logo img{
-    height: 50px;
+.footer p {
+    font-size: 1.5vh;
+    text-align: center;
+}
+.rede {
+    margin-top: 1vh;
+}
+.footer a{
+    font-size: 3.3vh;
+}
+.developer img {
+    width: 10vh;
+    margin-top: 1vh;
+}
+.developer {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3vh;
+    margin-right: 5px;
 }
-.footer-info{
-    color: rgb(14, 13, 13);
-    font-family: lato;
-    font-size: 20px;
-    
+
+.footer-logo img{
+   display: none;
 }
+.footer-mobile img {
+    display: block;
+    width: 100%;
+}
+
+ }
+
+

@@ -1,9 +1,40 @@
 @import '../css/global.css';
 
-.sobre {
-    margin-top: 35vh;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 700px;
-    color: aquamarine;
+.adogtown img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.equipe img{
+    width: 100%;
+    margin-top: -5px;
+}
+
+.adogtown-mobile img{
+    display: none;
+}
+
+.equipe-mobile img{
+    display: none;
+}
+/*-------------------Mobile---------------------*/
+
+@media (max-width: 950px) {
+    .adogtown img {
+        display: none;
+    }
+    .equipe img{
+        display: none;
+    }
+
+    .adogtown-mobile img{
+        display: block;
+        width: 100%;
+        margin-top: 6rem;
+    }
+    .equipe-mobile img{
+        display: block;
+        width: 100%;
+        margin-top: 0rem;
+    }
 }

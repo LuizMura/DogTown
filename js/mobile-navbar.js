@@ -46,3 +46,13 @@ class MobileNavbar {
   mobileNavbar.init();
   
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); // Obtém o nome do arquivo atual
+    const navLinks = document.querySelectorAll(".nav-list a");
+  
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active"); // Adiciona a classe 'active' ao link correspondente
+      }
+    });
+  });

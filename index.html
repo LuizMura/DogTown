@@ -8,11 +8,11 @@
     <script src="https://kit.fontawesome.com/b07f4922ff.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="img/index/icon/dogtown.ico">
-
+    
 </head>
 
 <body>
-    <header class="container">
+    <header class="container" id="container">
       
             <div class="logo">
                 <a href="index.html">
@@ -52,12 +52,13 @@
 
     </header>
 
-    <nav> 
-      <div class="mobile-menu">
-        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
-    </div>
+    <nav>
         
-        <ul class="nav-list">
+        <div class="mobile-menu">
+        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
+        </div>
+        
+        <ul class="nav-list" id="nav-list">
             <li><a href="cervejas.html">CERVEJAS</a></li>
             <li><a href="chope.html">BARRIL DE CHOPE</a></li>
             <li><a href="promo.html">PROMOÇÕES</a></li>
@@ -70,48 +71,57 @@
     </nav>
 
         
-    <div class="capa">
-        <img src="img/index/capa.png">
+    
+    <div class="capa-mobile">
+        <img src="img/index/capa-mobile.jpg">
     </div>
+
 
     <div class="cervejas">
 
-            <div class="lager">
+            <div class="lager" type="button" onclick="window.location.href='cervejas.html'">
                 <div class="garrafa-lager">
                     <img src="img/cervejas/garrafa-lager.png">
                 </div>
-                
-                <div class="copo-lager">
-                    <img src="img/cervejas/copo-lager.png">
-                </div>
-    
+                    
                 <div class="info-lager">
                     <div class="titulo-lager">
-                    <img src="img/cervejas/titulo-lager.png">
-                </div>
-                    <h1 class="chamada-lager">Leve e saborosa, é a cerveja é ideal para todos os gostos e ocasiões.</h1>
+                        <img src="img/cervejas/titulo-lager.png">
+                    </div>
+                    <h1 class="chamada-lager">"Leve e saborosa, é a cerveja é ideal para todos os gostos e ocasiões."</h1>
                 </div>
             </div>
-        
             
-            <div class="apa">
-    
+            <div class="apa" type="button" onclick="window.location.href='cervejas.html'">
                 <div class="garrafa-apa">
                     <img src="img/cervejas/garrafa-apa.png">
                 </div>
-                
-                <div class="copo-apa">
-                    <img src="img/cervejas/copo-apa.png">
-                </div>
-    
                 <div class="info-apa">
                     <div class="titulo-apa">
                     <img src="img/cervejas/titulo-apa.png">
                     </div>
-                    <h1 class="chamada-apa">Encorpada e muuuito saborosa, é a cerveja que vem arrancando elogios de quem experimenta.</h1>
+                    <h1 class="chamada-apa">"Encorpada e muuuito saborosa, é a cerveja que vem arrancando muitos elogios."</h1>
                 </div>
             </div>
+            <div class="logo-capa">
+                <img src="img/index/logo.png">
+            </div>
     </div>
+
+<div class="main-page">
+   <div class="texto-main">
+    <h1>Nossas brejas agora disponível  para entrega dentro de Ribeirão Preto.</h1>
+            <p>Disponível em garrafas de 500ml e 1 litro.</p>
+        <p>Barril de chope de 20, 30 e 50 litros.</p>
+            <p>Pedido minimo de 3 garrafas.</p>
+            <h2>Faça o seu pedido pelo nosso Whatsapp ou entre em contato.</h2>
+   </div>
+   <div class="garrafas-main">
+    <img src="img/cervejas/garrafa-copo-lager.png">
+    <img src="img/cervejas/garrafa-copo-apa.png">
+    </div>
+</div>
+
     
 <div class="chope">
     <div class="chopeira">
@@ -121,8 +131,8 @@
         <img src="img/chope/barril.png">
     </div>
     <div class="texto-chope">
-        <h1>CHOPE DOGTOWN BREW</h1><BR>
-        <p> Pedir um barril de chope é uma opção econômica e prática para eventos. O chope tem sabor fresco, textura cremosa e é fácil de servir. Além disso, reduz desperdícios e embalagens descartáveis. Há opções para todos os gostos, tornando a experiência mais especial. Ideal para festas, churrascos e confraternizações. 🍻</p>
+        <h1>CHOPE DOGTOWN BREW</h1><br>
+        <p> Pedir um barril de chope é uma opção econômica e prática para eventos. O chope tem sabor fresco, textura cremosa e é fácil de servir. Além disso, reduz desperdícios e embalagens descartáveis. Há opções para todos os gostos, tornando a experiência mais especial. Ideal para festas, churrascos e confraternizações.</p>
     </div>    
     
 </div>
@@ -147,25 +157,33 @@
         <img src="img/produ/produ6.jpg">
     </div>
     <div class="fabrica">
-        <img src="img/produ/produ7.webp">
+        <img src="img/produ/produ7.jpg">
     </div>
     <div class="fabrica">
-        <img src="img/produ/produ8.webp">
+        <img src="img/produ/produ8.jpg">
     </div>
 </div>
 
 
 
 
-<div class="sobre">
-    <div class="dogtown-sobre">
-        <h1>A DOGTOWN BREW</h1><br>
-        <p>A Dogtown Brew RP é uma cervejaria artesanal localizada em Ribeirão Preto/SP, movida pela paixão por criar sabores autênticos e experiências únicas. Com o nome inspirado no icônico bairro de Dogtown, em Santa Mônica/Califórnia, nossa marca reflete a atitude irreverente e o espírito livre, características que permeiam todo o processo de produção. Cada cerveja é uma verdadeira expressão de ousadia e autenticidade.
-            Acreditamos que a cerveja deve ser mais do que uma bebida, ela deve contar uma história e proporcionar uma experiência memorável. Buscamos sempre inovar e oferecer rótulos diversificados, com ingredientes de qualidade e produção cuidadosa. Além disso, valorizamos a sustentabilidade e a colaboração com a comunidade local, trazendo ao mercado cervejas que representam a liberdade e a irreverência de nosso nome.</p>
+<div class="adogtown">
+    <div class=" adogtown-texto">
+    <h1>A DOGTOWN BREW</h1>
+    <p>A Dogtown Brew RP é uma cervejaria artesanal localizada em Ribeirão Preto/SP, movida pela paixão por criar sabores autênticos e experiências únicas. Com o nome inspirado no icônico bairro de Dogtown, em Santa Mônica/Califórnia, nossa marca reflete a atitude irreverente e o espírito livre, características que permeiam todo o processo de produção. Cada cerveja é uma verdadeira expressão de ousadia e autenticidade. Acreditamos que a cerveja deve ser mais do que uma bebida, ela deve contar uma história e proporcionar uma experiência memorável. Buscamos sempre inovar e oferecer rótulos diversificados, com ingredientes de qualidade e produção cuidadosa. Além disso, valorizamos a sustentabilidade e a colaboração com a comunidade local, trazendo ao mercado cervejas que representam a liberdade e a irreverência de nosso nome.</p>
     </div>
-    <div class="dogtown-logo">
-        <img src="img/logo2.png">
-    </div>
+    <img src="img/index/logo.png">
+</div>
+
+
+
+<div class="adogtown-mobile">
+    <img src="img/sobre/adogtown-mobile.png">
+</div>
+
+<div class="equipe-mobile">
+    <img src="img/sobre/equipe-mobile.png">
+</div>
 </div>
 
 
@@ -185,8 +203,7 @@
 
 
 
-    </div>
-
+    
     
 
 
@@ -195,28 +212,48 @@
 
 
 
-<footer>
-    <div class="footer">
-        <div class="footer-logo">
+<footer class="footer">
+
+        <div class="redes-sociais">
+            <p>MÍDIAS SOCIAIS</p>
+                <div class="rede">
+                <a class="instagram" href="https://www.instagram.com/dogtownbrewrp/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                </a>
         
-            <div>
-                <img src="img/logo.png">
-            </div>
-            <div>
-                <img src="img/town.png">
-            </div>
-            
-            <div>
-            <img src="img/town.png">
-            </div>
-        </div>    
-    </div>
-    
+                <a class="facebook" href="https://www.facebook.com/dogtownbrewrp/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="facebook" href="https://wa.me/+5516997698989" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+        </div>
 
-    <div class="footer-info">
-         
+          <div class="footer-info">
+            <p>CONTATO</p>
+            <p>(16) 99769-8989</p>
+            <p>email: dogtown@hotmail.com</p>
+            <p>Rua Batatais, 123 - Jd. Paulista, Ribeirão Preto-SP</p>
+        </div>
 
+        <div class="developer">
+            <p>DESENVOLVIDO POR:</p>
+            <a href="https://github.com/LuizMura" target="_blank">
+            <img src="img/index/luiz.png">
+        </a>
+        </div>
+        
 </footer>
+
+
+<div class="footer-logo">
+    <img src="img/index/footer.png">
+</div>
+
+<div class="footer-mobile">
+    <img src="img/index/footer-mobile.png">
+</div>
 
     <script src="js/mobile-navbar.js"></script>
 </body>
