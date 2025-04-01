@@ -11,7 +11,7 @@ body {
     background-color: rgb(107, 107, 107);
     overflow-x: hidden;
 }
- div, section {
+ img div, section {
     max-width: 100%;
 }
 
@@ -258,7 +258,7 @@ i:hover {
       
       .whatsapp-button {
         position: fixed;
-        bottom: 140px;
+        bottom: 160px;
         right: 10px;
         background-color: white;
         border-radius: 30%;
@@ -345,7 +345,7 @@ i:hover {
     font-size: 0.7rem;
 }
 .rede a {
-    font-size: 8vw;
+    font-size: 7.5vw;
 }
 .developer img {
     width: 23vw;
