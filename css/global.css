@@ -356,11 +356,13 @@ p {
 }
 .footer-info {
     margin-top: 2vh;
+    margin-right: 5vw;
 }
 
 .footer {
     align-items: center;
     overflow: hidden;
+    margin-right: 5vw;
 }
 .footer p {
     font-size: 1.5vh;
