@@ -3,475 +3,318 @@
 
 /*-------------------------------------Principal---------------------------------------*/
 
-.capa img {
+.capa {
+    background-image: url(../img/index/capa.jpg);
+    background-size: cover;
     width: 100%;
-    margin-top: 8vh;
+    height: 48vw;
+    margin-top: -2rem;
     overflow: hidden;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.capa h1{
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 3.5vw;
+    margin-top: 21vw;
+    margin-right: 7vw;
+    text-align: center; 
+    
+}
+/*------------------------logo-capa----------------*/
+.logo-capa img{
+    margin-top: 7vw;
+    width: 9vw;
+    height: 9vw;
+    margin-right: 9vw;
+}
+   .logo-capa img {
+    opacity: 0.5;    
+    transition: opacity 0.4s ease-in-out;
+   } 
+.logo-capa img:hover {
+    opacity: 0.9;
+   
 }
 .capa-mobile img {
  display: none;
 }
 
-.cervejas {
-    background-image: url(../img/index/capa.png);
-    background-size: cover;
-    margin-top: 4vh;
-    display: flex;
-    cursor: pointer;
-}
-.lager:hover {
-    background-color: rgba(255, 253, 122, 0.726);
-}
-.apa:hover {
-    background-color: rgba(255, 253, 122, 0.726);
-}
-.lager {
-    width: 30vw;
-    display: flex;
-    height: 15vw;
-    margin-left: 4vw;
-    margin-top: 58vh;
-    background-color: rgba(255, 255, 255, 0.678);
-    border-radius: 30px;
-    margin-bottom: 8vh;
-    border:3px solid rgb(126, 124, 124);
-    transition: background-color 0.3s ease-in-out;
+/*-------------------carousel---------------------*/
 
-
-}
-.garrafa-lager img {
-    height:100%;
-    margin-top: 0.5vh;
-}
-
-.titulo-lager img {
-    width: 10vw;
-    margin-top: 1.5vw;
-    margin-left: rem;
-    background-image: linear-gradient(
-    to bottom,
-    rgb(199, 75, 75)0%, 
-    rgb(165, 69, 69));
-    padding: 2px 20px 2px 20px;
-    border-radius: 50px;
-    border:3px solid rgb(82, 76, 76);
-}
-.chamada-lager {
-    margin-top: 0.5vw;
-    margin-left: 0.5 rem;
-    padding-right: 20px;
-    font-family: lato;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.8vw;
+.brejas-titulo {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.2vw;
     text-align: center;
-
-}
-/*-------------------APA---------------*/
-
-.apa {
-    width: 30vw;
-    display: flex;
-    height: 15vw;
-    margin-left: 4vw;
-    margin-top: 58vh;
-    background-color: rgba(255, 255, 255, 0.678);
-    border-radius: 30px;
-    border:3px solid rgb(126, 124, 124);
-    transition: background-color 0.3s ease-in-out;
-}
-
-.garrafa-apa img {
-    height: 100%;
-    margin-top: 0.3vw;
-}
-.titulo-apa img {
-    width: 10vw;
-    margin-top: 1.5vw;
-    margin-left: rem;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(64, 133, 103, 0.678)0%, 
-        rgb(64, 133, 103));
-    padding: 2px 20px 2px 20px;
-    border-radius: 50px;
-    border:3px solid rgb(39, 75, 59);;
-}   
-
-.chamada-apa {
-    margin-top: 0.5vw;
-    margin-left: -1.rem;
-    padding-right: 20px;
-    font-family: lato;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.8vw;
-    text-align: center;
-}
-/*------------------------logo-capa----------------*/
-.logo-capa img{
-    margin-top: 72vh;
-    width: 9vw;
-    margin-left: 20vw;
-}
-   .logo-capa {
-    opacity: 0.5;    
-    transition: opacity 0.4s ease-in-out;
-   } 
-.logo-capa:hover {
-    opacity: 0.9;
+    color: rgb(107, 107, 107);
+    padding: 1vh;
+    border-top: 20px solid rgba(126, 124, 124, 0.534);
+    background-color: rgb(255, 255, 255);
    
 }
-/*-------------------main-page---------------------*/
-.main-page {
+.brejas {
     display: flex;
-    width:100%;
-    background-color: white;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 32vw;
+    z-index: 10;
+    background-image: linear-gradient(   
+    to bottom, 
+    rgba(0, 0, 0, 0.151)0%,
+    rgb(255, 255, 255) 30%, 
+    rgb(255, 255, 255) 70%,
+    rgba(0, 0, 0, 0.151) 100%);
+    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
+    
 }
-.texto-main {
-    font-family: lato;
-    font-style: italic;
-    margin-left: 0vw;
-    font-size: 1.3vw;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(151, 151, 151, 0.678)0%, 
-        rgb(194, 196, 195));
-    border-radius: 0 50px 50px 0;
-    height: 100%;
-}
-.texto-main h1{
-    margin: 2vw;
-    margin-top: 1vw;
-    text-align: center;
-}
-.texto-main h2{
-    margin: 2vw;
-    text-align: center;
-}
-.texto-main p{
-    margin-left: 3vw;
-    margin-top: 1vw;
-    font-size: 1.8vw;
-}
-.garrafas-main {
-    display: flex;
-    margin-top: 2vw;
-    margin-left: 4vw;
-}
-.garrafas-main img {
-width: 25vw;
-}
+.carousel-container {
+      width: 50%;
+      position: relative;
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+      
+    }
+.carousel-track {
+      display: flex;
+      transition: transform 1.0s ease;
+    }
+.carousel-item {
+     
+      flex-direction: column;
+      opacity: 0.4;
+      transform: scale(0.7);
+      transition: transform 1.0s, opacity 0.5s;
+    }
+.carousel-item img {
+      width: 20vw;
+    }
+    .carousel-item.active {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    .carousel-item:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 0.3rem 0.7rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .nav.prev { left: -20rem; }
+    .nav.next { right: -20rem; }
+
+
 /*-------------------Chope---------------------*/
 .chope {
     display: flex;
-    height: 28vw;
+    flex-direction: column;
+    height: 100%;
     background-color: white;
     max-width: 100%;
     margin-top: 0.3rem;
 }
+.chopeira:hover {
+    background-color: rgba(237, 248, 78, 0.336);
+    transition: background-color 0.8s ease;
+    cursor: pointer;
+}
+.chope h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    padding: 0.5vh;
+}
 .chope-img {
     display: flex;
-  
+    background-image: linear-gradient(   
+    to bottom, 
+    rgba(0, 0, 0, 0.151)0%,
+    rgb(255, 255, 255) 30%, 
+    rgb(255, 255, 255) 70%,
+    rgba(0, 0, 0, 0.151) 100%);
+    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
+   }
+   .chopeira {
+    display: flex;
+    gap: 2vw;
    }
    .chopeira img{
-    max-height: 100%;
-    margin-top: 0px;
-    border-radius: 0 100px 50px 0;
+    height: 20vw;
+    margin: 1vw 0;
+    border-radius: 0 20px 20px 0;
    }
-   .barril img {
-    height: 95%;
-    margin-top:1vw;
-   }
-    .texto-chope {
-     font-family: lato;
-     font-style: italic;
-     font-size: 1.8vw;
-     line-height: 2cap;
-     margin-top: 3vw;
-     padding-right: 2.5vw;
-     text-align: center;
-    }
 
     /*---------------------produção---------------------*/
     .produ {
-        margin-top: 0.5vh;
         flex-wrap: nowrap;
         display: flex;
-        height: 20vw;
+        height: 15vw;
         overflow: hidden;
-        
-
+        border-bottom: 20px solid rgba(126, 124, 124, 0.534);
     }
     .fabrica img{
         max-height: 100%;
     }
-
-/*-------------------Sobre---------------------*/
-
-
-.adogtown {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin-top: 0.5vw;
-}
-.adogtown img{
-width: 20vw;
-height:20vw;
-margin-right: 2vw;
-
-}
-
-.adogtown-texto {
-    margin-top: 0.5vw;
-}
-.adogtown h1{
-    font-family: lato;
-    font-style: italic;
-    font-size: 2.8vw;
-    color: rgb(0, 0, 0);
-    margin-left: 4rem;
-    padding-top: 5vh;
-}
-.adogtown p{
     
+/*-------------------ENTREGAS---------------------*/
+.entrega {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.2vw;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    padding: 0.5vh 0;
+  
+}
+.texto-main {
+    padding-top: 2vh;
+    width:100%;
     font-family: lato;
     font-style: italic;
-    font-size: 1.8vw;
-    line-height: 1.9cap;
+    font-size: 1.5vw;
     text-align: center;
+    line-height: 3cap;
+    background-image: linear-gradient(   
+    to bottom, 
+    rgba(0, 0, 0, 0.151)0%,
+    rgb(255, 255, 255) 30%, 
+    rgb(255, 255, 255) 70%,
+    rgba(0, 0, 0, 0.151) 100%);
+   
     color: rgb(0, 0, 0);
-   padding-bottom: 7vh;
-   margin: 2vh;
-}
-
-
-   /*-------------------Eventos---------------------*/
-
-.eventos {
-    background-color: black;
-    padding: 2vw;
-    margin-top: 0.5vw;
-}
-.titulo-evento {
-    font-family: lato;
-    color: white;
-     font-style: italic;
-     font-size: 20px;
-     line-height: 2cap;
-     margin-left: 40px;
-     
-}
-.ultimas{
-    display: flex;
-    margin-top: 30px;
-    margin-left: 40px;
-    height:44vh;
-    gap:30px;
 }
 
 /*---------------------------------------------Responsivo-------------------------------------------------------*/
 
 @media (max-width: 700px){
     .capa {
-        display: none;
+       background-image: url(../img/index/capa-mobile.jpg);
+        background-size: cover;
+        width: 100%;
+        height:105vw;
+        margin-top: 2rem;
+        overflow: hidden;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
     }
+    .capa h1{
+        font-size: 1rem;
+        margin-top: 50vw;
+        margin-right: 0vw;
+        background-color: rgba(0, 0, 0, 0.164);
+        border-radius: 20px;
+        padding: 5px 10px
+    }  
+
     .logo-capa img {
-        display: none;
+        margin-top: 5vw;
+        width: 15vw;
+        height: 15vw;
+        margin-right: 3vw;
     }
     .capa-mobile img {
-        display: block;
+        display:block;
         width: 100%;
         margin-top: 5rem;
        
     }
-    .adogtown {
-        display: none;
-    }
-    .cervejas {
-       flex-direction: column;
-       background-image:none;
-       margin:0;
-       gap:1vw
-         
-    }
-    .lager{
-            width: 100%;
-            display: flex;
-            height: 100%;
-            margin-left: 0vw;
-            margin-top: 0vh;
-            background-color: rgb(255, 255, 255);
-            border-radius: 0px;
-            margin-bottom: 0vh;
-            border:none;
-            transition: background-color 0.3s ease-in-out;
-    }
-    .garrafa-lager img {
-        margin-top: 2vw;
-        height: 12rem;
+    /*-------------------carousel---------------------*/
+    .brejas-titulo {
+        font-size: 3vw;
+        padding: 0.5vh;
+            }
+    .brejas {
+        height: 70vw;
+        z-index: 10;
+        overflow: hidden;
+        }
+        .carousel-container {
+          margin-left: -33vw;
+        }
+        .carousel-item img {
+          width: 40vw;
+          margin: -4vw;
+        }
         
-    }
-    .info-lager {
-        margin-left: 7vw;
-    }
-    .titulo-lager img {
-        width: 42%;
-        margin-left: 8.5vw;
-        margin-top: 4vh;
-    }
-    .chamada-lager {
-        width: 60vw;
-        max-height: 1vw;
-        font-size: 5vw;
-        margin-top: 3vh;
-    }
-
-/*-------------------APA---------------*/
-    .apa {
-        width: 100%;
-            display: flex;
-            height: 100%;
-            margin-left: 0vw;
-            margin-top: 0vh;
-            background-color: rgb(255, 255, 255);
-            border-radius: 0px;
-            margin-bottom: 0vh;
-            border:none;
-            transition: background-color 0.3s ease-in-out;
-    }
-    .garrafa-apa img {
-        margin-top: 2vw;
-        height: 13rem;
-        
-    }
-    .info-apa {
-        margin-left: 7vw;
-    }
-    .titulo-apa img {
-        width: 42%;
-        margin-left: 8.5vw;
-        margin-top: 2vh;
-    }
-    .chamada-apa {
-        width: 60vw;
-        max-height: 1vw;
-        font-size: 5vw;
-        margin-top: 3vh;
-    }
-/*-------------------Main---------------------*/
-.main-page {
-    display: flex;
-}
-.garrafas-main {
-    flex-direction: column;
-    margin-top: 1rem;
-    gap:2vh;
-}
-.texto-main {
-    font-family: lato;
-    font-style: italic;
-    margin-left: 0vw;
-    font-size: 3vw;
-    margin-top: 5vw;
-    border-radius: 0 30px 30px 0;
-}
-.texto-main h1{
-    margin: 2vw;
-    margin-top: 2vw;
-    text-align: center;
-}
-.texto-main h2{
-    margin: 2vw;
-    text-align: center;
-}
-.texto-main p{
-    margin-top: 1vw;
-    font-size: 3.8vw;
-    text-align: center;
-}
-
+        .nav.prev { left: -2rem; }
+        .nav.next { right: -10rem; }
 
 /*-------------------Chope---------------------*/
-
-    .chope {
-    margin-top: 0.3rem;
-    height: 110vw;
-    background-color: white;
-    flex-direction: column-reverse;
-    max-width: 100%;
-   }
-   .chope-img {
+.chope {
+    margin-top: 0rem;
+}
+.chope h1 {
+    font-size: 6.5vw;
+    padding: 0.5vh;
+}
+.chope-img {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    background-image: linear-gradient(   
+    to bottom, 
+    rgba(0, 0, 0, 0.151)0%,
+    rgb(255, 255, 255) 30%, 
+    rgb(255, 255, 255) 70%,
+    rgba(0, 0, 0, 0.151) 100%);
+    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
    }
    .chopeira img{
-    margin-top: 1rem;
     height: 60vw;
-    border-radius: 0 30px 0 0 ;
-    max-width: 100%;
+    margin-bottom:3vw;
+    border-radius: 0 20px 20px 0;
    }
-   .barril img {
-    max-height: 60vw;
-    margin-top: 1rem;
-    margin-right: 0.5rem;
-   }
-    .texto-chope {
-    margin-top: 3vw;        
-    font-size: 4vw;
-    line-height: 1.7cap;
-    padding-right: 10px;
-    }
-    .texto-chope p {
-        margin-top: 1vh;
-    }
-
+ 
+}
  /*---------------------produção---------------------*/
  .produ {
     flex-wrap: nowrap;
     display: flex;
-    height: 100px;
+    height: 23vw;
     overflow: hidden;
-
-
 }
 .fabrica img{
     height: 23vw;
     overflow: hidden;
 }
-
-/*-------------------Sobre---------------------*/
-
-
-.adogtown-mobile img{
-    height: 100%;       
-    margin-top: 1vh;
+/*-------------------ENTREGAS---------------------*/
+.entrega {
+    font-size: 2.8vw;
+    
 }
+.texto-main {
+    font-size: 2.8vw;
+}
+.texto-main p{
+    margin-top: 3vw;
+    font-size: 4.5vw;
+    line-height: 2cap;
+}
+.texto-main h2 {
+    margin-top: 3vw;
+
+}
+/*-------------------options---------------------*/
 
 
-/*-------------------Eventos---------------------*/
 
-.eventos {
-background-color: black;
-padding: 20px;
-}
-.titulo-evento {
-font-family: lato;
-color: white;
- font-style: italic;
- font-size: 10px;
- margin-left: 10px;
- 
-}
-.ultimas{
-display: flex;
-margin-top: 30px;
-margin-left: 0px;
-height:200px;
-gap:30px;
-}
+
+
+
+
+
+
 }

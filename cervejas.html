@@ -7,126 +7,207 @@
     <link rel="stylesheet" href="css/cervejas.css">
     <script src="https://kit.fontawesome.com/b07f4922ff.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
-    <header class="container">
+    <header class="container" id="container">
       
-            <div class="logo">
-                <a href="index.html">
+                <div class="logo">
+                    <a href="index.html">
                     <img src="img/logo.png" alt="DogTownBrew">
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="bem-vindo">
-                    <p>Bem vindo a DogTown Brew!!</p>
-            </div>
+                <div class="bem-vindo">
+                    <p>Bem vindo a cervejaria DogTown Brew!!</p>
+                </div>
 
-            <div class="whatsapp">
-                    <p class="contato">Contato pelo:</p>
-                    <a class="whatsapp-button" href="https://wa.me/+5516997698989" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <div class="contatos">
-                    <p class="ligue">ou ligue:</p>
-                    <p class="numero">(16) 99769-8989</p>
-            </div>
-            </div>
-
-            
+                <div class="whatsapp">
+                        <p class="contato">Contato pelo:</p>
+                        <a class="whatsapp-button" href="https://wa.me/+5516997698989" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                     <div class="contatos">
+                        <p class="ligue">ou ligue:</p>
+                        <p class="numero">(16) 99769-8989</p>
+                    </div>
+                </div>                
+                <div class="social"> 
+                        <p class="siga"> Siga e compartilhe no:</p>
+                        <a class="insta" href="https://www.instagram.com/dogtownbrewrp/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a>
                 
-            <div class="social"> 
-                <p class="siga"> Siga e compartilhe no:</p>
-                <a class="insta" href="https://www.instagram.com/dogtownbrewrp/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-                </a>
-        
-                <a class="face" href="https://www.facebook.com/dogtownbrewrp/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
+                        <a class="face" href="https://www.facebook.com/dogtownbrewrp/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                        </a>
+                </div>
             
-                                                                                                                      
-
+                                                                                                                                        
+                <nav>
+                    <div class="mobile-menu">
+                        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
+                    </div>
+        
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html">INÍCIO</a></li>
+                        <li><a href="cervejas.html">CERVEJAS</a></li>
+                        <li><a href="chope.html">BARRIL DE CHOPE</a></li>
+                        <li><a href="promo.html">PROMOÇÕES</a></li>
+                        <li><a href="eventos.html">EVENTOS</a></li>
+                        <li><a href="sobre.html">SOBRE A DOGTOWN</a></li>
+                        <li><a href="contato.html">CONTATO</a></li>
+                    </ul> 
+                    <div id="icone-carrinho">
+                      <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrinho" width="24">
+                      <span id="contador-itens">0</span>
+                    </div>
+            </nav>
     </header>
 
-    <nav> 
-      <div class="mobile-menu">
-        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
-    </div>
-        
-        <ul class="nav-list">
-            <li><a href="index.html">INÍCO</a>
-            <li><a href="cervejas.html">CERVEJAS</a></li>
-            <li><a href="chope.html">BARRIL DE CHOPE</a></li>
-            <li><a href="promo.html">PROMOÇÕES</a></li>
-            <li><a href="eventos.html">EVENTOS</a></li>
-            <li><a href="sobre.html">SOBRE A DOGTOWN</a></li>
-            <li><a href="contato.html">CONTATO</a></li>
-        </ul>        
-    </nav>
 
+<main>
 
-    <div class="main-page">
-        <div class="texto-main">
-         <h1>Nossas brejas agora disponível  para entrega dentro de Ribeirão Preto.</h1>
-                 <p>Disponível em garrafas de 500ml e 1 litro.</p>
-             <p>Barril de chope de 20, 30 e 50 litros.</p>
-                 <p>Pedido minimo de 3 garrafas.</p>
-                 <h2>Faça o seu pedido pelo nosso Whatsapp ou entre em contato.</h2>
+<div class="titulo">NOSSAS CERVEJAS</div>
+<div class="content">
+    
+    <section class="cervejas-container">
+      
+        <div class="cerveja-card">
+        <img src="img/cervejas/breja-lager.png" alt="DogTown Lager">
+        <div class="info">
+          <h3>DogTown - LAGER</h3>
+          <p>500ml</p>
+          <p class="price">R$13,00</p>
+          <button class="add">Adicionar ao carrinho</button>
         </div>
-        <div class="garrafas-main">
-         <img src="img/cervejas/garrafa-copo-lager.png">
-         <img src="img/cervejas/garrafa-copo-apa.png">
-         </div>
-     </div>
+      </div>
 
+        <div class="cerveja-card">
+        <img src="img/cervejas/breja-ipa.png" alt="DogTown IPA">
+        <div class="info">
+          <h3>DogTown - IPA</h3>
+          <p>500ml</p>
+          <p class="price">R$18,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
 
+      <div class="cerveja-card">
+        <img src="img/cervejas/breja-apa.png" alt="DogTown APA">
+        <div class="info">
+          <h3>DogTown - APA</h3>
+          <p>500ml</p>
+          <p class="price">R$15,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
 
+      <div class="cerveja-card">
+        <img src="img/cervejas/breja-bitter.png" alt="DogTown Bitter">
+        <div class="info">
+          <h3>DogTown - BITTER</h3>
+          <p>500ml</p>
+          <p class="price">R$18,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="cerveja-card">
+        <img src="img/cervejas/breja-porter.png" alt="DogTown Porter">
+        <div class="info">
+          <h3>DogTown - PORTER</h3>
+          <p>500ml</p>
+          <p class="price">R$17,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+      <div class="cerveja-card">
+        <img src="img/cervejas/lager-1lt.png" alt="DogTown Lager">
+        <div class="info">
+          <h3>DogTown - LAGER</h3>
+          <p>1-litro</p>
+          <p class="price">R$15,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="cerveja-card">
+        <img src="img/cervejas/ipa-1lt.png" alt="DogTown IPA">
+        <div class="info">
+          <h3>DogTown - IPA</h3>
+          <p>1-litro</p>
+          <p class="price">R$22,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="cerveja-card">
+        <img src="img/cervejas/apa-1lt.png" alt="DogTown APA">
+        <div class="info">
+          <h3>DogTown - APA</h3>
+          <p>1-litro</p>
+          <p class="price">R$20,00</p>
+          <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="cerveja-card">
+        <img src="img/cervejas/bitter-1lt.png" alt="DogTown BITTER">
+        <div class="info">
+          <h3>DogTown - BITTER</h3>
+          <p>1-litro</p>
+          <p class="price">R$22,00</p>
+        <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <div class="cerveja-card">
+        <img src="img/cervejas/porter-1lt.png" alt="DogTown Porter">
+        <div class="info">
+          <h3>DogTown - PORTER</h3>
+          <p>1-litro</p>
+          <p class="price">R$20,00</p>
+        <button class="add">Adicionar ao carrinho</button>
+        </div>
+      </div>
+      
+    </section>
 
     
-           
-    <div class="cervejas">
 
-        <div class="lager" type="button" onclick="window.location.href='cervejas.html'">
-        
-            <div class="garrafa-lager">
-                <img src="img/cervejas/garrafa-lager.png">
-            </div>
-                
-            <div class="info-lager">
-                <div class="titulo-lager">
-                    <img src="img/cervejas/titulo-lager.png">
-                </div> 
-                    <h1 class="chamada-lager">"Leve e saborosa, é a cerveja é ideal para todos os gostos e ocasiões."</h1>
-                    <p class="texto-lager">Uma boa cerveja lager é conhecida por sua leveza, frescor e sabor suave. Ela passa por um processo de fermentação em baixas temperaturas, o que resulta em um perfil limpo e cristalino. Com notas maltadas delicadas e um leve amargor do lúpulo, a lager é perfeita para momentos de descontração, sendo uma escolha clássica para acompanhar petiscos ou churrascos.</p>
-
-            </div>
+    <aside class="slide-carrinho" id="carrinhoAside">
+      <div class="box">
+        <div class="resumo">Resumo da compra</div>
+        <div id="carrinho-itens"></div>
+    
+        <div class="info-total">
+          <div><span>Sub-total</span><span id="subtotal">R$ 0,00</span></div>
+          <div>Taxa de Entrega: <span id="frete">R$ 15,00</span></div>
         </div>
-        
-        <div class="apa" type="button" onclick="window.location.href='cervejas.html'">
-            <div class="garrafa-apa">
-                <img src="img/cervejas/garrafa-apa.png">
-            </div>
-            <div class="info-apa">
-                <div class="titulo-apa">
-                <img src="img/cervejas/titulo-apa.png">
-                </div>
-                <h1 class="chamada-apa">"Encorpada e muuuito saborosa, é a cerveja que vem arrancando muitos elogios."</h1>
-                <p class="texto-apa">Criamos uma APA equilibrada, resultado de muitos ajustes no mapa e escolha dos insumos de melhor qualidade. O aroma cítrico e o amargor suave se harmonizam perfeitamente. Cada gole traz frescor e notas frutadas envolventes. Uma receita afinada para quem aprecia qualidade e sabor.</p>
-
-            </div>
+    
+        <div class="total">
+          <span>Total</span>
+          <span id="total">R$ 0,00</span>
         </div>
-    </div>
-       
-        
+      </div>
+      <button class="btn" id="finalizarPedido">Finalizar Pedido</button>
+    </aside>
+
+    
+  </div>
 
 
+</main> 
+
+
+   
 
     <footer class="footer">
 
@@ -171,6 +252,28 @@
     <img src="img/index/footer-mobile.png">
 </div>
 
+
     <script src="js/mobile-navbar.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/whatsapp.js"></script>
+
+
+
+    <div id="promptCliente" class="prompt hidden">
+      <div class="prompt-box">
+        <h3>Finalizar Pedido</h3>
+        <input type="text" id="nomeCliente" placeholder="Seu nome / * preenchimento obrigatório" />
+        <input type="text" id="telefoneCliente" placeholder="Seu telefone / * preenchimento obrigatório" />
+        <input type="text" id="enderecoCliente" placeholder="Seu endereço / * preenchimento obrigatório" />
+        <input type="text" id="emailCliente" placeholder="Seu e-mail / opcional" />
+        <div class="botoes">
+          <button id="cancelarPrompt">Cancelar</button>
+          <button id="enviarPedido">Enviar Pedido</button>
+        </div>
+      </div>
+    </div>
+
+
+
 </body>
 </html>
