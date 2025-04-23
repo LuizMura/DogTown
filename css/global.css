@@ -34,8 +34,8 @@ a {
     to bottom, 
     rgb(255, 255, 255)0%,
     rgb(255, 255, 255) 48%, 
-    black 40%,
-    black 100%);
+    rgb(0, 0, 0) 40%,
+    rgb(0, 0, 0) 100%);
     max-width: 100%;
     height: 6.5rem;
     transition: 0.5s;
@@ -188,23 +188,33 @@ i:hover {
     display: none;
   }
   #icone-carrinho {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     margin-left: auto; /* ou ajuste conforme seu layout */
-  }
-  
+    height: 55px;
+    width: 55px;
+    margin-top: 3.4vw;
+    margin-left: -7vw;
+           ;
+
+    &:hover { background-color: rgba(76, 143, 98, 0.932);
+            border-radius: 30px;
+            border: 2px solid rgb(255, 255, 255)
+    }
+}
   #icone-carrinho img {
     width: 28px;
     height: 28px;
     filter: brightness(0) invert(1); /* transforma em branco */
-    margin-top: 4.2rem;
-    margin-right: 3.5rem;
+    margin-top: 1rem;
+    margin-left: 0.7vw;
+    
   }
   
   #contador-itens {
     position: absolute;
-    top: 3.7rem;
-    right: 2.5rem;
+    top: 0.3rem;
+    right: -0.1rem;
     background-color: red;
     color: white;
     font-size: 12px;
@@ -250,7 +260,7 @@ i:hover {
     margin-top: 3vh;
 }
 .developer img {
-    width: 23vh;
+    width: 20vh;
     margin-top: 3vh;
     
     
@@ -262,9 +272,32 @@ i:hover {
     background-color: rgb(112, 112, 112);
 }
 
- /*------------------------------------------responsive--------------------------------------------------------------------*/
+ 
+          
+@keyframes navLinkFade {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+    
+
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-5px) scale(1.1);
+    }
+}
+/*------------------------------------------responsive--------------------------------------------------------------------*/
    
- @media (max-width: 950px) {
+@media (max-width: 1200px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -280,14 +313,15 @@ i:hover {
         font-size: 35px;
         gap: 0.8rem;
         left: 1rem;
+        width: 80px
       }
       .bem-vindo, .siga, .contato, .contatos{
         display: none;
       }
       .whatsapp-button {
-        position: fixed;
+        position: absolute;
         top: 0.2rem;
-        right: 3rem;
+        right: 1.8rem;
         background-color: white;
         border-radius: 20%;
         padding: 0 6px;
@@ -330,39 +364,22 @@ i:hover {
         cursor: pointer;
         z-index: 1000;
     }
-    
     .nav-list.active {
     transform: translateX(0);
     }
-
     #icone-carrinho {
-        margin-left: 22rem;
-        margin-top: -6.3rem;
+        margin-left: 7.5rem;
+        margin-top: -3.1rem;
       }
-          
-@keyframes navLinkFade {
-    from { 
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    }
-    
-
-
-@keyframes translateY {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(-5px) scale(1.1);
-    }
-}
+      #icone-carrinho img{
+        margin-left: -0.5rem;
+      }
+      #contador-itens {
+        right: 0.2rem;
+      }
+        
 .footer {
-    letter-spacing: 0;;
+    letter-spacing: 0;
 }
 .footer-logo img{
    display: none;
@@ -380,8 +397,9 @@ i:hover {
     font-size: 7.5vw;
 }
 .developer img {
-    width: 23vw;
+    width: 22vw;
+    margin-top: 1.5vw;
 }
 
- }
+}
 

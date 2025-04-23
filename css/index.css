@@ -4,6 +4,7 @@
 /*-------------------------------------Principal---------------------------------------*/
 
 .capa {
+    position: sticky;
     background-image: url(../img/index/capa.jpg);
     background-size: cover;
     width: 100%;
@@ -191,11 +192,11 @@
     font-size: 1.2vw;
     text-align: center;
     color: rgb(107, 107, 107);
-    padding: 0.5vh 0;
+   
   
 }
 .texto-main {
-    padding-top: 2vh;
+    padding: 2vh 0;
     width:100%;
     font-family: lato;
     font-style: italic;
