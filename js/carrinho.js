@@ -94,18 +94,3 @@ carrinhoItens.addEventListener("click", e => {
     atualizarCarrinho();
   }
 });
-
-// finalizarBtn?.addEventListener("click", () => {
-//   if (carrinho.length === 0) {
-//     alert("Seu carrinho está vazio.");
-//     return;
-//   }
-
-//   if (confirm("Deseja finalizar o pedido?")) {
-//     carrinho = [];
-//     localStorage.removeItem("carrinho");
-//     atualizarCarrinho();
-//     alert("Pedido finalizado com sucesso! 🍻");
-//   }
-// });
-
