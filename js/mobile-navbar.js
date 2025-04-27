@@ -40,34 +40,7 @@ class MobileNavbar {
 const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li");
 mobileNavbar.init();
 
-// ------------------------- CARRINHO SLIDE -------------------------
 
-const iconeCarrinho = document.getElementById('icone-carrinho');
-const carrinhoAside = document.getElementById('carrinhoAside');
-
-iconeCarrinho.addEventListener('click', (e) => {
-  e.stopPropagation();
-  carrinhoAside.classList.toggle('aberto');
-});
-
-carrinhoAside.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
-
-// Fecha carrinho e menu mobile ao clicar fora
-document.addEventListener('click', (e) => {
-  const navList = document.querySelector(".nav-list");
-  const mobileMenu = document.querySelector(".mobile-menu");
-
-  if (!carrinhoAside.contains(e.target) && !iconeCarrinho.contains(e.target)) {
-    carrinhoAside.classList.remove('aberto');
-  }
-
-  if (!navList.contains(e.target) && !mobileMenu.contains(e.target)) {
-    navList.classList.remove('active');
-    mobileMenu.classList.remove('active');
-  }
-});
 
 // ------------------------- ATIVAR LINK DE MENU -------------------------
 

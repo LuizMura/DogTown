@@ -110,7 +110,7 @@ main {
 }
 
 .cerveja-card img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -151,7 +151,7 @@ aside {
   right: 0;
   transition: none;
   font-family: lato;
-  width: 25vw;
+  width: 24vw;
   background-color: #f1f1f1;
   border-radius: 12px;
 }
@@ -161,10 +161,9 @@ aside {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  position: sticky;
   top: 2vw;
   width: 21vw;
-  margin: 1vw;
+  margin: 0.5vw 0.5vw;
   
 }
 
@@ -258,14 +257,14 @@ aside {
 }
 
 .btn {
-  margin-top: 1rem;
+  margin: 0.6rem;
   background-color: #479b37;
   border: none;
   color: white;
-  width: 100%;
+  width: 95%;
   padding: 0.65rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 8px;
   cursor: pointer;
   &:hover {
@@ -400,9 +399,18 @@ aside {
 .resumo {
   font-size: 1.2rem;
 }
-
+.quantidade {
+  width: 5.8vw;
+  text-align: center;
+  font-size: 0.9em;
+  
+}
+.preco {
+  font-size: 0.9em;
+  margin-right: -3.3vw;
+}
 .item-carrinho {
-  gap: 3vw;
+  gap: 4vw;
   padding-bottom: 8px;
 }
 
