@@ -51,10 +51,9 @@ a {
 .bem-vindo {
     width: 100%;
     font-family: lato;
-    font-style: italic;
     font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-left: 2.5rem;
+    margin-top: 1.4rem;
+    margin-left: 2.3rem;
     margin-right: 2rem;  
     white-space: nowrap;
     text-overflow:ellipsis;
@@ -67,7 +66,6 @@ a {
 }
 .contato {
     font-family: lato;
-    font-style: italic;
     font-size: 1.3rem;
     margin-top: 1.4rem;
     margin-right: -10px;
@@ -80,7 +78,6 @@ a {
     margin-top: 1px;
     font-family: lato;
     font-size: 1.2rem;
-    font-style: italic;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -102,7 +99,7 @@ a {
     gap: 20px;
     right: 0px;
     margin-top: 2px;
-    margin-right: 30px;
+    margin-right: 4rem;
 
 }
 .insta {
@@ -111,28 +108,17 @@ a {
 }.insta:hover {
     color: rgb(243, 73, 206);
 }
-.face {
-    color:rgb(118, 145, 235);
-}
-.face:hover {
-    color: rgb(27, 56, 221);
-}
-
 
 .siga {
     width: 150px;
     font-family: lato;
     font-size: 1.3rem;
-    font-style: italic;
     margin-top: 3px;
     line-height: 22px;
     margin-right: -20px;
     text-align: center;
-    
 }
 
-
-    
 i:hover {
     animation: translateY 0.7s infinite alternate;
 }
@@ -193,8 +179,8 @@ i:hover {
     margin-left: auto; /* ou ajuste conforme seu layout */
     height: 55px;
     width: 55px;
-    margin-top: 3.4vw;
-    margin-left: -7vw;
+    margin-top: 3.3rem;
+    margin-left: -7rem;
            ;
 
     &:hover { background-color: rgba(76, 143, 98, 0.932);
@@ -244,6 +230,8 @@ i:hover {
 }
 .rede {
     margin-top: 2vh;
+    display: flex;
+    justify-content: space-around;
 }
 .rede a{
     color: rgb(216, 215, 215);
@@ -310,11 +298,10 @@ i:hover {
        margin-left: 0rem;
       }
       .social {
-        font-size: 35px;
-        gap: 0.8rem;
-        left: 1rem;
-        width: 80px
-      }
+        font-size: 40px;
+        left: 2.3rem;
+        top: -0.2rem;
+    }
       .bem-vindo, .siga, .contato, .contatos{
         display: none;
       }
