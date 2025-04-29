@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Seu carrinho está vazio.");
       return;
     }
+    
     promptCliente.classList.remove("hidden");
   });
 
@@ -155,16 +156,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("emailCliente").value.trim();
     const telefone = document.getElementById("telefoneCliente").value.trim();
     const endereco = document.getElementById("enderecoCliente").value.trim();
+    const termos = document.getElementById("termos").checked;
 
     if (!nome || !telefone || !endereco) {
       alert("Por favor, preencha nome, email, telefone e endereço.");
       return;
     }
-
+    if (!termos) {
+      const termosEl = document.getElementById("termos");
+      termosEl.classList.add("checkbox-invalido");
+      alert("Você precisa declarar ter mais de 18 anos antes de enviar o pedido.");
+      return;
+    } else {
+      document.getElementById("termos").classList.remove("checkbox-invalido");
+    }
     const { subtotal, frete, total } = calcularTotais();
 
     let msg = "*🍺 Pedido DogTown Brew*\n\n";
-    msg += `👤 *Nome:* ${nome}\n📧 *Email:* ${email}\n📞 *Telefone:* ${telefone}\n🏠 *Endereço:* ${endereco}\n\n`;
+    msg += `👤 *Nome:* ${nome}\n📧 *Email:* ${email}\n📞 *Telefone:* ${telefone}\n🏠 *Endereço:* ${endereco}\n🔞 ${termos ? "Maior de 18 anos" : "Não confirmado"}\n\n`;
 
     carrinho.forEach(item => {
       msg += `• ${item.nome} (${item.volume}) - ${item.quantidade}x - R$ ${item.preco.toFixed(2)}\n`;
@@ -184,14 +193,15 @@ document.addEventListener("DOMContentLoaded", () => {
     carrinho = [];
     atualizarCarrinho();
   });
-  function mostrarCarrinhoPorTempo(segundos = 3) {
-    console.log("Mostrando carrinho por tempo..."); // Teste
-    carrinhoAside.classList.add('aberto');
+
+  // function mostrarCarrinhoPorTempo(segundos = 3) {
+  //   console.log("Mostrando carrinho por tempo..."); // Teste
+  //   carrinhoAside.classList.add('aberto');
   
-    clearTimeout(mostrarCarrinhoPorTempo.timeoutId);
-    mostrarCarrinhoPorTempo.timeoutId = setTimeout(() => {
-      carrinhoAside.classList.remove('aberto');
-    }, segundos * 1000);
-  }
+  //   clearTimeout(mostrarCarrinhoPorTempo.timeoutId);
+  //   mostrarCarrinhoPorTempo.timeoutId = setTimeout(() => {
+  //     carrinhoAside.classList.remove('aberto');
+  //   }, segundos * 1000);
+  // }
   
 });

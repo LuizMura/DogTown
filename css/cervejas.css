@@ -36,7 +36,7 @@
 .prompt-box .botoes {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 20px;
 }
 
 .prompt-box button {
@@ -52,6 +52,24 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  
+  }
+  .termos {
+    display: flex;
+    font-size: 2.5vh;
+    margin-top: 1vh;
+    margin-left: 0.2vw;
+  }
+  #termos {
+    width: 30px;
+    margin-left: 2vh;
+  }
+  .campo-invalido {
+    border: 2px solid red;
+  }
+  .checkbox-invalido {
+    outline: 2px solid red;
+    outline-offset: 4px;
   }
 /* --------------------------------------------------------------------------- */
 
@@ -113,7 +131,12 @@ main {
   width: 80%;
   height: auto;
 }
-
+.abvIbu {
+  font-size: 1.8vh;
+  font-family: "lato", sans-serif;
+  margin-bottom: 1vh;
+  color: rgb(133, 133, 133);
+}
 .cerveja-card .info h3 {
   font-size: 1.1vw;
   font-family: "Orbitron", sans-serif;
@@ -193,7 +216,7 @@ aside {
 .volume {
   font-weight: 400;
   color: #888;
-  font-size: 0.8em;
+  font-size: 0.9em;
   
 }
 .preco {
