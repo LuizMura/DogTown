@@ -1,3 +1,5 @@
+AOS.init();
+
 // ------------------------- MENU MOBILE -------------------------
 
 class MobileNavbar {

@@ -12,6 +12,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -29,10 +31,10 @@
 </head>
 
 <body>
-    <header class="container" id="container">
+    <header class="container" id="container" data-aos="fade-down" data-aos-duration="1000">
       
             <div class="logo">
-                <a href="index.html">
+                    <a href="index.html">
                     <img src="img/logo.png" alt="DogTownBrew">
                 </a>
             </div>
@@ -99,8 +101,8 @@
     
 
     <div class="capa">
-        <h1>"Nossa missão é fazer a melhor<br> cerveja para vocês."</h1>
-        <div class="logo-capa">
+        <h1 data-aos="fade-left" data-aos-duration="1500">"Nossa missão é fazer a melhor<br> cerveja para vocês."</h1>
+        <div class="logo-capa" data-aos="fade-right" data-aos-duration="2000">
             <img src="img/index/logo.png">
         </div>
     </div>
@@ -236,6 +238,7 @@
 <div class="footer-mobile">
     <img src="img/index/footer-mobile.png">
 </div>
+
 
 <script src="js/mobile-navbar.js" defer></script>
 <script src="js/carrinho.js" defer></script>
