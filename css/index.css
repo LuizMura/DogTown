@@ -219,7 +219,7 @@ width: 15vw
      font-size: 1.7vw;
      line-height: 2cap;
      padding: 2vw 2.5vw;
-     text-align: center;
+     text-align:justify;
     }
 .texto-chope h1 {
     font-family: "Orbitron", sans-serif;
@@ -252,7 +252,6 @@ width: 15vw
     padding: 2vh 0;
     width:100%;
     font-family: lato;
-    font-style: italic;
     font-size: 1.5vw;
     text-align: center;
     line-height: 3cap;
@@ -375,12 +374,11 @@ width: 50vw
     flex-direction: column;
    }
 .texto-chope p{
-     font-family: lato;
-     font-style: italic;
+  margin: 2vw;
      font-size: 4vw;
      line-height: 2cap;
      padding: 2vw 2.5vw;
-     text-align: center;
+     text-align: justify;
     }
 .texto-chope h1 {
     font-family: "Orbitron", sans-serif;
