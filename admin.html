@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Administrador</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <section id="login-section">
+    <img src="img/logo2.png" alt="DogTownBrew" />
+            <h1>ADMINISTRAÇÃO<BR>DOGTOWN BREW ®</h1>
+    
+    <input id="email" type="email" placeholder="Email" />
+    <input id="senha" type="password" placeholder="Certeza que esqueceu" />
+    <button onclick="login()">Entrar</button>
+  </section>
+  <div class="voltar"><a href="index.html">VOLTAR AO SITE</a></div>
+  <section id="admin-section" style="display: none;">
+    <h2>Painel do Administrador</h2>
+    <button id="abrirPrompt">Adicionar Produto</button>
+    <div class="produtos-container" id="lista-produtos"></div>
+  </section>
+  
+  <!-- Prompt para adicionar/editar produto -->
+  <div id="produto-prompt" class="prompt hidden">
+    <div class="prompt-box">
+      <h3 id="titulo-prompt">Adicionar Produto</h3>
+      <label>Cervejas</a>
+        <select id="input-nome">
+            <option value="Dogtown - APA">APA</option>
+            <option value="Dogtown - LAGER">LAGER</option>
+            <option value="Dogtown - IPA"> IPA</option>
+            <option value="Dogtown - PORTER">PORTER</option>
+            <option value="Dogtown - BITTER">BITTER</option>
+        </select><br>
+        
+          <label>Imagens </label>
+          <select id="input-imagem"> <!-- Corrigido o id aqui -->
+              <option value="img/cervejas/breja-apa.png">APA 500ml</option>
+              <option value="img/cervejas/apa-1lt.png">APA 1 litro</option>
+              <option value="img/cervejas/breja-lager.png">LAGER 500ml</option>
+              <option value="img/cervejas/lager-1lt.png">LARGER 1 litro</option>
+              <option value="img/cervejas/breja-ipa.png">IPA 500ml</option>
+              <option value="img/cervejas/ipa-1lt.png">IPA 1 litro</option>
+              <option value="img/cervejas/breja-bitter.png">BITTER 500ml</option>
+              <option value="img/cervejas/bitter-1lt.png">BITTER 1 litro</option>
+              <option value="img/cervejas/breja-porter.png">PORTER 500ml</option>
+              <option value="img/cervejas/porter-1lt.png">PORTER 1 litro</option>
+              <option value="img/chope/barril-10.png">BARRIL 10 Litros</option>
+              <option value="img/chope/barril-20.png">BARRIL 20 Litros</option>
+              <option value="img/chopel/barril-30.png">BARRIL 30 Litros</option>
+              <option value="img/chope/barril-50.png">BARRIL 50 Litros</option>
+          </select><br>
+          
+        
+      <label>Tamanho </label>
+        <select id="input-tamanho">
+          <option value="500ml">500 ml</option>
+          <option value="1-litro">1 litro</option>
+          <option value="10-litro">10 litros</option>
+          <option value="20-litro">20 litros</option>
+          <option value="30-litro">30 litros</option>
+          <option value="50-litro">50 litros</option>
+        </select><br>
+
+      <label>Preço </label><input type="text" id="input-preco" placeholder="Preço (ex: 99.99)" required><br>
+
+      <label>ABV </label><input type="text" id="input-abv" placeholder="ABV%" required><br>
+        
+      <label>IBU </label><input type="text" id="input-ibu" placeholder="IBU%" required><br>
+        
+      <label>Estoque </label><input type="number" id="input-estoque" placeholder="Estoque" required><br>
+        
+      <label>Ordem:</label><input type="number" id="input-ordem" /><br>
+
+      <div class="botoes">
+        <button id="cancelarPrompt">Cancelar</button>
+        <button id="salvarProduto">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,204 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DogTownBrew</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://kit.fontawesome.com/b07f4922ff.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="128x128" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/b07f4922ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon-192x192.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "DogTown Brew",
-          "url": "https://seusite.com",
-          "logo": "https://seusite.com/logo.png",
-          "sameAs": [
-            "https://www.instagram.com/dogtownbrew",
-            "https://www.facebook.com/dogtownbrew"
-          ]
-        }
-        </script> -->
-        
-</head>
+  </head>
 
-<body>
-    <header class="container" id="container" data-aos="fade-down" data-aos-duration="1000">
-      
-            <div class="logo">
-                    <a href="index.html">
-                    <img src="img/logo.png" alt="DogTownBrew">
-                </a>
-            </div>
-
-            <div class="bem-vindo">
-                    <p>Bem vindo à cervejaria DogTown Brew!!</p>
-            </div>
-
-            <div class="whatsapp">
-                    <p class="contato">Contato pelo:</p>
-                    <a class="whatsapp-button" href="https://wa.me/+5516997698989" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <div class="contatos">
-                    <p class="ligue">ou ligue:</p>
-                    <p class="numero">(16) 99769-8989</p>
-            </div>
-            </div>                
-            <div class="social"> 
-                <p class="siga"> Siga e compartilhe no:</p>
-                <a class="insta" href="https://www.instagram.com/dogtownbrewrp/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-            
-                                                                                                                                                    
-                <nav>
-                    <div class="mobile-menu">
-                        <i class="fas fa-bars"></i> <!-- Ícone do menu -->
-                    </div>
-        
-                    <ul class="nav-list" id="nav-list">
-                        <li><a href="cervejas.html">CERVEJAS</a></li>
-                        <li><a href="chope.html">BARRIL DE CHOPP</a></li>
-                        <li><a href="promo.html">PROMOÇÕES</a></li>
-                        <li><a href="eventos.html">EVENTOS</a></li>
-                        <li><a href="sobre.html">SOBRE A DOGTOWN</a></li>
-                        <li><a href="contato.html">CONTATO</a></li>
-                    </ul> 
-                    <div id="icone-carrinho">
-                        <a href="cervejas.html">
-                          <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrinho" width="24">
-                          <span id="contador-itens">0</span>
-                        </a>
-                      </div>
-                    
-            </nav>
-
-          
-    </header>
-
-  <!-- Popup de verificação de idade -->
-<div id="popup-idade" class="popup-idade">
-    <div class="popup-conteudo">
-      <img src="img/index/logo.png" alt="DogTownBrew" class="logo-popup">
-      <h2>Você tem 18 anos ou mais?</h2>
-      <button id="btn-sim">Sim</button>
-      <button id="btn-nao">Não</button>
+  <body>
+    <!-- Popup de verificação de idade -->
+    <div id="popup-idade" class="popup-idade">
+      <div class="popup-conteudo">
+        <img src="img/index/logo.png" alt="DogTownBrew" class="logo-popup" />
+        <h2>VOCÊ TEM 18 ANOS OU MAIS?</h2>
+        <button id="btn-sim">Sim</button>
+        <button id="btn-nao">Não</button>
+      </div>
     </div>
-  </div>
-  
 
-        
-    
+    <div class="video-capa">
+      <video autoplay muted loop playsinline>
+        <source src="./videos/capa.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
 
-    <div class="capa">
-        <h1 data-aos="fade-left" data-aos-duration="1500">"Nossa missão é fazer a melhor<br> cerveja para vocês."</h1>
-        <div class="logo-capa" data-aos="fade-right" data-aos-duration="2000">
-            <img src="img/index/logo.png">
+      <!-- Película escura -->
+      <div class="overlay-dark"></div>
+      <!-- Navbar sobre o vídeo -->
+      <header>
+        <div class="navbar">
+          <div class="logo">
+           <a href="index.html"><img src="img/logo2.png" alt="DogTownBrew" /></a>
+            <h1>DOGTOWN BREW ®</h1>
+          </div>
+
+          <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+            <!-- Ícone do menu -->
+          </div>
+
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="loja.html">LOJA</a></li>
+            <li><a href="chope.html">BARRIL</a></li>
+            <li><a href="sobre.html">SOBRE</a></li>
+            <li><a href="contato.html">CONTATO</a></li>
+          </ul>
+
+          <div id="icone-carrinho">
+            <a href="loja.html">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/107/107831.png"
+                alt="Carrinho"
+                width="24"
+              />
+              <span id="contador-itens">0</span>
+            </a>
+          </div>
         </div>
+      </header>
+
+      <!-- Conteúdo centralizado -->
+      <div class="overlay-content">
+        <p>NOSSA MISSÃO</p>
+        <h1>FAZER A MELHOR CERVEJA PARA VOCÊS</h1>
+      </div>
     </div>
 
-<div class="brejas-titulo">
-    
-    <h1>CERVEJAS DOGTOWN</h1>
-    </div>
-        
-    <div class="brejas">
+    <div class="section2">
+      <div class="brejas">
         <div class="carousel-container">
-              <button class="nav prev">&#10094;</button>
-            <div class="carousel-track" id="carouselTrack">
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-lager.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-apa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-ipa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-bitter.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-porter.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-lager.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-apa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-ipa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-bitter.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-porter.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-lager.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-apa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-ipa.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-bitter.png"></a></div>
-              <div class="carousel-item"><a href="cervejas.html"><img src="img/cervejas/breja-porter.png"></a></div>
+          <button class="nav prev">&#10094;</button>
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-lager.png"
+              /></a>
             </div>
-              <button class="nav next">&#10095;</button>
-        </div>
-    </div>
-
-
-            
-    <div class="chope">
-            <h1>CHOPP DOGTOWN</h1>
-        <div class="chope-img">   
-            <div class="chopeira"><a href="chope.html">
-                <img src="img/chope/torneira.jpg">
-                <img src="img/chope/barril.png"></a>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-apa.png"
+              /></a>
             </div>
-            
-            <div class="texto-chope">     
-                <p> "Barril de Chopp é a melhor opção para suas festas, churrascos e confraternizações. Além de econômico e prático, reduz desperdícios e embalagens descartáveis. Temos opções para todos os gostos, tornando a experiência mais especial."</p>
-                <h1>DISPONÍVEIS:<br> LAGER - APA - IPA - BITTER - PORTER</p2>
-                <h1></h1>
-            </div>    
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-ipa.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-bitter.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-porter.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-lager.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-apa.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-ipa.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-bitter.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-porter.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-lager.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-apa.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-ipa.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html"
+                ><img src="img/cervejas/breja-bitter.png"
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="cervejas.html">
+                <img src="img/cervejas/breja-porter.png"
+              /></a>
+            </div>
+          </div>
+          <button class="nav next">&#10095;</button>
         </div>
+      </div>
     </div>
 
-    <div class="produ">
-        <div class="fabrica">
-            <img src="img/produ/produ1.jpg">
+
+
+        <div class="chope">   
+                <img class="torneira" src="img/chope/torneira.jpg">
+                <img class="barril" src="img/chope/barril.png"></a>
+                <div class="chope-texto">
+                  <p>CHOPP DOGTOWN</p>    
+                  <h1>A MELHOR ESCOLHA PARA SEU EVENTO.</h1>
+                  <div class="disponivel">
+                    <h2>DISPONÍVEIS:<br> LAGER - APA - IPA - BITTER - PORTER</h2>
+                    <a href="https://wa.me/+5516997698989?text=Gostaria%20de%20saber%20sobre%20preço%20e%20disponibilidade%20do%20chopp%20DogTown." target="_blank">
+                    <button data-aos="fade-left">CONSULTE DISPONIBILIDADE</button></a>
+                  </div>
+                </div>
         </div>
-        <div class="fabrica">
-            <img src="img/produ/produ2.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ3.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ4.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ5.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ6.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ7.jpg">
-        </div>
-        <div class="fabrica">
-            <img src="img/produ/produ8.jpg">
-        </div>
+
+
+
+    <div class="section3">
+      <div class="texto-insta">
+        <p>ÚLTIMOS</p>
+        <h1>EVENTOS E POSTAGENS EM NOSSO INSTAGRAM</h1>
+        <a 
+          class="share"
+          href="https://www.instagram.com/dogtownbrewrp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >SIGA E COMPARTILHE</a
+        >
+      </div>
+      <div class="insta">
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div
+          class="elfsight-app-a57b7d82-9cfe-4528-a60b-bb4b009d886a"
+          data-elfsight-app-lazy
+        ></div>
+      </div>
     </div>
 
+    <div class="section4">
+      <div class="entrega">
+        <h1>DOGTOWN DELIVERY</h1>
+        <h2>SOMENTE DENTRO DE RIBEIRÃO PRETO-SP</h1>
+        <p>GARRAFAS de 500ml e 1 litro.</p>
+        <p>BARRIL de 10, 20, 30 e 50 litros.</p>
+        <h3>Pedidos de segunda à sexta das 09hrs até 18hrs<br> pelo nosso Whatsapp ou entre em contato.</h2>
+           <img data-aos="fade-right" src="img\delivery.svg"/>
+        <a href="loja.html" target="_blank">
+        <button>PEÇA AGORA</button></a>
+      </div>
+    </div>
 
-<div class="entrega">
     
-    <h1>DOGTOWN DELIVERY</h1>
-    <div class="texto-main">
-        <h1>Nossas brejas agora disponíveis para entrega dentro de Ribeirão Preto.</h1>
-        <p>Disponível em garrafas de 500ml e 1 litro.</p>
-        <p>Barril de chopp de 10, 20, 30 e 50 litros.</p>
-        <p>Pedidos acima de R$100,00 a entrega é grátis.</p>
-        <h2>Faça o seu pedido (de segunda à sexta das 09hrs até 18hrs)<br> pelo nosso Whatsapp ou entre em contato.</h2>
-    </div>
-</div>
-
-
-
-
-
-
 <footer class="footer">
 
         <div class="redes-sociais">
@@ -230,7 +261,6 @@
         
 </footer>
 
-
 <div class="footer-logo">
     <img src="img/index/footer.png">
 </div>
@@ -239,13 +269,18 @@
     <img src="img/index/footer-mobile.png">
 </div>
 
+<a
+  href="https://wa.me/+5516997698989"
+  target="_blank"
+  class="whats-link"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-<script src="js/mobile-navbar.js" defer></script>
-<script src="js/carrinho.js" defer></script>
-<script src="js/carrossel.js" defer></script>
-<script src="js/contador-carrinho.js" defer></script>
-<script src="js/popup-idade.js" defer></script>
-
-
-</body>
+    <script src="js/mobile-navbar.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
+    <script src="js/contador-carrinho.js" defer></script>
+    <script src="js/popup-idade.js" defer></script>
+  </body>
 </html>

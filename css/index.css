@@ -1,428 +1,539 @@
-@import '../css/global.css';
-@import '../css/sobre.css';
+@import "../css/global.css";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
 
-/* Estilos do popup */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "lato", sans-serif;
+}
+
+.whats-link {
+  position: fixed;
+  bottom: 20px; /* distância do fundo */
+  right: 20px; /* distância da direita */
+  color: rgb(2, 255, 44);
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 0 0.6rem;
+  font-size: 62px;
+  border-radius: 50%;
+  z-index: 1000; /* sempre acima do resto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.whats-link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* --------------------poup-up-idade---------------------------------------- */
 .popup-idade {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-  }
-  
-  .popup-conteudo {
-    background: #fff;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    width: 20vw;
-    height: 25vw;
-  }
-  .logo-popup {
-width: 15vw
-  }
-  .popup-idade h2 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.8vw;
-    color: rgb(107, 107, 107);
-    margin-top: 1vw;
-    margin-bottom: 2px;
-
-  }
-  .popup-conteudo button {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.5vw;
-    margin: 10px;
-    padding: 10px 40px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    
-  }
-  #btn-sim {
-        background-color: #4CAF50; /* Verde */
-    }
-  .popup-conteudo button:hover {
-    background-color: #555;
-  }
-  
-
-/*-------------------------------------Principal---------------------------------------*/
-
-.capa {
-    position: sticky;
-    background-image: url(../img/index/capa.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 48vw;
-    margin-top: -2rem;
-    overflow: hidden;
-    color:white;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-.capa h1{
-    font-family: "Sedgwick Ave", cursive;
-    font-size: 3.5vw;
-    margin-top: 21vw;
-    margin-right: 7vw;
-    text-align: center; 
-    
-}
-/*------------------------logo-capa----------------*/
-.logo-capa img{
-    margin-top: 7vw;
-    width: 9vw;
-    height: 9vw;
-    margin-right: 9vw;
-}
-   .logo-capa img {
-    opacity: 0.5;    
-    transition: opacity 0.4s ease-in-out;
-   } 
-.logo-capa img:hover {
-    opacity: 0.9;
-   
-}
-.capa-mobile img {
- display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 53, 53, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
 }
 
-/*-------------------carousel---------------------*/
-
-.brejas-titulo {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.2vw;
-    text-align: center;
-    color: rgb(107, 107, 107);
-    padding: 1vh;
-    border-top: 20px solid rgba(126, 124, 124, 0.534);
-    background-color: rgb(255, 255, 255);
-   
+.popup-conteudo {
+  background: #131313e5;
+  padding-top: 1rem;
+  text-align: center;
+  border-radius: 30px;
+  width: 20rem;
+  height: 24rem;
 }
+.logo-popup {
+  width: 14rem;
+}
+.popup-idade h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+  margin-bottom: 2px;
+}
+.popup-conteudo button {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  margin: 10px;
+  padding: 10px 40px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#btn-sim {
+  background-color: #2a8f71; /* Verde */
+}
+.popup-conteudo button:hover {
+  background-color: #555;
+}
+
+/* ---------------------------------Section1------------------------------------------ */
+.video-capa {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.video-capa video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* vídeo atrás da película e conteúdo */
+}
+
+/* Película escura */
+.overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1; /* entre o vídeo e o conteúdo */
+}
+/* Conteúdo centralizado da primeira pagina*/
+.overlay-content {
+  position: absolute;
+  top: 26rem;
+  left: 30rem;
+  width: 38rem;
+  height: 23rem;
+  background-color: rgba(0, 0, 0, 0.11);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.856);
+  text-align: left;
+  z-index: 5;
+}
+.overlay-content p {
+  font-size: 3rem;
+  font-family: "Teko", sans-serif;
+  color: rgba(255, 255, 255, 0.658);
+}
+.overlay-content h1 {
+  font-size: 7rem;
+  font-family: "Teko", sans-serif;
+  font-weight: 500;
+  line-height: 6.3rem;
+  margin-top: 0.5rem;
+}
+/* ---------------------------carrosel---------------------------------- */
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.945);
+}
+
+.cervejas {
+  width: 50%;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  border-radius: 2rem;
+}
+.cervejas h1 {
+  padding: 2rem;
+  font-size: 3rem;
+  font-family: "lato", sans-serif;
+  color: white;
+}
+
 .brejas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32vw;
-    z-index: 10;
-    background-image: linear-gradient(   
-    to bottom, 
-    rgba(0, 0, 0, 0.151)0%,
-    rgb(255, 255, 255) 30%, 
-    rgb(255, 255, 255) 70%,
-    rgba(0, 0, 0, 0.151) 100%);
-    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
-    
+  width: 100%;
+  margin: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vw;
+  z-index: 10;
+  background-color: rgb(238, 231, 215);
+  border: 2px solid rgba(0, 0, 0, 0.247);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
 }
+
 .carousel-container {
-      width: 50%;
-      position: relative;
-      margin-top: 2vw;
-      margin-bottom: 1vw;
-      
-    }
+  width: 100%;
+  position: relative;
+}
 .carousel-track {
-      display: flex;
-      transition: transform 1.0s ease;
-    }
+  display: flex;
+  transition: transform 1s ease;
+}
 .carousel-item {
-     
-      flex-direction: column;
-      opacity: 0.4;
-      transform: scale(0.7);
-      transition: transform 1.0s, opacity 0.5s;
-    }
+  flex-direction: column;
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: transform 1s, opacity 0.5s;
+}
 .carousel-item img {
-      width: 20vw;
-    }
-    .carousel-item.active {
-      opacity: 1;
-      transform: scale(1.2);
-    }
-    .carousel-item:hover {
-        cursor: pointer;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-    }
-    .nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
+  width: 13vw;
+}
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.carousel-item:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.nav {
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.726);
+  border: none;
+  padding: 1.4rem 0.7rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.nav.prev {
+  left: 0.5rem;
+}
+.nav.next {
+  right: 0.5rem;
+}
+/* -----------------------------------------------choppe----------------------------- */
+.chope {
+  display: flex;
+  width: 100%;
+  height: 22rem;
+  gap: 3rem;
+  p {
+    padding-top: 1rem;
+    font-family: teko;
+    font-size: 3rem;
+  }
+  h1 {
+    font-family: teko;
+    font-size: 7rem;
+    line-height: 5rem;
+    letter-spacing: -5px;
+  }
+  .disponivel {
+    display: flex;
+    button {
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding: 0.7rem;
+      margin-top: 2rem;
+      margin-left: 5rem;
+      background-color: #000000;
       color: white;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      padding: 0.3rem 0.7rem;
-      cursor: pointer;
-      z-index: 2;
+      border-radius: 5px;
     }
+  }
+  h2 {
+    font-family: teko;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.barril {
+  padding: 1rem;
+}
 
-    .nav.prev { left: -20rem; }
-    .nav.next { right: -20rem; }
+/* ---------------------------------------------Section3-Insta------------------------------ */
+.section3 {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
 
+.texto-insta {
+  width: 30%;
+  padding: 2rem 5rem;
+  color: rgb(255, 255, 255);
+}
+.texto-insta p {
+  font-size: 3rem;
+  font-family: "Teko", sans-serif;
+}
+.texto-insta h1 {
+  font-size: 6rem;
+  font-family: "Teko", sans-serif;
+  line-height: 5rem;
+  padding-bottom: 3rem;
+}
 
-/*-------------------Chope---------------------*/
-.chope {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: white;
-    max-width: 100%;
-    margin-top: 0.3rem;
+.share {
+  margin-top: 3rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.8rem;
+  margin-left: 12rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background-color: rgba(214, 214, 214, 0.829);
 }
-.chopeira:hover {
-    background-color: rgba(237, 248, 78, 0.336);
-    transition: background-color 0.8s ease;
-    cursor: pointer;
+.insta {
+  width: 60%;
 }
-.chope h1 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2.5vw;
-    text-align: center;
-    color: rgb(107, 107, 107);
-    padding: 0.5vh;
+
+/* -------------------------------------------section4-------------------------------- */
+.section4 {
+  width: 100%;
+  display: flex;
 }
-.chope-img {
-    display: flex;
-    background-image: linear-gradient(   
-    to bottom, 
-    rgba(0, 0, 0, 0.151)0%,
-    rgb(255, 255, 255) 30%, 
-    rgb(255, 255, 255) 70%,
-    rgba(0, 0, 0, 0.151) 100%);
-    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
-   }
-   .chopeira {
-    display: flex;
-    gap: 2vw;
-   }
-   .chopeira img{
-    height: 20vw;
-    margin: 1vw 0;
-    border-radius: 0 20px 20px 0;
-   }
-   .texto-chope{
-    flex-direction: column;
-   }
-.texto-chope p{
-     font-family: lato;
-     font-style: italic;
-     font-size: 1.7vw;
-     line-height: 2cap;
-     padding: 2vw 2.5vw;
-     text-align:justify;
-    }
-.texto-chope h1 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2vw;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-    /*---------------------produção---------------------*/
-    .produ {
-        flex-wrap: nowrap;
-        display: flex;
-        height: 15vw;
-        overflow: hidden;
-        border-bottom: 20px solid rgba(126, 124, 124, 0.534);
-    }
-    .fabrica img{
-        max-height: 100%;
-    }
-    
-/*-------------------ENTREGAS---------------------*/
 .entrega {
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.2vw;
-    text-align: center;
-    color: rgb(107, 107, 107);
-   
-  
+  font-family: teko;
+  padding: 5rem;
+  text-align: start;
+  color: rgb(0, 0, 0);
+  h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: oblique;
+  }
+  h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 5rem;
+    width: 70%;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+  }
+  button {
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: 700;
+    width: 15rem;
+    padding: 1rem;
+    margin-top: -4rem;
+    margin-left: 55rem;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+  }
+  img {
+    position: absolute;
+    width: 12rem;
+    margin-top: -20rem;
+    margin-left: 60rem;
+  }
 }
-.texto-main {
-    padding: 2vh 0;
-    width:100%;
-    font-family: lato;
-    font-size: 1.5vw;
-    text-align: center;
-    line-height: 3cap;
-    background-image: linear-gradient(   
-    to bottom, 
-    rgba(0, 0, 0, 0.151)0%,
-    rgb(255, 255, 255) 30%, 
-    rgb(255, 255, 255) 70%,
-    rgba(0, 0, 0, 0.151) 100%);
-   
-    color: rgb(0, 0, 0);
-}
-
-/*---------------------------------------------Responsivo-------------------------------------------------------*/
-
-@media (max-width: 700px){
-
-/* Estilos do popup */
-  
-  .popup-conteudo {
-    width: 70vw;
-    height: 85vw;
-  }
-  .logo-popup {
-width: 50vw
-  }
-  .popup-idade h2 {
-    font-size: 6.8vw;
-    margin-top: 6vw;
-    margin-bottom: 2px;
-
-  }
-  .popup-conteudo button {
-    font-size: 5.5vw;
-    margin: 5px;
-    padding: 10px 35px;
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+/* ---------------------------------------CELULAR--------------------------------------- */
+@media (max-width: 700px) {
+  .video-capa {
+    height: 32rem;
   }
 
-
-
-    .capa {
-       background-image: url(../img/index/capa-mobile.jpg);
-        background-size: cover;
-        width: 100%;
-        height:105vw;
-        margin-top: 2rem;
-        overflow: hidden;
-        color:white;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-    .capa h1{
-        font-size: 1rem;
-        margin-top: 50vw;
-        margin-right: 0vw;
-        background-color: rgba(0, 0, 0, 0.164);
-        border-radius: 20px;
-        padding: 5px 10px
-    }  
-
-    .logo-capa img {
-        margin-top: 5vw;
-        width: 15vw;
-        height: 15vw;
-        margin-right: 3vw;
-    }
-    .capa-mobile img {
-        display:block;
-        width: 100%;
-        margin-top: 5rem;
-       
-    }
-    /*-------------------carousel---------------------*/
-    .brejas-titulo {
-        font-size: 3vw;
-        padding: 0.5vh;
-            }
-    .brejas {
-        height: 70vw;
-        z-index: 10;
-        overflow: hidden;
-        }
-        .carousel-container {
-          margin-left: -33vw;
-        }
-        .carousel-item img {
-          width: 40vw;
-          margin: -4vw;
-        }
-        
-        .nav.prev { left: -2rem; }
-        .nav.next { right: -10rem; }
-
-/*-------------------Chope---------------------*/
-.chope {
+  .whats-link {
+    padding: 0 0.5rem;
+    font-size: 45px;
+  }
+  /* -----------------------------------------texto-capa--------------------------- */
+  /* Conteúdo centralizado da primeira pagina*/
+  .overlay-content {
+    top: 20rem;
+    left: 12rem;
+    width: 80%;
+    height: 12rem;
+    padding: 1rem;
+  }
+  .overlay-content p {
+    font-size: 1.8rem;
+  }
+  .overlay-content h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 3rem;
     margin-top: 0rem;
-}
-.chope h1 {
-    font-size: 6.5vw;
-    padding: 0.5vh;
-}
-.chope-img {
+  }
+  /* ---------------------------------------------section2------------------------------ */
+
+  .brejas {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0rem;
+    height: 55vw;
+    border-radius: 0rem;
+  }
+  .carousel-container {
+    width: 210%;
+    position: relative;
+  }
+  .carousel-track {
     display: flex;
-    flex-direction: column-reverse;
-    background-image: linear-gradient(   
-    to bottom, 
-    rgba(0, 0, 0, 0.151)0%,
-    rgb(255, 255, 255) 30%, 
-    rgb(255, 255, 255) 70%,
-    rgba(0, 0, 0, 0.151) 100%);
-    border-bottom: 20px solid rgba(126, 124, 124, 0.534);
-   }
-   .chopeira img{
-    height: 60vw;
-    margin-bottom:3vw;
-    border-radius: 0 20px 20px 0;
-   }
-   .texto-chope{
+    transition: transform 1s ease;
+  }
+  .carousel-item {
     flex-direction: column;
-   }
-.texto-chope p{
-  margin: 2vw;
-     font-size: 4vw;
-     line-height: 2cap;
-     padding: 2vw 2.5vw;
-     text-align: justify;
-    }
-.texto-chope h1 {
-    font-family: "Orbitron", sans-serif;
-    font-size: 5vw;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-top: 0vw;
-}
- /*---------------------produção---------------------*/
- .produ {
-    flex-wrap: nowrap;
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: transform 1s, opacity 0.5s;
+  }
+  .carousel-item img {
+    width: 8rem;
+  }
+  .nav.prev {
+    left: 13rem;
+  }
+  .nav.next {
+    right: 13rem;
+  }
+
+  /* -----------------------------------------------choppe----------------------------- */
+  .chope {
+    overflow: hidden;
     display: flex;
-    height: 23vw;
+    width: 100%;
+    height: 18rem;
+    gap: 3rem;
+    p {
+      padding-top: 1rem;
+      margin-left: -3rem;
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-left: -3rem;
+      line-height: 2.2rem;
+      letter-spacing: -2.5px;
+      width: 18rem;
+    }
+    .disponivel {
+      margin-top: 1.8rem;
+      button {
+        width: 9rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.2rem;
+        margin-top: -1rem;
+        margin-left: -6rem;
+        color: white;
+      }
+    }
+  }
+  .disponivel h2 {
+    font-family: teko;
+    margin-left: -11rem;
+    margin-bottom: -15rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .barril {
+    height: 8rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+  }
+  .torneira {
+    display: none;
+  }
+  /* ---------------------------------------------section3------------------------------ */
+
+  .section3 {
     overflow: hidden;
-}
-.fabrica img{
-    height: 23vw;
-    overflow: hidden;
-}
-/*-------------------ENTREGAS---------------------*/
-.entrega {
-    font-size: 2.8vw;
-    
-}
-.texto-main {
-    font-size: 2.8vw;
-}
-.texto-main p{
-    margin-top: 3vw;
-    font-size: 4.5vw;
-    line-height: 2cap;
-}
-.texto-main h2 {
-    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .texto-insta {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .texto-insta p {
+    font-size: 2rem;
+  }
+  .texto-insta h1 {
+    font-size: 2.9rem;
+    line-height: 2.8rem;
+    padding-bottom: 0rem;
+  }
+  .insta {
+    width: 100%;
+  }
+  .share {
+    display: none;
+  }
 
-}
-/*-------------------options---------------------*/
+  /* --------------------------------------------section4-------------------------------------- */
 
-
-
-
-
-
-
-
-
+  .section4 {
+    width: 100%;
+    height: 27rem;
+    display: flex;
+  }
+  .entrega {
+    font-family: teko;
+    padding: 1.5rem;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      font-style: oblique;
+    }
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 2.5rem;
+      width: 100%;
+      padding-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    button {
+      position: absolute;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 13rem;
+      padding: 1rem;
+      margin-top: 2rem;
+      margin-left: 1rem;
+      background-color: #000000;
+      color: white;
+      border-radius: 5px;
+    }
+    img {
+      position: absolute;
+      width: 5rem;
+      margin-top: 1.5rem;
+      margin-left: 16rem;
+    }
+  }
 }

@@ -1,296 +1,269 @@
-@import '../css/global.css';
+@import "../css/global.css";
 
 .chamada {
-    display: flex;
-    background-image: linear-gradient(to right
-        , rgb(255, 255, 255) 10%, rgb(255, 255, 255));
-    background-size: cover;
-    margin-top: 6.5rem;
-    padding: 0px;
-    justify-content: space-between;
-        
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.877) 10%,
+    rgba(0, 0, 0, 0.808)
+  );
+  background-size: cover;
+  padding: 0px;
+  justify-content: space-between;
 }
 
 .chope-chamada {
-    min-width: 55vw;
-    min-height: 25.5vh;
-    font-family: lato;
-    font-style: italic;
-    text-align: center;
+  padding-top: 6.5rem;
+  width: 100%;
+  font-family: lato;
+  font-style: italic;
+  text-align: center;
 }
-.chope-chamada h1{
-    font-size: 3.2vw;
-    margin-top: 1vh;
-    margin-left: 2vw;
-    
-    
+.chope-chamada h1 {
+  color: white;
+  font-size: 3.2vw;
+  margin-top: 2.5vh;
+  margin-left: 2vw;
 }
-.chope-chamada h2{
-    margin-left: 2vw;
-    margin-top: 2.5vh;
-    font-size: clamp(0.9rem, 2vw, 2.5rem);
+.chope-chamada h2 {
+  color: white;
+  margin-left: 2vw;
+  margin-top: 2.5vh;
+  font-size: clamp(0.9rem, 2vw, 2.5rem);
 }
 .galera img {
-    width: 100%;
-    margin-bottom: -3rem;
-    border-radius: 0 0 0 120px;
+  padding-top: 6.5rem;
+  width: 30vw;
+  margin-bottom: -3rem;
+  border-radius: 0 0 0 120px;
 }
 /*-------------------Principal---------------------*/
- main{
-    width: 100%;
-    margin-top: -6.5vw;
-    overflow: hidden;
- }
+main {
+  width: 100%;
+  overflow: hidden;
+}
 
 .chope {
-    width: 100%;
-    display:flex;
-    justify-content:flex-start;
-    gap: 2rem;
-    background-image: linear-gradient(   
-        to bottom, 
-        rgba(0, 0, 0, 0.151)0%,
-        rgb(255, 255, 255) 30%, 
-        rgb(255, 255, 255) 70%,
-        rgba(0, 0, 0, 0.151) 100%);
-        background-size: cover;
-    margin-top: 3vw;
-    
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 30%,
+    rgb(255, 255, 255) 70%,
+    rgba(0, 0, 0, 0.356) 100%
+  );
+  background-size: cover;
+  margin-top: 0vw;
 }
 .barril img {
-    width: 23vw;
-    margin-left: 1vw;
-    margin-top: 6vw;
+  width: 23vw;
+  margin-left: 1vw;
+  margin-top: 6vw;
 }
 .chope-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .titulo h1 {
-    font-family: "Orbitron", sans-serif;
-    color: rgb(255, 254, 252);
-    font-size: 2.8vw;
-    background-image: linear-gradient(to right, 
-    rgb(46, 46, 45) 0%, 
-    rgb(163, 163, 163));
-    padding: 0.5vw 2VW;
-    border-radius: 30px;
-    margin: 1VW 1vw 1VW -2vw;
-    width: 42vw
+  font-family: "Orbitron", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 2.8vw;
+  background-color: rgb(219, 219, 219);
+  padding: 0.5vw 2vw;
+  border-radius: 30px;
+  margin: 1vw 1vw 1vw -2vw;
+  width: 42vw;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.418);
 }
-.chope-lager {
-    display: flex;
-    width: 36vw;
-    font-family: lato;
-    font-style: italic;
-    color: rgb(0, 0, 0);
-    font-size: 2vw;
-    margin-left: 1vw;
-    margin-top: 1.3vw;
-}
-.chope-lager img{
-    width: 10vw;
-    margin-left: 1vw;
-    border: 1px solid black;
-    border-radius: 30px;
-}
+
 .tag {
-    display: flex;
-    font-family: lato;
-    font-style: italic;
-    color: rgb(0, 0, 0);
-    font-size: 2vw;
-    margin-top: 1.3vw;
-    border-bottom: 2px solid rgb(153, 153, 153);
-    width: 65vw;
-    padding: 15px
- }
-.chopes img {
-   width: 10vw;
-   margin-left: 2vw;
-   border: 1px solid black;
-   border-radius: 30px;
-   
+  display: flex;
+  margin-top: 3.3vw;
+  border-bottom: 2px solid rgb(153, 153, 153);
+  width: 65vw;
+  padding: 15px;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.tag img {
+  width: 10vw;
+  margin-left: 2vw;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.452);
+  border-radius: 30px;
 }
 .tamanhos-info {
-    display: flex;
-    font-family: lato;
-    font-style: italic;
-    color: rgb(0, 0, 0);
+  display: flex;
+  font-family: lato;
+  color: rgb(0, 0, 0);
+  margin-top: 6vw;
+  text-align: end;
+  border-bottom: 2px solid rgb(153, 153, 153);
+  width: 65vw;
+  padding: 15px;
+  h1 {
+    margin-left: -1vw;
+    margin-top: 1.5rem;
     font-size: 2vw;
-    margin-top:6vw;
-    text-align: end;
-    border-bottom: 2px solid rgb(153, 153, 153);
-    width: 65vw;
-    padding: 15px 
+  }
 }
-.tamanhos-info img{
-    width: 7vw;
-    margin-top: -13vh;
-    margin-left: 2vw;
-    margin-left: 5vw;
+.tamanhos-info img {
+  width: 7vw;
+  margin-top: -13vh;
+  margin-left: 2vw;
+  margin-left: 5vw;
 }
-.tamanhos-info h2{
-    font-family: lato;
-    font-size: 2vw;
-    margin-top: 1vh;
-    margin-left: 2vw;
+.tamanhos-info h2 {
+  font-family: lato;
+  font-size: 2vw;
+  margin-top: 1vh;
+  margin-left: 2vw;
 }
 /*-------------------confira---------------------*/
 .confira {
-    display: flex;
-    width: 100%;
-    margin-top: 2vw;
-    margin-left: -22vw;
-    height: 25vh;
-button {
-    margin-top: 1vw;
-    font-family: lato;
-    font-size: 2vw;
+  display: flex;
+  width: 100%;
+  margin: 4vw;
+  margin-left: -22vw;
+  button {
+    font-family: "lato", sans-serif;
+    font-size: 1.8vw;
     color: rgb(255, 255, 255);
     font-weight: 900;
     width: 30vw;
     height: 6.1vw;
-    margin-left: 9vw;
+    margin-left: 3vw;
     border-radius: 60px;
-    background-color: rgb(255, 93, 93);
-    
-    &:hover {
-        background-color: rgb(216, 26, 26);
-    }
+    background-color: rgba(0, 0, 0, 0.815);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.493);
 
-}
+    &:hover {
+      background-color: rgb(194, 4, 4);
+    }
+  }
 }
 .disque h1 {
-    font-family: "Orbitron", sans-serif;
-    color: rgb(56, 56, 56);
-    font-size: 2.5vw;
-    width: 46vw;
+  font-family: "Orbitron", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 2.5vw;
+  width: 55vw;
 }
 
 /*-------------------------------------------------Responsivo------------------------------------------*/
 @media (max-width: 768px) {
-    .chamada {
-            margin-top: 5.7rem;
-    }
-    .chope-chamada h1{
-        font-size: 6vw;
-        margin-top: 0.5vh;
-        margin-left: 2vw;
-        
-    }
-    .chope-chamada h2 {
-        margin-left: 1vw;
-        margin-top: 1.2vh;
-        font-size: 4.8vw;
-        width: 95vw;
-    }
-    
-/*-------------------Principal---------------------*/
-main{
-    margin-top: -3rem;
-    max-width: 100%;
- }
+  .chamada {
+    overflow: hidden;
+  }
+  .chope-chamada h1 {
+    font-size: 6vw;
+    margin-top: -1vh;
+    margin-left: 4vw;
+    text-align: left;
+    width: 12rem;
+  }
+  .chope-chamada h2 {
+    margin-left: 1vw;
+    margin-top: 2.8vh;
+    padding-bottom: 1rem;
+    font-size: 4.8vw;
+    width: 100vw;
+  }
+  .galera img {
+    width: 55vw;
+    margin-left: -13rem;
+    margin-top: -1.5rem;
+  }
 
-.chope {
+  /*-------------------Principal---------------------*/
+  main {
+    margin-top: 0rem;
+    max-width: 100%;
+  }
+
+  .chope {
     width: 100%;
-}
-.barril img {
+  }
+  .barril img {
     width: 42vw;
-    margin-top: 13vw;
-}
-.titulo h1 {
+    margin-top: 19vw;
+  }
+  .titulo h1 {
     font-size: 5.8vw;
-    padding: 0.5vw 2VW;
+    padding: 0.5vw 2vw;
     border-radius: 30px;
-    margin: 1VW 1vw 1VW -45vw;
-    width: 90vw
-}
-.chope-lager {
-    flex-direction: column;
-    width: 100%;
-    font-size: 5vw;
-    margin-left: -6vw;
-    margin-top: 3.3vw;
-}
-.chope-lager img{
+    margin-left: -48.5vw;
+    margin-top: 1rem;
+    width: 90vw;
+  }
+  .tag {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin-left: -10vw;
+    margin-top: 5vw;
+    border-bottom: 2px solid rgb(153, 153, 153);
+    max-width: 100%;
+    padding: 15px;
+    padding-bottom: 1rem;
+  }
+  .tag img {
+    flex-wrap: wrap;
     width: 25vw;
+    margin-left: -1vw;
     margin-top: 2vw;
-    margin-left: 12vw;
     border: 1px solid black;
     border-radius: 30px;
-}
-.tag {
-    flex-direction: column;
-    font-size: 5vw;
-    margin-left: -10vw;
-    margin-top: 0vw;
-    border-bottom: 2px solid rgb(153, 153, 153);
-    max-width: 100%;
-    padding: 15px
- }
-.chopes img {
-    flex-wrap: wrap;
-   width: 25vw;
-   margin-left: 0vw;
-   margin-top: 2vw;
-   border: 1px solid black;
-   border-radius: 30px;
-   
-}
-.tamanhos-info {
-    margin-left: -58vw;
+    margin-bottom: 0.3rem;
+  }
+  .tamanhos-info {
+    margin-left: -20vw;
     width: 100%;
     font-size: 5vw;
-    margin-top:2vw;
+    margin-top: 3vw;
     text-align: end;
     border-bottom: 2px solid rgb(153, 153, 153);
-}
-.tamanhos-info p {
-    margin-top: -3vw;
-    width: 90vw;
-    margin-left: -3vw;
-}
-.tamanhos-info img{
+  }
+  .tamanhos-info h1 {
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: -7.5rem;
+    font-size: 1.2rem;
+    text-align: start;
+  }
+  .tamanhos-info img {
     width: 18vw;
-    margin-top: 2vh;
-}
-.barril-10 {
+    margin-top: 5vh;
+  }
+  .barril-10 {
     margin-left: -8rem;
-}
-.tamanhos-info h2{
+  }
+  .tamanhos-info h2 {
     font-size: 5vw;
     margin-top: 1vh;
     margin-left: 2vw;
-}
-/*-------------------confira---------------------*/
-.confira {
+  }
+  /*-------------------confira---------------------*/
+  .confira {
     display: flex;
     max-width: 100%;
-    margin-top: 3vw;
+    margin-top: 5vw;
     margin-left: -50vw;
     height: 40vw;
-button {
-    margin-top: 18vw;
-    font-size: 4vw;
-    color: rgb(255, 255, 255);
-    font-weight: 900;
-    width: 70vw;
-    height: 12vw;
-    margin-left: -21rem;
-    border-radius: 60px;
-    background-color: rgb(255, 93, 93);
-    
-    &:hover {
-        background-color: rgb(216, 26, 26);
+    button {
+      margin-top: 27vw;
+      font-size: 4vw;
+      font-weight: 900;
+      width: 70vw;
+      height: 12vw;
+      margin-left: -21rem;
     }
-
-}
-}
-.disque h1 {
-    font-size: 5vw;
+  }
+  .disque h1 {
+    font-size: 6vw;
     width: 100vw;
     text-align: center;
-}
+  }
 }

@@ -1,22 +1,70 @@
-@import '../css/global.css';
+@import "../css/global.css";
+p a {
+  text-decoration: none;
+  color: inherit; /* opcional: usa a mesma cor do texto do parágrafo */
+}
 
 .contato-dogtown {
-    flex-direction: column;
-    justify-items: center;   
-    background-color: white;
-    margin-top: 5vw;
-    padding: 2vw;
-    font-family: lato;
-    font-size: 1.5vw;
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 8vw;
+  padding: 15rem;
+  background-color: rgba(0, 0, 0, 0.897);
+}
+.contato {
+  color: white;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  h1 {
+    padding-bottom: 1rem;
+  }
+  p {
+    padding-bottom: 1rem;
+  }
+}
+.whats-link i {
+  color: rgb(9, 185, 68);
+  font-size: 3.8rem;
+  padding-right: 1rem;
+}
+.email-link i {
+  color: rgb(109, 87, 235);
+  font-size: 3rem;
+  padding-right: 1rem;
 }
 
 @media (max-width: 768px) {
-    .contato-dogtown img {
-        width: 30vw
+  .contato-dogtown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 0rem;
+    padding-top: 7rem;
+    img {
+      width: 10rem;
     }
-    .contato-dogtown {
-        margin-top: 25vw;
-        font-size: 4vw;
-        padding: 7vw;
+  }
+  .contato {
+    padding-top: 0rem;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 7rem;
+    h1 {
+      padding-bottom: 1rem;
     }
+    p {
+      padding-bottom: 1rem;
+    }
+  }
+  .whats-link i {
+    font-size: 2.8rem;
+    padding-right: 1rem;
+  }
+  .email-link i {
+    font-size: 2.2em;
+    padding-right: 1rem;
+  }
 }

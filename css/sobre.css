@@ -1,42 +1,44 @@
-@import '../css/global.css';
-
+@import "../css/global.css";
+body {
+  background-color: rgba(0, 0, 0, 0.856);
+}
 
 .adogtown img {
-    width: 100%;
-    margin-top: 5rem;
+  width: 100%;
+  margin-top: 5rem;
 }
 
-.equipe img{
-    width: 100%;
-    margin-top: -5px;
-    margin-bottom: -5px;
+.equipe img {
+  width: 100%;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
-.adogtown-mobile img{
-    display: none;
+.adogtown-mobile img {
+  display: none;
 }
 
-.equipe-mobile img{
-    display: none;
+.equipe-mobile img {
+  display: none;
 }
 /*-------------------Mobile---------------------*/
 
 @media (max-width: 950px) {
-    .adogtown img {
-        display: none;
-    }
-    .equipe img{
-        display: none;
-    }
+  .adogtown img {
+    display: none;
+  }
+  .equipe img {
+    display: none;
+  }
 
-    .adogtown-mobile img{
-        display: block;
-        width: 100%;
-        margin-top: 5rem;
-    }
-    .equipe-mobile img{
-        display: block;
-        width: 100%;
-        margin-top: 0rem;
-    }
+  .adogtown-mobile img {
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .equipe-mobile img {
+    display: block;
+    width: 100%;
+    margin-top: 0rem;
+  }
 }
