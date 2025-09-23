@@ -16,7 +16,9 @@ class MobileNavbar {
     this.navLinks.forEach((link, index) => {
       link.style.animation
         ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
     });
   }
 
@@ -39,10 +41,12 @@ class MobileNavbar {
   }
 }
 
-const mobileNavbar = new MobileNavbar(".mobile-menu", ".nav-list", ".nav-list li");
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li"
+);
 mobileNavbar.init();
-
-
 
 // ------------------------- ATIVAR LINK DE MENU -------------------------
 
@@ -51,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-list a");
   const contadorEl = document.getElementById("contador-itens");
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     if (link.getAttribute("href") === currentPage) {
       link.classList.add("active");
     }
@@ -82,4 +86,3 @@ document.addEventListener("DOMContentLoaded", () => {
 //   }
 //   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 // });
-
