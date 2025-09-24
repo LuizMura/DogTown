@@ -24,10 +24,14 @@
   align-items: center;
   justify-content: space-between;
   z-index: 10000;
+  transition: transform 0.3s ease; /* animação suave */
   a {
     text-decoration: none;
     padding: 1vw;
   }
+}
+.navbar.hidden {
+  transform: translateY(-150%); /* esconde para cima */
 }
 
 .logo {

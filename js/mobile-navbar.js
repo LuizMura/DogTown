@@ -96,17 +96,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// // ------------------------- HEADER FIXO -------------------------
+// ---------------------------------navibar hiddem-----------------------------
+let lastScroll = 0;
+const navbar = document.querySelector(".navbar");
 
-// let lastScrollTop = 0;
-// const container = document.getElementById("container");
+window.addEventListener("scroll", () => {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
 
-// window.addEventListener("scroll", () => {
-//   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-//   if (currentScroll > lastScrollTop) {
-//     container.style.top = "-350px";
-//   } else {
-//     container.style.top = "0";
-//   }
-//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-// });
+  if (currentScroll > lastScroll) {
+    // Scrolando para baixo → esconde
+    navbar.classList.add("hidden");
+  } else {
+    // Scrolando para cima → mostra
+    navbar.classList.remove("hidden");
+  }
+
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll; // evita valores negativos
+});
