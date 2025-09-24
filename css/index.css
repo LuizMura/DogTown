@@ -11,12 +11,12 @@
 
 .whats-link {
   position: fixed;
-  bottom: 20px; /* distância do fundo */
-  right: 20px; /* distância da direita */
+  bottom: 1.5vw; /* distância do fundo */
+  right: 1.5vw; /* distância da direita */
   color: rgb(2, 255, 44);
   background-color: rgba(0, 0, 0, 0.404);
   padding: 0 0.6rem;
-  font-size: 62px;
+  font-size: 4vw;
   border-radius: 50%;
   z-index: 1000; /* sempre acima do resto */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -81,7 +81,7 @@
 .video-capa {
   position: relative;
   width: 100%;
-  height: 50rem;
+  height: 50vw;
   overflow: hidden;
 }
 
@@ -108,13 +108,13 @@
 /* Conteúdo centralizado da primeira pagina*/
 .overlay-content {
   position: absolute;
-  top: 26rem;
-  left: 30rem;
-  width: 38rem;
-  height: 23rem;
+  top: 27vw;
+  left: 31vw;
+  width: 39vw;
+  height: 24vw;
   background-color: rgba(0, 0, 0, 0.11);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
+  padding: 2vw;
   border-radius: 2rem;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.856);
@@ -122,16 +122,16 @@
   z-index: 5;
 }
 .overlay-content p {
-  font-size: 3rem;
+  font-size: 3.5vw;
   font-family: "Teko", sans-serif;
   color: rgba(255, 255, 255, 0.658);
 }
 .overlay-content h1 {
-  font-size: 7rem;
+  font-size: 7vw;
   font-family: "Teko", sans-serif;
   font-weight: 500;
-  line-height: 6.3rem;
-  margin-top: 0.5rem;
+  line-height: 6.5vw;
+  margin-top: 0.5vw;
 }
 /* ---------------------------carrosel---------------------------------- */
 .section2 {
@@ -139,23 +139,9 @@
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.945);
 }
-
-.cervejas {
-  width: 50%;
-  margin-top: 3rem;
-  margin-left: 3rem;
-  border-radius: 2rem;
-}
-.cervejas h1 {
-  padding: 2rem;
-  font-size: 3rem;
-  font-family: "lato", sans-serif;
-  color: white;
-}
-
 .brejas {
   width: 100%;
-  margin: 2rem;
+  margin: 2vw;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -209,36 +195,36 @@
   z-index: 2;
 }
 .nav.prev {
-  left: 0.5rem;
+  left: 0.5vw;
 }
 .nav.next {
-  right: 0.5rem;
+  right: 0.5vw;
 }
 /* -----------------------------------------------choppe----------------------------- */
 .chope {
   display: flex;
   width: 100%;
-  height: 22rem;
-  gap: 3rem;
+  height: 25vw;
+  gap: 3vw;
   p {
-    padding-top: 1rem;
+    padding-top: 1vw;
     font-family: teko;
-    font-size: 3rem;
+    font-size: 3.5vw;
   }
   h1 {
     font-family: teko;
-    font-size: 7rem;
-    line-height: 5rem;
+    font-size: 7vw;
+    line-height: 5vw;
     letter-spacing: -5px;
   }
   .disponivel {
     display: flex;
     button {
-      font-size: 1.3rem;
+      font-size: 1.3vw;
       font-weight: 700;
-      padding: 0.7rem;
+      padding: 0.7vw;
       margin-top: 2rem;
-      margin-left: 5rem;
+      margin-left: 5vw;
       background-color: #000000;
       color: white;
       border-radius: 5px;
@@ -246,14 +232,14 @@
   }
   h2 {
     font-family: teko;
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 500;
-    margin-top: 1.5rem;
-    line-height: 2rem;
+    margin-top: 1.5vw;
+    line-height: 2vw;
   }
 }
 .barril {
-  padding: 1rem;
+  padding: 1vw;
 }
 
 /* ---------------------------------------------Section3-Insta------------------------------ */
@@ -265,32 +251,33 @@
 
 .texto-insta {
   width: 30%;
-  padding: 2rem 5rem;
+  padding: 2vw 5vw;
   color: rgb(255, 255, 255);
 }
 .texto-insta p {
-  font-size: 3rem;
+  font-size: 3vw;
   font-family: "Teko", sans-serif;
 }
 .texto-insta h1 {
-  font-size: 6rem;
+  font-size: 6vw;
   font-family: "Teko", sans-serif;
-  line-height: 5rem;
-  padding-bottom: 3rem;
+  line-height: 5vw;
+  padding-bottom: 3vw;
 }
 
 .share {
-  margin-top: 3rem;
+  margin-top: 3vw;
   text-decoration: none;
   color: black;
-  padding: 0.8rem;
-  margin-left: 12rem;
-  font-size: 1.3rem;
+  padding: 0.8vw;
+  margin-left: 12vw;
+  font-size: 1.3vw;
   font-weight: 900;
   background-color: rgba(214, 214, 214, 0.829);
 }
 .insta {
   width: 60%;
+  padding: 2vw;
 }
 
 /* -------------------------------------------section4-------------------------------- */
@@ -309,34 +296,34 @@
     font-style: oblique;
   }
   h2 {
-    font-size: 5rem;
+    font-size: 5vw;
     font-weight: 900;
     letter-spacing: -4px;
-    line-height: 5rem;
+    line-height: 5vw;
     width: 70%;
-    padding-bottom: 2rem;
+    padding-bottom: 2vw;
   }
   p {
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
+    font-size: 1.8vw;
+    padding-bottom: 1vw;
   }
   button {
     position: absolute;
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-weight: 700;
-    width: 15rem;
-    padding: 1rem;
-    margin-top: -4rem;
-    margin-left: 55rem;
+    width: 15vw;
+    padding: 1vw;
+    margin-top: -4vw;
+    margin-left: 55vw;
     background-color: #000000;
     color: white;
     border-radius: 5px;
   }
   img {
     position: absolute;
-    width: 12rem;
-    margin-top: -20rem;
-    margin-left: 60rem;
+    width: 12vw;
+    margin-top: -20vw;
+    margin-left: 60vw;
   }
 }
 /* ---------------------------------------CELULAR--------------------------------------- */
@@ -348,7 +335,7 @@
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .video-capa {
     height: 32rem;
   }
@@ -479,6 +466,7 @@
   }
   .insta {
     width: 100%;
+    padding: 0rem;
   }
   .share {
     display: none;

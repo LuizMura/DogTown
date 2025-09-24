@@ -3,35 +3,37 @@ p a {
   text-decoration: none;
   color: inherit; /* opcional: usa a mesma cor do texto do parágrafo */
 }
-
+.contato-dogtown img {
+  width: 15vw;
+}
 .contato-dogtown {
   display: flex;
   width: 100%;
   justify-content: start;
   gap: 8vw;
-  padding: 15rem;
+  padding: 15vw;
   background-color: rgba(0, 0, 0, 0.897);
 }
 .contato {
   color: white;
-  padding-top: 2rem;
-  font-size: 1.5rem;
+  padding-top: 2vw;
+  font-size: 1.5vw;
   h1 {
-    padding-bottom: 1rem;
+    padding-bottom: 1vw;
   }
   p {
-    padding-bottom: 1rem;
+    padding-bottom: 1vw;
   }
 }
 .whats-link i {
   color: rgb(9, 185, 68);
-  font-size: 3.8rem;
-  padding-right: 1rem;
+  font-size: 3.8vw;
+  padding-right: 1vw;
 }
 .email-link i {
   color: rgb(109, 87, 235);
-  font-size: 3rem;
-  padding-right: 1rem;
+  font-size: 3vw;
+  padding-right: 1vw;
 }
 
 @media (max-width: 768px) {
