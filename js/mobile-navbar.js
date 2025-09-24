@@ -10,6 +10,7 @@ class MobileNavbar {
     this.activeClass = "active";
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   animateLinks() {
@@ -23,10 +24,33 @@ class MobileNavbar {
   }
 
   handleClick(e) {
-    e.stopPropagation(); // Evita conflito com clique fora
+    e.stopPropagation(); // evita disparo no documento
     this.navList.classList.toggle(this.activeClass);
     this.mobileMenu.classList.toggle(this.activeClass);
     this.animateLinks();
+
+    // 👉 quando abrir, escuta clique/touch fora
+    if (this.navList.classList.contains(this.activeClass)) {
+      document.addEventListener("click", this.handleOutsideClick);
+      document.addEventListener("touchstart", this.handleOutsideClick);
+    } else {
+      document.removeEventListener("click", this.handleOutsideClick);
+      document.removeEventListener("touchstart", this.handleOutsideClick);
+    }
+  }
+
+  handleOutsideClick(e) {
+    // fecha se o clique NÃO for no menu nem no botão
+    if (
+      !this.navList.contains(e.target) &&
+      !this.mobileMenu.contains(e.target)
+    ) {
+      this.navList.classList.remove(this.activeClass);
+      this.mobileMenu.classList.remove(this.activeClass);
+      this.navLinks.forEach((link) => (link.style.animation = "")); // limpa animação
+      document.removeEventListener("click", this.handleOutsideClick);
+      document.removeEventListener("touchstart", this.handleOutsideClick);
+    }
   }
 
   addClickEvent() {

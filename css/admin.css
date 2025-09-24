@@ -160,6 +160,10 @@ body {
   }
 }
 /* ------------------- RESPONSIVO PARA CELULAR ------------------- */
+/* ------------------- RESPONSIVO PARA CELULAR ------------------- */
+/* ------------------- RESPONSIVO PARA CELULAR ------------------- */
+/* ------------------- RESPONSIVO PARA CELULAR ------------------- */
+/* ------------------- RESPONSIVO PARA CELULAR ------------------- */
 @media (max-width: 500px) {
   /* ---------- LOGIN ---------- */
   #login-section {
@@ -173,6 +177,7 @@ body {
   }
 
   #admin-section {
+    overflow-x: hidden;
     padding: 1rem;
     text-align: start;
   }
@@ -258,7 +263,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 13rem;
-    margin: 0.7rem;
     padding: 5px;
   }
   .prompt-box label {
