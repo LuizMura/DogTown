@@ -250,8 +250,8 @@
 }
 
 .texto-insta {
-  width: 30%;
-  padding: 2vw 5vw;
+  width: 38%;
+  padding: 2vw 0 0 5vw;
   color: rgb(255, 255, 255);
 }
 .texto-insta p {
@@ -277,7 +277,7 @@
 }
 .insta {
   width: 60%;
-  padding: 2vw;
+  padding-right: 2vw;
 }
 
 /* -------------------------------------------section4-------------------------------- */
@@ -454,7 +454,7 @@
   }
   .texto-insta {
     width: 100%;
-    padding: 1.5rem;
+    padding-left: 1.5rem;
   }
   .texto-insta p {
     font-size: 2rem;
