@@ -25,10 +25,10 @@
   justify-content: space-between;
   z-index: 10000;
   transition: transform 0.3s ease; /* animação suave */
-  a {
-    text-decoration: none;
-    padding: 1vw;
-  }
+}
+.navbar a {
+  text-decoration: none;
+  padding: 1vw;
 }
 .navbar.hidden {
   transform: translateY(-150%); /* esconde para cima */
@@ -207,16 +207,6 @@
   .logo h1 {
     font-size: 1rem;
   }
-  .navlist {
-    padding-right: 0rem;
-    display: none;
-    gap: 3rem;
-  }
-  .navlist p {
-    font-size: 1.2rem;
-    font-family: "lato", sans-serif;
-  }
-
   .nav-list {
     gap: 2rem;
     margin-right: 0rem;
@@ -262,7 +252,7 @@
     z-index: 1000;
   }
   .nav-list.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   #icone-carrinho {
     margin-right: 5rem;

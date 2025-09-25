@@ -137,21 +137,21 @@
 .section2 {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.945);
+  background-color: rgba(0, 0, 0, 0.897);
 }
 .brejas {
   width: 100%;
-  margin: 2vw;
+  margin: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20vw;
+  height: 21vw;
   z-index: 10;
   background-color: rgb(238, 231, 215);
-  border: 2px solid rgba(0, 0, 0, 0.247);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
+  border-top: 15px solid rgba(165, 165, 165, 0.329);
+  border-bottom: 15px solid rgba(0, 0, 0, 0.411);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.795);
 }
 
 .carousel-container {
@@ -170,6 +170,7 @@
 }
 .carousel-item img {
   width: 13vw;
+  margin-top: 2vw;
 }
 .carousel-item.active {
   opacity: 1;
@@ -206,38 +207,41 @@
   width: 100%;
   height: 25vw;
   gap: 3vw;
-  p {
-    padding-top: 1vw;
-    font-family: teko;
-    font-size: 3.5vw;
-  }
-  h1 {
-    font-family: teko;
-    font-size: 7vw;
-    line-height: 5vw;
-    letter-spacing: -5px;
-  }
-  .disponivel {
-    display: flex;
-    button {
-      font-size: 1.3vw;
-      font-weight: 700;
-      padding: 0.7vw;
-      margin-top: 2rem;
-      margin-left: 5vw;
-      background-color: #000000;
-      color: white;
-      border-radius: 5px;
-    }
-  }
-  h2 {
-    font-family: teko;
-    font-size: 2vw;
-    font-weight: 500;
-    margin-top: 1.5vw;
-    line-height: 2vw;
-  }
+  margin-top: 1vw;
 }
+.chope p {
+  padding-top: 1vw;
+  font-family: teko;
+  font-size: 3.5vw;
+}
+.chope h1 {
+  font-family: teko;
+  font-size: 7vw;
+  line-height: 5vw;
+  letter-spacing: -5px;
+}
+.disponivel {
+  display: flex;
+}
+.disponivel button {
+  font-size: 1.3vw;
+  font-weight: 700;
+  padding: 0.7vw;
+  margin-top: 3.5vw;
+  margin-left: 5vw;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+}
+
+.disponivel h2 {
+  font-family: teko;
+  font-size: 2vw;
+  font-weight: 500;
+  margin-top: 3vw;
+  line-height: 2vw;
+}
+
 .barril {
   padding: 1vw;
 }
@@ -348,27 +352,28 @@
   /* Conteúdo centralizado da primeira pagina*/
   .overlay-content {
     top: 20rem;
-    left: 12rem;
-    width: 80%;
-    height: 12rem;
-    padding: 1rem;
+    left: 48vw;
+    width: 85%;
+    height: 48vw;
+    padding: 5vw;
   }
   .overlay-content p {
-    font-size: 1.8rem;
+    font-size: 8vw;
   }
   .overlay-content h1 {
-    font-size: 3.5rem;
+    font-size: 15vw;
     font-weight: 500;
-    line-height: 3rem;
+    line-height: 12.5vw;
     margin-top: 0rem;
   }
   /* ---------------------------------------------section2------------------------------ */
 
   .brejas {
     overflow: hidden;
-    max-width: 100%;
-    margin: 0rem;
-    height: 55vw;
+    width: 100%;
+    height: 48vw;
+    background-color: rgb(238, 231, 215);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.849);
     border-radius: 0rem;
   }
   .carousel-container {
@@ -386,13 +391,14 @@
     transition: transform 1s, opacity 0.5s;
   }
   .carousel-item img {
-    width: 8rem;
+    width: 30vw;
+    margin-top: 4vw;
   }
   .nav.prev {
-    left: 13rem;
+    left: 53vw;
   }
   .nav.next {
-    right: 13rem;
+    right: 53vw;
   }
 
   /* -----------------------------------------------choppe----------------------------- */
@@ -400,47 +406,49 @@
     overflow: hidden;
     display: flex;
     width: 100%;
-    height: 18rem;
-    gap: 3rem;
-    p {
-      padding-top: 1rem;
-      margin-left: -3rem;
-      font-size: 2rem;
-    }
-    h1 {
-      font-size: 2.8rem;
-      margin-left: -3rem;
-      line-height: 2.2rem;
-      letter-spacing: -2.5px;
-      width: 18rem;
-    }
-    .disponivel {
-      margin-top: 1.8rem;
-      button {
-        width: 9rem;
-        font-size: 0.8rem;
-        font-weight: 700;
-        padding: 0.2rem;
-        margin-top: -1rem;
-        margin-left: -6rem;
-        color: white;
-      }
-    }
+    /* height: 18rem; */
+    height: 72vw;
+    gap: 13vw;
+  }
+  .chope p {
+    padding-top: 5vw;
+    margin-left: -12vw;
+    /* font-size: 2rem; */
+    font-size: 8vw;
+  }
+  .chope h1 {
+    font-size: 11vw;
+    margin-left: -12vw;
+    line-height: 9vw;
+    letter-spacing: -2.5px;
+    width: 63vw;
+  }
+
+  .disponivel {
+    margin-top: 7vw;
+  }
+  .disponivel button {
+    width: 39vw;
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 1vw;
+    margin-top: -5vw;
+    margin-left: -16vw;
+    color: white;
   }
   .disponivel h2 {
     font-family: teko;
-    margin-left: -11rem;
-    margin-bottom: -15rem;
-    font-size: 1.6rem;
+    margin-left: -42vw;
+    font-size: 6vw;
     font-weight: 500;
-    margin-top: 1.5rem;
-    line-height: 1.5rem;
+    margin-top: 5vw;
+    line-height: 6vw;
   }
 
   .barril {
-    height: 8rem;
-    margin-top: 1.5rem;
-    padding: 0.5rem;
+    height: 33vw;
+    margin-top: 6.5vw;
+    padding: 2vw;
   }
   .torneira {
     display: none;
@@ -448,20 +456,20 @@
   /* ---------------------------------------------section3------------------------------ */
 
   .section3 {
-    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
   .texto-insta {
-    width: 100%;
-    padding-left: 1.5rem;
+    width: 90%;
+    margin-left: 1rem;
+    padding-left: 0rem;
   }
   .texto-insta p {
-    font-size: 2rem;
+    font-size: 9vw;
   }
   .texto-insta h1 {
-    font-size: 2.9rem;
-    line-height: 2.8rem;
+    font-size: 11vw;
+    line-height: 9vw;
     padding-bottom: 0rem;
   }
   .insta {
@@ -476,42 +484,42 @@
 
   .section4 {
     width: 100%;
-    height: 27rem;
+    height: 110vw;
     display: flex;
   }
   .entrega {
     font-family: teko;
-    padding: 1.5rem;
+    padding: 5vw;
     text-align: start;
     color: rgb(0, 0, 0);
     h1 {
-      font-size: 1.8rem;
+      font-size: 6vw;
       font-weight: 900;
       font-style: oblique;
     }
     h2 {
-      font-size: 2.5rem;
+      font-size: 10vw;
       font-weight: 900;
       letter-spacing: -3px;
-      line-height: 2.5rem;
+      line-height: 9vw;
       width: 100%;
-      padding-bottom: 1.5rem;
+      padding-bottom: 5vw;
     }
     p {
-      font-size: 1.2rem;
-      padding-bottom: 0.5rem;
+      font-size: 5vw;
+      padding-bottom: 3vw;
     }
     h3 {
-      margin-top: 1rem;
-      font-size: 0.9rem;
+      margin-top: 3vw;
+      font-size: 4vw;
     }
     button {
       position: absolute;
-      font-size: 1rem;
+      font-size: 4vw;
       font-weight: 700;
-      width: 13rem;
-      padding: 1rem;
-      margin-top: 2rem;
+      width: 45vw;
+      padding: 3vw;
+      margin-top: 8vw;
       margin-left: 1rem;
       background-color: #000000;
       color: white;
@@ -519,9 +527,9 @@
     }
     img {
       position: absolute;
-      width: 5rem;
-      margin-top: 1.5rem;
-      margin-left: 16rem;
+      width: 17vw;
+      margin-top: 7vw;
+      margin-left: 60vw;
     }
   }
 }
