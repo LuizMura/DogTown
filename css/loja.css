@@ -125,7 +125,7 @@
 
 /* --------------------------------------------------------------------------- */
 body {
-  background-color: #333;
+  background-color: #000000ef;
 }
 
 main {
@@ -456,7 +456,7 @@ aside {
 
   /* O card em si */
   .card-cerveja {
-    width: 10rem;
+    width: 42vw;
   }
   .card-cerveja:hover {
     background-color: white;

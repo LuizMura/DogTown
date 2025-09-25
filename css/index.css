@@ -218,7 +218,7 @@
   font-family: teko;
   font-size: 7vw;
   line-height: 5vw;
-  letter-spacing: -5px;
+  letter-spacing: -0.3vw;
 }
 .disponivel {
   display: flex;
@@ -291,45 +291,51 @@
 }
 .entrega {
   font-family: teko;
-  padding: 5rem;
+  padding: 5vw;
   text-align: start;
   color: rgb(0, 0, 0);
-  h1 {
-    font-size: 2rem;
-    font-weight: 900;
-    font-style: oblique;
-  }
-  h2 {
-    font-size: 5vw;
-    font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 5vw;
-    width: 70%;
-    padding-bottom: 2vw;
-  }
-  p {
-    font-size: 1.8vw;
-    padding-bottom: 1vw;
-  }
-  button {
-    position: absolute;
-    font-size: 1.3vw;
-    font-weight: 700;
-    width: 15vw;
-    padding: 1vw;
-    margin-top: -4vw;
-    margin-left: 55vw;
-    background-color: #000000;
-    color: white;
-    border-radius: 5px;
-  }
-  img {
-    position: absolute;
-    width: 12vw;
-    margin-top: -20vw;
-    margin-left: 60vw;
-  }
 }
+.entrega h1 {
+  font-size: 3vw;
+  font-weight: 900;
+  padding-bottom: 1vw;
+}
+.entrega h2 {
+  font-size: 5vw;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 5vw;
+  width: 70%;
+  padding-bottom: 2vw;
+}
+.entrega p {
+  font-size: 1.8vw;
+  padding-bottom: 1vw;
+}
+.entrega h3 {
+  margin-top: 2vw;
+  font-size: 1.5vw;
+  width: 60%;
+}
+.entrega button {
+  position: absolute;
+  font-size: 1.3vw;
+  font-weight: 700;
+  width: 15vw;
+  padding: 1vw;
+  margin-top: -4vw;
+  margin-left: 60vw;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+}
+.entrega img {
+  position: absolute;
+  width: 12vw;
+  margin-top: -20vw;
+  margin-left: 60vw;
+}
+
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
@@ -339,7 +345,7 @@
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
 /* ---------------------------------------CELULAR--------------------------------------- */
-@media (max-width: 950px) {
+@media (max-width: 550px) {
   .video-capa {
     height: 39rem;
   }
@@ -406,21 +412,19 @@
     overflow: hidden;
     display: flex;
     width: 100%;
-    /* height: 18rem; */
     height: 72vw;
     gap: 13vw;
   }
   .chope p {
     padding-top: 5vw;
     margin-left: -12vw;
-    /* font-size: 2rem; */
     font-size: 8vw;
   }
   .chope h1 {
     font-size: 11vw;
     margin-left: -12vw;
     line-height: 9vw;
-    letter-spacing: -2.5px;
+    letter-spacing: -0.5vw;
     width: 63vw;
   }
 
@@ -433,7 +437,7 @@
     font-weight: 700;
     padding: 1vw;
     margin-top: -5vw;
-    margin-left: -16vw;
+    margin-left: -18vw;
     color: white;
   }
   .disponivel h2 {
@@ -441,7 +445,7 @@
     margin-left: -42vw;
     font-size: 6vw;
     font-weight: 500;
-    margin-top: 5vw;
+    margin-top: 7vw;
     line-height: 6vw;
   }
 
@@ -492,44 +496,43 @@
     padding: 5vw;
     text-align: start;
     color: rgb(0, 0, 0);
-    h1 {
-      font-size: 6vw;
-      font-weight: 900;
-      font-style: oblique;
-    }
-    h2 {
-      font-size: 10vw;
-      font-weight: 900;
-      letter-spacing: -3px;
-      line-height: 9vw;
-      width: 100%;
-      padding-bottom: 5vw;
-    }
-    p {
-      font-size: 5vw;
-      padding-bottom: 3vw;
-    }
-    h3 {
-      margin-top: 3vw;
-      font-size: 4vw;
-    }
-    button {
-      position: absolute;
-      font-size: 4vw;
-      font-weight: 700;
-      width: 45vw;
-      padding: 3vw;
-      margin-top: 8vw;
-      margin-left: 1rem;
-      background-color: #000000;
-      color: white;
-      border-radius: 5px;
-    }
-    img {
-      position: absolute;
-      width: 17vw;
-      margin-top: 7vw;
-      margin-left: 60vw;
-    }
+  }
+  .entrega h1 {
+    font-size: 7vw;
+    font-weight: 800;
+  }
+  .entrega h2 {
+    font-size: 10vw;
+    font-weight: 900;
+    line-height: 9vw;
+    width: 100%;
+    padding-bottom: 8vw;
+  }
+  .entrega p {
+    font-size: 5vw;
+    padding-bottom: 2vw;
+  }
+  .entrega h3 {
+    margin-top: 5vw;
+    font-size: 4vw;
+    width: 100%;
+  }
+  .entrega button {
+    position: absolute;
+    font-size: 4vw;
+    font-weight: 700;
+    width: 45vw;
+    padding: 3vw;
+    margin-top: 8vw;
+    margin-left: 1rem;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+  }
+  .entrega img {
+    position: absolute;
+    width: 17vw;
+    margin-top: 7vw;
+    margin-left: 60vw;
   }
 }
