@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8P2KKQ8CE7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-8P2KKQ8CE7");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja DogTown Brew | Cervejas Artesanais e Chopp</title>
+    <meta
+      name="description"
+      content="Compre cervejas artesanais DogTown Brew e monte seu pedido para finalizar pelo WhatsApp em Ribeirao Preto."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="canonical" href="/loja.html" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dogtownbrew.com.br/loja.html" />
+    <meta
+      property="og:title"
+      content="Loja DogTown Brew | Cervejas Artesanais e Chopp"
+    />
+    <meta
+      property="og:description"
+      content="Conheca a loja DogTown Brew e finalize seu pedido pelo WhatsApp."
+    />
+    <meta property="og:image" content="img/logo2.png" />
+    <meta property="og:image:alt" content="Produtos da DogTown Brew" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Loja DogTown Brew" />
+    <meta
+      name="twitter:description"
+      content="Cervejas artesanais e chopp DogTown Brew para pedir online."
+    />
+    <meta name="twitter:image" content="img/logo2.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Loja DogTown Brew",
+        "url": "https://dogtownbrew.com.br/loja.html",
+        "about": {
+          "@type": "Brewery",
+          "name": "DogTown Brew"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="css/loja.css" />
+    <script
+      src="https://kit.fontawesome.com/b07f4922ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicon-192x192.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <
+        <div class="logo">
+          <a href="index.html"><img src="img/logo2.png" alt="DogTownBrew" /></a>
+          <a href="index.html"><p class="brand-title">DOGTOWN BREW ®</p></a>
+        </div>
+
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+          <!-- Ícone do menu -->
+        </div>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">INÍCIO</a></li>
+          <li><a href="loja.html">LOJA</a></li>
+          <li><a href="chope.html">BARRIL</a></li>
+          <li><a href="sobre.html">SOBRE</a></li>
+          <li><a href="contato.html">CONTATO</a></li>
+        </ul>
+
+        <div id="icone-carrinho">
+          <a href="loja.html">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/107/107831.png"
+              alt="Carrinho"
+              width="24"
+            />
+            <span id="contador-itens">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="header-loja">
+        <h1 class="titulo">NOSSAS CERVEJAS</h1>
+        <div class="subtitulo">
+          Ao "Finalizar Pedido" sua compra será encaminhada para nosso Whatsapp.
+        </div>
+      </div>
+      <div class="content">
+        <div id="spinner" class="spinner hidden"></div>
+        <div id="lista-cervejas" class="cervejas-container"></div>
+
+        <aside class="slide-carrinho" id="carrinhoAside">
+          <div class="box">
+            <div class="resumo">Resumo da compra</div>
+            <div id="carrinho-itens"></div>
+            <div class="info-total">
+              <div>
+                <span>Sub-total</span><span id="subtotal">R$ 0,00</span>
+              </div>
+              <div>Taxa de Entrega: <span id="frete">R$ 15,00</span></div>
+            </div>
+            <div class="total">
+              <span>Total</span><span id="total">R$ 0,00</span>
+            </div>
+          </div>
+          <button class="btn" id="finalizarPedido">Finalizar Pedido</button>
+        </aside>
+      </div>
+    </main>
+
+    <div data-site-footer></div>
+
+    <!-- -----------------------Prompt de Finalização---------------------------------- -->
+    <div id="promptCliente" class="prompt hidden">
+      <div class="prompt-box">
+        <h3>Finalizar Pedido</h3>
+        <input
+          type="text"
+          id="nomeCliente"
+          placeholder="Seu nome / * preenchimento obrigatório"
+        />
+        <input
+          type="number"
+          id="telefoneCliente"
+          placeholder="Seu telefone / * preenchimento obrigatório"
+        />
+        <input
+          type="text"
+          id="enderecoCliente"
+          placeholder="Seu endereço / * preenchimento obrigatório"
+        />
+        <input
+          type="email"
+          id="emailCliente"
+          placeholder="Seu e-mail / opcional"
+        />
+        <div class="termos">
+          <label for="termos">Declaro ter mais de 18 anos.</label
+          ><input type="checkbox" id="termos" />
+        </div>
+        <div class="botoes">
+          <button id="cancelarPrompt">Cancelar</button>
+          <button id="enviarPedido">Enviar Pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script type="module" src="js/loja.js"></script>
+    <script src="js/mobile-navbar.js" defer></script>
+    <script src="js/footer-component.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
+    <script src="js/contador-carrinho.js" defer></script>
+    <script src="js/popup-idade.js" defer></script>
+    <script src="js/site-analytics.js" defer></script>
+  </body>
+</html>

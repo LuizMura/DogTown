@@ -1,0 +1,15 @@
+# Variáveis de ambiente e segredos — NUNCA subir
+backend/.env
+backend/analytics-store.json
+
+# Dependências
+node_modules/
+backend/node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db

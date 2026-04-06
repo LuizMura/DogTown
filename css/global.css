@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  list-style-type: none;
+  font-family: "lato", sans-serif;
+}
+
+/* Navbar sobre o vídeo */
+.navbar {
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.753);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.24);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo {
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.logo img {
+  width: 6.7rem;
+  opacity: 0.8;
+}
+.logo h1 {
+  font-size: 1.5rem;
+  font-family: "lato", sans-serif;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.849);
+}
+.logo .brand-title {
+  font-size: 1.5rem;
+  font-family: "lato", sans-serif;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.849);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.nav-list {
+  display: flex;
+  z-index: 10001;
+  gap: 3rem;
+  margin-right: -20rem;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list a {
+  position: relative;
+  color: rgb(182, 182, 182);
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+.nav-list a:hover {
+  color: rgb(255, 255, 255);
+}
+.nav-list a.active {
+  font-weight: bold;
+  color: rgb(169, 204, 166);
+}
+.mobile-menu {
+  display: none;
+}
+#icone-carrinho {
+  position: relative; /* 🔑 ponto de referência para o badge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4rem;
+  margin-top: -0.9rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+}
+#icone-carrinho img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* transforma em branco */
+  margin-top: 1rem;
+}
+
+#contador-itens {
+  position: absolute;
+  top: 10px; /* ajuste fino vertical */
+  right: 0px; /* ajuste fino horizontal */
+  padding: 2px 6px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+#contador-itens.has-items {
+  background-color: #1f9b41;
+  color: #ffffff;
+}
+
+/*-------------------------------footer---------------------------------------------*/
+
+.footer-mobile img {
+  display: none;
+}
+.footer {
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: space-around;
+  color: rgb(216, 215, 215);
+  font-family: "Lato", sans-serif;
+  font-size: 2.2vh;
+  text-align: center;
+  letter-spacing: 0.2cap;
+  padding-bottom: 0.8rem;
+}
+.redes-sociais {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3vh;
+}
+.rede {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-around;
+}
+.rede a {
+  color: rgb(216, 215, 215);
+  font-size: 6vh;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  margin-top: 3vh;
+}
+.developer {
+  margin-top: 3vh;
+}
+.developer img {
+  width: 20vh;
+  margin-top: 1vh;
+}
+.footer-logo img {
+  width: 100%;
+  margin-bottom: -4px;
+  background-color: rgb(175, 175, 175);
+}
+
+/* -------------------------------beer popup---------------------------------------------*/
+
+#cerveja-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9500;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#cerveja-popup-overlay.active {
+  display: flex;
+}
+
+body.popup-open {
+  overflow: hidden;
+}
+
+#cerveja-popup {
+  position: relative;
+  width: min(860px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 2rem;
+  background:
+    linear-gradient(145deg, rgba(38, 32, 22, 0.97), rgba(22, 18, 12, 0.95)),
+    linear-gradient(135deg, rgba(212, 162, 74, 0.22), transparent 50%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.55);
+  color: #f2eee8;
+  padding: 2.5rem;
+  animation: beer-popup-in 0.25s ease;
+}
+
+@keyframes beer-popup-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+#cerveja-popup-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f2eee8;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#cerveja-popup-close:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+#cerveja-popup-inner {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+#cerveja-popup-img-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.5rem;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(212, 162, 74, 0.14),
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 250, 240, 0.88),
+      rgba(246, 237, 220, 0.78)
+    );
+  border: 1px solid rgba(212, 162, 74, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 12px 30px rgba(0, 0, 0, 0.16);
+  border-radius: 1.4rem;
+  padding: 1.2rem;
+}
+
+#cerveja-popup-img {
+  width: 100%;
+  max-height: 26rem;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.55));
+}
+
+#cerveja-popup-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(212, 162, 74, 0.18),
+      rgba(255, 255, 255, 0.04)
+    ),
+    radial-gradient(
+      ellipse at top left,
+      rgba(212, 162, 74, 0.24),
+      transparent 72%
+    );
+  border: 1px solid rgba(212, 162, 74, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.4rem;
+}
+
+#cerveja-popup-kicker {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+  color: #d4a24a;
+  margin: 0;
+}
+
+#cerveja-popup-nome {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+#cerveja-popup-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#cerveja-popup-badges span {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(212, 162, 74, 0.18);
+  border: 1px solid rgba(212, 162, 74, 0.4);
+  color: #ffe9a0;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06rem;
+}
+
+#cerveja-popup-desc {
+  font-family: "Lato", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #e8e2d8;
+  margin: 0;
+}
+/*------------------------------------------responsive--------------------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+  .navbar {
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+  }
+
+  .logo {
+    padding-left: 1rem;
+    gap: 1rem;
+  }
+  .logo img {
+    width: 4.7rem;
+    opacity: 0.7;
+  }
+  .logo h1 {
+    font-size: 1rem;
+  }
+  .logo .brand-title {
+    font-size: 1rem;
+  }
+
+  .navlist {
+    padding-right: 0rem;
+    display: none;
+    gap: 3rem;
+  }
+  .navlist p {
+    font-size: 1.2rem;
+    font-family: "lato", sans-serif;
+  }
+
+  /* ========== MENU MOBILE DESLIZANTE ========== */
+  .nav-list {
+    margin-left: 0px;
+    position: fixed;
+    top: 4.7rem;
+    right: 20rem;
+    width: 250px;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(7, 7, 7, 0.829);
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(190%);
+    transition: transform 0.3s ease-in;
+    gap: 0rem;
+    padding-top: 1rem;
+  }
+  .nav-list li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 700;
+    margin: 0 0 1.7rem 0;
+    padding: 0;
+  }
+  .nav-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.8rem;
+    min-height: 2.4rem;
+    background-color: white;
+    padding: 0 0.8rem;
+    border-radius: 3rem;
+    color: black;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .nav-list.active {
+    transform: translateY(0);
+  }
+  #icone-carrinho {
+    margin-right: 5rem;
+    margin-top: -0.8rem;
+  }
+  #icone-carrinho img {
+    margin-left: -1rem;
+  }
+  #contador-itens {
+    right: 0rem;
+  }
+
+  /* -----------------------------------------footer------------------------------------------- */
+  .footer {
+    letter-spacing: 0;
+  }
+  .footer-logo img {
+    display: none;
+  }
+  .footer-mobile img {
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    background-color: rgb(255, 255, 255);
+  }
+  .footer {
+    font-size: 0.7rem;
+  }
+  .rede a {
+    font-size: 7.5vw;
+  }
+  .developer img {
+    width: 22vw;
+  }
+
+  #cerveja-popup {
+    padding: 1.8rem 1.2rem;
+    border-radius: 1.4rem;
+  }
+
+  #cerveja-popup-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  #cerveja-popup-img-wrap {
+    width: 11rem;
+  }
+
+  #cerveja-popup-nome {
+    font-size: 2.2rem;
+  }
+
+  #cerveja-popup-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #cerveja-popup-overlay {
+    padding: 0.8rem;
+  }
+
+  #cerveja-popup {
+    width: min(540px, 92vw);
+    max-height: 84vh;
+    padding: 1.15rem 0.9rem;
+    border-radius: 1rem;
+  }
+
+  #cerveja-popup-inner {
+    gap: 1rem;
+  }
+
+  #cerveja-popup-img-wrap {
+    width: 8.4rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+
+  #cerveja-popup-info {
+    padding: 0.85rem 0.95rem;
+    gap: 0.65rem;
+  }
+
+  #cerveja-popup-kicker {
+    font-size: 0.66rem;
+    letter-spacing: 0.14rem;
+  }
+
+  #cerveja-popup-nome {
+    font-size: 1.75rem;
+  }
+
+  #cerveja-popup-badges span {
+    padding: 0.32rem 0.7rem;
+    font-size: 0.68rem;
+  }
+
+  #cerveja-popup-desc {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+}

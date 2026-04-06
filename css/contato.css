@@ -1,0 +1,353 @@
+@import "../css/global.css";
+
+:root {
+  --contact-bg: #090909;
+  --contact-panel: rgba(20, 20, 20, 0.82);
+  --contact-line: rgba(255, 255, 255, 0.12);
+  --contact-text: #f2eee8;
+  --contact-muted: rgba(242, 238, 232, 0.72);
+  --contact-accent: #d4a24a;
+  --contact-accent-2: #7bc77f;
+  --contact-blue: #68a8ff;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(212, 162, 74, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(123, 199, 127, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #111111 0%, #080808 42%, #111111 100%);
+  color: var(--contact-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+.contato-page {
+  position: relative;
+  overflow: hidden;
+  padding: 7.8rem 2vw 3.2rem;
+}
+
+.contact-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(320px, 96vw);
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 2rem -6rem auto auto;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 162, 74, 0.16),
+    transparent 68%
+  );
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.contact-brand-card {
+  position: relative;
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--contact-line);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+}
+
+.contact-brand-card {
+  padding: 3rem 3.2rem;
+  border-radius: 2rem;
+  background:
+    linear-gradient(145deg, rgba(20, 20, 20, 0.94), rgba(8, 8, 8, 0.88)),
+    linear-gradient(135deg, rgba(212, 162, 74, 0.12), transparent 45%);
+}
+
+.contact-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 36rem;
+  align-items: start;
+  gap: 2.2rem;
+}
+
+.contact-copy {
+  order: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+}
+
+.contact-side {
+  order: 2;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 3.6rem;
+  padding-right: 2rem;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.contact-brand-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+.contact-kicker,
+.highlight-label {
+  margin-bottom: 0.7rem;
+  color: var(--contact-accent);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+}
+
+.contact-brand-card h1 {
+  max-width: 18ch;
+  font-family: "Teko", sans-serif;
+  font-size: clamp(2.8rem, 5.6vw, 4.6rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.contact-intro,
+.contact-highlight p {
+  color: var(--contact-muted);
+  line-height: 1.7;
+}
+
+.contact-intro {
+  max-width: 54rem;
+  margin-top: 0.95rem;
+  font-size: 1.08rem;
+}
+
+.contact-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.contact-badges span {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f7f1e7;
+  font-size: 0.9rem;
+}
+
+.contact-actions {
+  order: 2;
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0;
+  width: 100%;
+}
+
+.contact-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--contact-text);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-action:hover,
+.contact-highlight a:hover {
+  transform: translateY(-2px);
+}
+
+.contact-action i {
+  flex: 0 0 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-action-primary {
+  border-color: rgba(123, 199, 127, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(123, 199, 127, 0.2),
+    rgba(255, 255, 255, 0.04)
+  );
+}
+
+.contact-action-primary i {
+  color: #7ff08b;
+}
+
+.contact-action:not(.contact-action-primary) i {
+  color: var(--contact-blue);
+}
+
+.contact-action span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contact-action strong {
+  font-size: 1.05rem;
+}
+
+.contact-action small {
+  color: var(--contact-muted);
+  font-size: 0.95rem;
+}
+
+.contact-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.contact-highlight {
+  padding: 1.2rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-highlight h3 {
+  font-family: "Special Gothic Condensed One", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.03rem;
+  color: #fff8ed;
+}
+
+.contact-highlight a {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.95rem;
+  color: #f9cf7a;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .contato-page {
+    padding: 7.2rem 1rem 3rem;
+  }
+
+  .contact-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-brand-card {
+    min-height: auto;
+  }
+
+  .contact-top {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-copy,
+  .contact-side,
+  .contact-highlights {
+    order: initial;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .contact-brand-card h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contato-page {
+    padding-top: 6.8rem;
+  }
+
+  .contact-copy {
+    order: 1;
+  }
+
+  .contact-side {
+    order: 2;
+    width: 100%;
+    padding-right: 0;
+    justify-items: stretch;
+  }
+
+  .contact-highlights {
+    order: 3;
+  }
+
+  .contact-brand-card {
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+  }
+
+  .contact-actions,
+  .contact-action {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-action span {
+    min-width: 0;
+  }
+
+  .contact-brand-card h1 {
+    font-size: clamp(2.1rem, 9.5vw, 3.2rem);
+  }
+
+  .contact-intro,
+  .contact-highlight p,
+  .contact-action small {
+    font-size: 0.96rem;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-action {
+    align-items: flex-start;
+  }
+
+  .contact-kicker,
+  .highlight-label {
+    letter-spacing: 0.18rem;
+  }
+}

@@ -1,0 +1,228 @@
+@import "../css/global.css";
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+
+body {
+  background-color: #0d0905;
+  color: #f0e6cf;
+}
+
+/* ======================== HERO ======================== */
+.sobre-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(180, 100, 10, 0.28) 0%, transparent 70%),
+    linear-gradient(160deg, #1a0e03 0%, #0d0905 55%, #1a1005 100%);
+  overflow: hidden;
+  padding: 7rem 2rem 5rem;
+}
+
+.sobre-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 255, 255, 0.012) 3px,
+      rgba(255, 255, 255, 0.012) 4px
+    );
+  pointer-events: none;
+}
+
+.sobre-hero-content {
+  position: relative;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.sobre-kicker {
+  font-family: "Teko", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  color: #c87d2a;
+  margin-bottom: 1rem;
+}
+
+.sobre-titulo {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 1;
+  color: #f0e6cf;
+  text-shadow: 0 4px 32px rgba(200, 125, 42, 0.35);
+  margin-bottom: 1.8rem;
+}
+
+.sobre-desc {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: rgba(240, 230, 207, 0.72);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ======================== FUNDADORES ======================== */
+.sobre-fundadores {
+  background: linear-gradient(160deg, #140b02 0%, #0d0905 100%);
+  border-top: 1px solid rgba(200, 125, 42, 0.18);
+  padding: 6rem 4rem;
+}
+
+.sobre-fundadores-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sobre-fundadores-foto {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.sobre-fundadores-foto img {
+  width: 340px;
+  display: block;
+  border: 1px solid rgba(200, 125, 42, 0.25);
+  filter: sepia(0.15) contrast(1.05);
+}
+
+.sobre-fundadores-foto figcaption {
+  display: flex;
+  justify-content: space-around;
+  width: 340px;
+  padding: 0.7rem 1rem 0.6rem;
+  border-bottom: 1px solid rgba(200, 125, 42, 0.15);
+}
+
+.sobre-fundadores-foto figcaption span {
+  font-family: "Teko", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  color: #c87d2a;
+}
+
+.sobre-fundadores-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sobre-fundadores-titulo {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  color: #f0e6cf;
+  line-height: 1;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.sobre-fundadores-copy {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(240, 230, 207, 0.68);
+  max-width: 560px;
+}
+
+.sobre-fundadores-copy strong {
+  color: #f0e6cf;
+  font-weight: 800;
+}
+
+.sobre-fundadores-copy.is-highlight {
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(200, 125, 42, 0.9);
+  background: linear-gradient(90deg, rgba(200, 125, 42, 0.12) 0%, rgba(200, 125, 42, 0) 100%);
+  color: rgba(240, 230, 207, 0.82);
+}
+
+/* ======================== ESTILOS ======================== */
+.sobre-estilos {
+  padding: 6rem 4rem;
+  background: #0d0905;
+  border-top: 1px solid rgba(200, 125, 42, 0.18);
+}
+
+.sobre-estilos-titulo {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: 0.08em;
+  color: #c87d2a;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sobre-estilos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgba(200, 125, 42, 0.15);
+  border: 1px solid rgba(200, 125, 42, 0.15);
+}
+
+.sobre-estilo-item {
+  padding: 2.5rem 2rem;
+  background: #0d0905;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.sobre-estilo-item:hover {
+  background: #1a1005;
+}
+
+.sobre-estilo-nome {
+  font-family: "Teko", sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: 0.1em;
+  color: #f0e6cf;
+  margin-bottom: 0.5rem;
+}
+
+.sobre-estilo-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(240, 230, 207, 0.55);
+}
+
+/* ======================== MOBILE ======================== */
+@media (max-width: 900px) {
+  .sobre-estilos {
+    padding: 4rem 1.5rem;
+  }
+
+  .sobre-estilos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sobre-estilo-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .sobre-fundadores {
+    padding: 4rem 1.5rem;
+  }
+
+  .sobre-fundadores-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sobre-fundadores-foto img,
+  .sobre-fundadores-foto figcaption {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-fundadores-copy {
+    max-width: 100%;
+  }
+}

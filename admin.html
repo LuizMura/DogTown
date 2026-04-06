@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Administrador | DogTown Brew</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body id="admin-body">
+  <section id="login-section">
+    <img src="img/logo2.png" alt="DogTownBrew" />
+            <h1>ADMINISTRAÇÃO<BR>DOGTOWN BREW ®</h1>
+    <form id="login-form" autocomplete="on">
+      <input id="email" type="email" placeholder="Email" autocomplete="username" />
+      <div class="password-field">
+        <input
+          id="senha"
+          type="password"
+          placeholder="Certeza que esqueceu"
+          autocomplete="current-password"
+        />
+        <button
+          id="toggle-password"
+          class="toggle-password"
+          type="button"
+          aria-label="Mostrar senha"
+          title="Mostrar senha"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path d="M12 5c-5.6 0-9.3 4.7-10 5.6a1 1 0 0 0 0 1.1C2.7 12.6 6.4 17.3 12 17.3s9.3-4.7 10-5.6a1 1 0 0 0 0-1.1C21.3 9.7 17.6 5 12 5zm0 10.3a4.7 4.7 0 1 1 0-9.3 4.7 4.7 0 0 1 0 9.3z" fill="currentColor" />
+            <circle cx="12" cy="10.7" r="2.3" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+      <label class="remember-me" for="remember-me">
+        <input id="remember-me" type="checkbox" checked />
+        <span>Lembrar de mim</span>
+      </label>
+      <button type="submit">Entrar</button>
+    </form>
+    <a class="login-voltar" href="index.html">Voltar ao site</a>
+  </section>
+  <section id="admin-section" style="display: none;">
+    <header class="admin-topbar">
+      <div>
+        <p class="admin-kicker">Controle Central</p>
+        <h2>Painel do Administrador</h2>
+      </div>
+      <a class="voltar" href="index.html">Voltar ao site</a>
+    </header>
+
+    <nav class="admin-tabs" aria-label="Abas do painel">
+      <button class="admin-tab is-active" data-tab-target="dashboard">Dashboard</button>
+      <button class="admin-tab" data-tab-target="produtos">Produtos</button>
+    </nav>
+
+    <section class="admin-panel is-active" data-tab-panel="dashboard">
+      <div class="dashboard-toolbar">
+        <p id="dashboard-period-label">Período: últimos 7 dias</p>
+        <div class="range-switch" role="group" aria-label="Filtro de período">
+          <button class="range-btn is-active" data-range-days="7">7 dias</button>
+          <button class="range-btn" data-range-days="30">30 dias</button>
+          <button class="range-btn" data-range-days="90">90 dias</button>
+        </div>
+      </div>
+
+      <div class="metrics-grid">
+        <article class="metric-card">
+          <p>Visitantes únicos (total)</p>
+          <h3 id="metric-visitors">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Visualizações</p>
+          <h3 id="metric-views">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Cliques</p>
+          <h3 id="metric-clicks">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>CTR geral</p>
+          <h3 id="metric-ctr">0%</h3>
+        </article>
+        <article class="metric-card">
+          <p>Produtos cadastrados</p>
+          <h3 id="metric-products">0</h3>
+        </article>
+        <article class="metric-card">
+          <p>Itens em estoque</p>
+          <h3 id="metric-stock">0</h3>
+        </article>
+      </div>
+
+      <div class="charts-grid">
+        <article class="chart-card">
+          <h4 id="traffic-title">Tráfego e cliques (últimos 7 dias)</h4>
+          <canvas id="chart-traffic"></canvas>
+        </article>
+        <article class="chart-card">
+          <h4>Distribuição por estilo</h4>
+          <canvas id="chart-styles"></canvas>
+        </article>
+      </div>
+
+      <article class="table-card">
+        <h4>Páginas com mais interação</h4>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Página</th>
+                <th>Visualizações</th>
+                <th>Cliques</th>
+                <th>CTR</th>
+              </tr>
+            </thead>
+            <tbody id="analytics-pages-body"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="admin-panel" data-tab-panel="produtos">
+      <div class="panel-actions">
+        <button id="abrirPrompt">Adicionar Produto</button>
+      </div>
+      <div class="table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Imagem</th>
+              <th>Nome</th>
+              <th>Tamanho</th>
+              <th>Preço</th>
+              <th>ABV/IBU</th>
+              <th>Estoque</th>
+              <th>Ordem</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-produtos"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+  
+  <!-- Prompt para adicionar/editar produto -->
+  <div id="produto-prompt" class="prompt hidden">
+    <div class="prompt-box">
+      <h3 id="titulo-prompt">Adicionar Produto</h3>
+      <label>Cervejas</a>
+        <select id="input-nome">
+            <option value="Dogtown - APA">APA</option>
+            <option value="Dogtown - LAGER">LAGER</option>
+            <option value="Dogtown - IPA"> IPA</option>
+            <option value="Dogtown - PORTER">PORTER</option>
+            <option value="Dogtown - BITTER">BITTER</option>
+        </select><br>
+        
+          <label>Imagens </label>
+          <select id="input-imagem"> <!-- Corrigido o id aqui -->
+              <option value="img/cervejas/breja-apa.png">APA 500ml</option>
+              <option value="img/cervejas/apa-1lt.png">APA 1 litro</option>
+              <option value="img/cervejas/breja-lager.png">LAGER 500ml</option>
+              <option value="img/cervejas/lager-1lt.png">LARGER 1 litro</option>
+              <option value="img/cervejas/breja-ipa.png">IPA 500ml</option>
+              <option value="img/cervejas/ipa-1lt.png">IPA 1 litro</option>
+              <option value="img/cervejas/breja-bitter.png">BITTER 500ml</option>
+              <option value="img/cervejas/bitter-1lt.png">BITTER 1 litro</option>
+              <option value="img/cervejas/breja-porter.png">PORTER 500ml</option>
+              <option value="img/cervejas/porter-1lt.png">PORTER 1 litro</option>
+              <option value="img/chope/barril-10.png">BARRIL 10 Litros</option>
+              <option value="img/chope/barril-20.png">BARRIL 20 Litros</option>
+              <option value="img/chopel/barril-30.png">BARRIL 30 Litros</option>
+              <option value="img/chope/barril-50.png">BARRIL 50 Litros</option>
+          </select><br>
+          
+        
+      <label>Tamanho </label>
+        <select id="input-tamanho">
+          <option value="500ml">500 ml</option>
+          <option value="1-litro">1 litro</option>
+          <option value="10-litro">10 litros</option>
+          <option value="20-litro">20 litros</option>
+          <option value="30-litro">30 litros</option>
+          <option value="50-litro">50 litros</option>
+        </select><br>
+
+      <label>Preço </label><input type="text" id="input-preco" placeholder="Preço (ex: 99.99)" required><br>
+
+      <label>ABV </label><input type="text" id="input-abv" placeholder="ABV%" required><br>
+        
+      <label>IBU </label><input type="text" id="input-ibu" placeholder="IBU%" required><br>
+        
+      <label>Estoque </label><input type="number" id="input-estoque" placeholder="Estoque" required><br>
+        
+      <label>Ordem:</label><input type="number" id="input-ordem" /><br>
+
+      <div class="botoes">
+        <button id="cancelarPrompt">Cancelar</button>
+        <button id="salvarProduto">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
