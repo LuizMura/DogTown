@@ -97,6 +97,7 @@ function atualizarCarrinho() {
   }
 
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  window.dispatchEvent(new CustomEvent("dogtown-cart-updated"));
 }
 
 function adicionarAoCarrinho(nome, preco, volume) {

@@ -203,6 +203,7 @@ main {
 
 /* O card em si */
 .card-cerveja {
+  position: relative;
   width: 15rem;
   background: #dad8d8; /* fundo escuro */
   color: #000000;
@@ -217,6 +218,32 @@ main {
 .card-cerveja:hover {
   background-color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-cart-counter {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 1.55rem;
+  height: 1.55rem;
+  padding: 0;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  background: #0c7911;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+}
+
+.card-cart-counter.is-visible {
+  display: inline-flex;
 }
 
 /* Imagem da cerveja */
@@ -517,6 +544,14 @@ aside {
     margin: 0.3rem;
     padding: 0.5rem 1rem;
     font-size: 0.7rem;
+  }
+
+  .card-cart-counter {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    font-size: 0.66rem;
   }
 
   .slide-carrinho {

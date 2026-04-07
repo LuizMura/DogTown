@@ -23,18 +23,6 @@
 
   const endpoint = window.DOGTOWN_INSTAGRAM_API || defaultApi;
 
-  function formatDate(value) {
-    if (!value) {
-      return "Instagram";
-    }
-
-    return new Intl.DateTimeFormat("pt-BR", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    }).format(new Date(value));
-  }
-
   function escapeHtml(text) {
     return text
       .replace(/&/g, "&amp;")
@@ -104,7 +92,6 @@
   function buildCard(post) {
     const caption = (post.caption || "").slice(0, 90);
     const safeCaption = escapeHtml(caption);
-    const safeDate = escapeHtml(formatDate(post.timestamp));
 
     return [
       '<a class="instagram-card" href="' +
@@ -113,7 +100,6 @@
       '<img src="' +
         post.imageUrl +
         '" alt="Publicacao Instagram DogTown" loading="lazy" />',
-      '<span class="instagram-card-date">' + safeDate + "</span>",
       '<p class="instagram-card-caption">' +
         (safeCaption || "Ver post no Instagram") +
         "</p>",
@@ -134,15 +120,8 @@
       })
       .join("");
 
-    const loadMoreLabel = loadingMore
-      ? "Carregando mais posts..."
-      : "Role para carregar mais posts";
     const loadMoreMarkup = hasMore
-      ? '<div class="instagram-load-more-wrap"><p class="instagram-load-more' +
-        (loadingMore ? " is-loading" : "") +
-        '" data-instagram-load-more-sentinel>' +
-        loadMoreLabel +
-        "</p></div>"
+      ? '<div class="instagram-load-more-sentinel" data-instagram-load-more-sentinel aria-hidden="true"></div>'
       : "";
 
     feedElement.innerHTML =
