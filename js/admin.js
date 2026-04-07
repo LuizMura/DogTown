@@ -24,7 +24,7 @@ const firebaseConfig = {
   storageBucket: "dogtown-f3603.appspot.com",
   messagingSenderId: "153818184475",
   appId: "1:153818184475:web:892e41f0d576c5d16931be",
-  measurementId: "G-8P2KKQ8CE7",
+  measurementId: "G-ZEPXV9VTFE",
 };
 
 const app = initializeApp(firebaseConfig);

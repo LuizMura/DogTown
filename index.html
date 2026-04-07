@@ -2,13 +2,13 @@
 <html lang="pt-BR">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8P2KKQ8CE7"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEPXV9VTFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-8P2KKQ8CE7');
+  gtag('config', 'G-ZEPXV9VTFE');
 </script>
 
     <meta charset="UTF-8" />
@@ -152,86 +152,75 @@
     <div class="section2">
       <div class="brejas">
         <div class="carousel-container">
+          <p class="carousel-hint">Clique na cerveja para detalhes.</p>
           <button class="nav prev">&#10094;</button>
           <div class="carousel-track" id="carouselTrack">
-            <div class="carousel-item">
+            <div class="carousel-item" data-beer="lager">
               <a href="cervejas.html"
                 ><img src="img/cervejas/breja-lager.png" alt="Cerveja artesanal DogTown Brew Lager"
               /></a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-beer="apa">
               <a href="cervejas.html"
                 ><img src="img/cervejas/breja-apa.png" alt="Cerveja artesanal DogTown Brew APA"
               /></a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-beer="ipa">
               <a href="cervejas.html"
                 ><img src="img/cervejas/breja-ipa.png" alt="Cerveja artesanal DogTown Brew IPA"
               /></a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-beer="bitter">
               <a href="cervejas.html"
                 ><img src="img/cervejas/breja-bitter.png" alt="Cerveja artesanal DogTown Brew Bitter"
               /></a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-beer="porter">
               <a href="cervejas.html"
                 ><img src="img/cervejas/breja-porter.png" alt="Cerveja artesanal DogTown Brew Porter"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-lager.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-apa.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-ipa.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-bitter.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-porter.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-lager.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-apa.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-ipa.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html"
-                ><img src="img/cervejas/breja-bitter.png"
-              /></a>
-            </div>
-            <div class="carousel-item">
-              <a href="cervejas.html">
-                <img src="img/cervejas/breja-porter.png"
               /></a>
             </div>
           </div>
           <button class="nav next">&#10095;</button>
         </div>
+
+        <article class="beer-showcase" id="beerShowcasePanel" aria-live="polite">
+          <p class="beer-showcase-style" id="beerShowcaseStyle">LAGER</p>
+          <h3 class="beer-showcase-name" id="beerShowcaseName">DogTown Lager</h3>
+          <p class="beer-showcase-description" id="beerShowcaseDescription">
+            Leve e refrescante, feita para beber sem pressa e repetir sem culpa.
+          </p>
+
+          <div class="beer-showcase-specs">
+            <div class="beer-spec-card">
+              <span>ABV</span>
+              <strong id="beerShowcaseAbv">4.5%</strong>
+            </div>
+            <div class="beer-spec-card">
+              <span>IBU</span>
+              <strong id="beerShowcaseIbu">11</strong>
+            </div>
+          </div>
+
+          <div class="beer-flavor-grid">
+            <div class="beer-flavor-item">
+              <span>Corpo</span>
+              <div class="beer-meter"><div class="beer-meter-fill" id="beerShowcaseBody"></div></div>
+            </div>
+            <div class="beer-flavor-item">
+              <span>Amargor</span>
+              <div class="beer-meter"><div class="beer-meter-fill" id="beerShowcaseBitterness"></div></div>
+            </div>
+            <div class="beer-flavor-item">
+              <span>Aroma</span>
+              <div class="beer-meter"><div class="beer-meter-fill" id="beerShowcaseAroma"></div></div>
+            </div>
+          </div>
+
+          <p class="beer-showcase-pairing" id="beerShowcasePairing">
+            Harmoniza com: petiscos leves, frango grelhado e queijos suaves.
+          </p>
+        </article>
       </div>
     </div>
 
@@ -299,6 +288,7 @@
     <script>window.DOGTOWN_INSTAGRAM_API = "https://dogtown.onrender.com/api/instagram-feed";</script>
     <script>window.DOGTOWN_ANALYTICS_API = "https://dogtown.onrender.com/api/analytics/event";</script>
     <script>window.DOGTOWN_ANALYTICS_SUMMARY_API = "https://dogtown.onrender.com/api/analytics/summary";</script>
+    <script>fetch("https://dogtown.onrender.com/api/ping").catch(function(){});</script>
 
     <script src="js/mobile-navbar.js" defer></script>
     <script src="js/footer-component.js" defer></script>

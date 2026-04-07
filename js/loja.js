@@ -14,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "dogtown-f3603.appspot.com",
   messagingSenderId: "153818184475",
   appId: "1:153818184475:web:892e41f0d576c5d16931be",
-  measurementId: "G-8P2KKQ8CE7",
+  measurementId: "G-ZEPXV9VTFE",
 };
 
 // 🔹 Inicializa Firebase e Firestore
@@ -44,8 +44,8 @@ async function carregarCervejas() {
       <img src="${cerveja.imagem}" alt="${cerveja.nome}">
       <h2>${cerveja.nome}</h2>
       <p class="abv-ibu">${cerveja.abv ? `ABV: ${cerveja.abv}` : ""} ${
-      cerveja.ibu ? `IBU: ${cerveja.ibu}` : ""
-    }</p>
+        cerveja.ibu ? `IBU: ${cerveja.ibu}` : ""
+      }</p>
       <p class="tamanho">${cerveja.tamanho || ""}</p>
       <p class="valor"><strong>R$ ${
         cerveja.preco ? cerveja.preco.toFixed(2).replace(".", ",") : "00,00"
@@ -60,7 +60,7 @@ async function carregarCervejas() {
         window.adicionarAoCarrinho(
           nomeLimpo,
           cerveja.preco,
-          cerveja.tamanho || ""
+          cerveja.tamanho || "",
         );
       } else {
         console.warn("Função adicionarAoCarrinho não encontrada");

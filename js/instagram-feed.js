@@ -134,20 +134,6 @@
       })
       .join("");
 
-    const dots = groups
-      .map(function (_, index) {
-        return (
-          '<button class="instagram-dot' +
-          (index === 0 ? " is-active" : "") +
-          '" type="button" data-instagram-dot="' +
-          index +
-          '" aria-label="Ir para slide ' +
-          (index + 1) +
-          '"></button>'
-        );
-      })
-      .join("");
-
     const loadMoreLabel = loadingMore
       ? "Carregando mais posts..."
       : "Role para carregar mais posts";
@@ -169,9 +155,6 @@
       "</div>" +
       "</div>" +
       '<button class="instagram-nav instagram-nav-next" type="button" aria-label="Proximo">&#10095;</button>' +
-      "</div>" +
-      '<div class="instagram-pagination">' +
-      dots +
       "</div>" +
       loadMoreMarkup;
 
@@ -264,9 +247,6 @@
     const track = feedElement.querySelector(".instagram-track");
     const viewport = feedElement.querySelector(".instagram-viewport");
     const slides = Array.from(feedElement.querySelectorAll(".instagram-slide"));
-    const dots = Array.from(
-      feedElement.querySelectorAll("[data-instagram-dot]"),
-    );
     const prevButton = feedElement.querySelector(".instagram-nav-prev");
     const nextButton = feedElement.querySelector(".instagram-nav-next");
     let currentIndex = 0;
@@ -296,10 +276,6 @@
       nextButton.disabled = currentIndex === slides.length - 1;
       prevButton.hidden = slides.length <= 1;
       nextButton.hidden = slides.length <= 1;
-
-      dots.forEach(function (dot, index) {
-        dot.classList.toggle("is-active", index === currentIndex);
-      });
     }
 
     function stopAutoPlay() {
@@ -345,13 +321,6 @@
     nextButton.addEventListener("click", function () {
       goToSlide(currentIndex + 1);
       startAutoPlay();
-    });
-
-    dots.forEach(function (dot) {
-      dot.addEventListener("click", function () {
-        goToSlide(Number(dot.getAttribute("data-instagram-dot")));
-        startAutoPlay();
-      });
     });
 
     viewport.addEventListener(
@@ -453,6 +422,12 @@
 
     return chain;
   }
+
+  feedElement.innerHTML =
+    '<div class="instagram-skeleton-wrap">' +
+    '<div class="instagram-skeleton-card"><div class="instagram-skeleton-img"></div><div class="instagram-skeleton-line"></div><div class="instagram-skeleton-line short"></div></div>' +
+    '<div class="instagram-skeleton-card"><div class="instagram-skeleton-img"></div><div class="instagram-skeleton-line"></div><div class="instagram-skeleton-line short"></div></div>' +
+    "</div>";
 
   fetchFeedWithFallback("")
     .then(function (data) {

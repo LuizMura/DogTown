@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static(projectRoot));
 
 const PORT = process.env.PORT || 3000;
-const CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 300000);
+const CACHE_TTL_MS = Number(process.env.CACHE_TTL_MS || 1800000);
 const INSTAGRAM_LIMIT = Number(process.env.INSTAGRAM_LIMIT || 6);
 const MAX_INSTAGRAM_LIMIT = Number(process.env.MAX_INSTAGRAM_LIMIT || 24);
 const IG_TOKEN_REFRESH_INTERVAL_MS = Number(
@@ -511,6 +511,10 @@ app.post("/api/analytics/event", (req, res) => {
 
 app.get("/api/analytics/summary", (req, res) => {
   res.json(analyticsStore);
+});
+
+app.get("/api/ping", (req, res) => {
+  res.json({ ok: true });
 });
 
 app.get("/", (req, res) => {

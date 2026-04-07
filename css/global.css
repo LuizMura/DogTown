@@ -11,6 +11,11 @@
   font-family: "lato", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Navbar sobre o vídeo */
 .navbar {
   position: absolute;
@@ -23,27 +28,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(1rem, 2vw, 2.2rem);
+  padding: 0 clamp(1rem, 2.4vw, 2.8rem);
+  box-sizing: border-box;
   z-index: 10;
 }
 
 .logo {
-  padding-left: 4rem;
+  padding-left: 0;
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex: 0 0 auto;
 }
 .logo img {
-  width: 6.7rem;
+  width: 7.4rem;
   opacity: 0.8;
 }
 .logo h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "lato", sans-serif;
   letter-spacing: 5px;
   color: rgba(255, 255, 255, 0.849);
 }
 .logo .brand-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "lato", sans-serif;
   letter-spacing: 5px;
   color: rgba(255, 255, 255, 0.849);
@@ -71,8 +80,10 @@
 .nav-list {
   display: flex;
   z-index: 10001;
-  gap: 3rem;
-  margin-right: -20rem;
+  gap: clamp(1.2rem, 2vw, 2.8rem);
+  margin: 0 0 0 auto;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .nav-list li {
@@ -118,23 +129,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 4rem;
-  margin-top: -0.9rem;
-  padding-left: 1rem;
+  margin: 0 0 0 clamp(0.6rem, 1.4vw, 1.5rem);
+  padding-left: 0;
   cursor: pointer;
   height: 55px;
   width: 55px;
+  flex: 0 0 auto;
 }
 #icone-carrinho img {
   width: 28px;
   height: 28px;
   filter: brightness(0) invert(1); /* transforma em branco */
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 #contador-itens {
   position: absolute;
-  top: 10px; /* ajuste fino vertical */
+  top: 5px; /* ajuste fino vertical */
   right: 0px; /* ajuste fino horizontal */
   padding: 2px 6px;
   background-color: rgb(255, 255, 255);
@@ -150,6 +161,86 @@
 #contador-itens.has-items {
   background-color: #1f9b41;
   color: #ffffff;
+}
+
+@media (min-width: 1700px) and (max-width: 2559px) {
+  .navbar {
+    height: 5.4rem;
+    top: 1rem;
+    padding: 0 2.8rem;
+  }
+
+  .logo {
+    gap: 1.8rem;
+  }
+
+  .logo img {
+    width: 7.2rem;
+  }
+
+  .logo .brand-title {
+    font-size: 1.55rem;
+    letter-spacing: 0.22rem;
+  }
+
+  .nav-list {
+    gap: 2rem;
+  }
+
+  .nav-list a {
+    font-size: 1.18rem;
+  }
+
+  #icone-carrinho {
+    width: 58px;
+    height: 58px;
+    margin-left: 1rem;
+  }
+
+  #icone-carrinho img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .navbar {
+    height: 6.2rem;
+    top: 1.2rem;
+    padding: 0 4rem;
+  }
+
+  .logo {
+    gap: 2.4rem;
+  }
+
+  .logo img {
+    width: 8rem;
+  }
+
+  .logo .brand-title {
+    font-size: 1.85rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .nav-list {
+    gap: 3.2rem;
+  }
+
+  .nav-list a {
+    font-size: 1.35rem;
+  }
+
+  #icone-carrinho {
+    width: 62px;
+    height: 62px;
+    margin-left: 1.6rem;
+  }
+
+  #icone-carrinho img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /*-------------------------------footer---------------------------------------------*/
@@ -393,14 +484,14 @@ body.popup-open {
     gap: 1rem;
   }
   .logo img {
-    width: 4.7rem;
+    width: 5.2rem;
     opacity: 0.7;
   }
   .logo h1 {
-    font-size: 1rem;
+    font-size: 1.22rem;
   }
   .logo .brand-title {
-    font-size: 1rem;
+    font-size: 1.22rem;
   }
 
   .navlist {
@@ -418,13 +509,13 @@ body.popup-open {
     margin-left: 0px;
     position: fixed;
     top: 4.7rem;
-    right: 20rem;
+    right: 1rem;
     width: 250px;
     border-radius: 0 0 20px 20px;
     background-color: rgba(7, 7, 7, 0.829);
     flex-direction: column;
     align-items: center;
-    transform: translateX(190%);
+    transform: translateX(120%);
     transition: transform 0.3s ease-in;
     gap: 0rem;
     padding-top: 1rem;
@@ -460,7 +551,7 @@ body.popup-open {
     z-index: 1000;
   }
   .nav-list.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   #icone-carrinho {
     margin-right: 5rem;
@@ -521,6 +612,59 @@ body.popup-open {
 }
 
 @media (max-width: 700px) {
+  .navbar {
+    height: 3.7rem;
+    padding: 0 0.6rem;
+    top: 0.7rem;
+  }
+
+  .logo {
+    padding-left: 0.3rem;
+    gap: 0.7rem;
+  }
+
+  .logo img {
+    width: 4.2rem;
+  }
+
+  .logo .brand-title {
+    display: block;
+    font-size: 1.02rem;
+    letter-spacing: 0.06rem;
+    white-space: nowrap;
+  }
+
+  .mobile-menu {
+    top: 0.65rem;
+    right: 0.75rem;
+    font-size: 26px;
+  }
+
+  .nav-list {
+    top: 4.15rem;
+    right: 0.55rem;
+    width: min(82vw, 260px);
+  }
+
+  #icone-carrinho {
+    width: 44px;
+    height: 44px;
+    margin: 0 2.9rem 0 0.25rem;
+  }
+
+  #icone-carrinho img {
+    width: 22px;
+    height: 22px;
+    margin-left: 0;
+  }
+
+  #contador-itens {
+    top: 4px;
+    right: -2px;
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+
   #cerveja-popup-overlay {
     padding: 0.8rem;
   }
