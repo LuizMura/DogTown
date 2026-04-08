@@ -282,65 +282,68 @@ async function fetchAnalyticsSummary() {
   }
 
   analyticsInFlight = (async () => {
-  const candidates = getAnalyticsSummaryCandidates();
-  const localFallback = readLocalAnalyticsFallback();
-  let bestAnalytics = null;
-  let bestScore = -1;
+    const candidates = getAnalyticsSummaryCandidates();
+    const localFallback = readLocalAnalyticsFallback();
+    let bestAnalytics = null;
+    let bestScore = -1;
 
-  function scoreAnalytics(analytics) {
-    const totalsScore =
-      Number(analytics?.totals?.pageViews || 0) +
-      Number(analytics?.totals?.clicks || 0);
-    const visitorsScore = Object.keys(analytics?.visitors || {}).length;
-    const dailyScore = Object.values(analytics?.daily || {}).reduce(
-      (acc, day) => acc + Number(day?.views || 0) + Number(day?.clicks || 0),
-      0,
+    function scoreAnalytics(analytics) {
+      const totalsScore =
+        Number(analytics?.totals?.pageViews || 0) +
+        Number(analytics?.totals?.clicks || 0);
+      const visitorsScore = Object.keys(analytics?.visitors || {}).length;
+      const dailyScore = Object.values(analytics?.daily || {}).reduce(
+        (acc, day) => acc + Number(day?.views || 0) + Number(day?.clicks || 0),
+        0,
+      );
+
+      return totalsScore + visitorsScore + dailyScore;
+    }
+
+    function fetchWithTimeout(url, timeoutMs) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+      return fetch(url, {
+        cache: "no-store",
+        signal: controller.signal,
+      }).finally(() => {
+        clearTimeout(timeoutId);
+      });
+    }
+
+    const settled = await Promise.allSettled(
+      candidates.map(async (url) => {
+        const response = await fetchWithTimeout(
+          url,
+          ANALYTICS_FETCH_TIMEOUT_MS,
+        );
+        if (!response.ok) return null;
+
+        const payload = await response.json();
+        return normalizeAnalytics(payload);
+      }),
     );
 
-    return totalsScore + visitorsScore + dailyScore;
-  }
+    settled.forEach((result) => {
+      if (result.status !== "fulfilled" || !result.value) {
+        return;
+      }
 
-  function fetchWithTimeout(url, timeoutMs) {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-
-    return fetch(url, {
-      cache: "no-store",
-      signal: controller.signal,
-    }).finally(() => {
-      clearTimeout(timeoutId);
+      const score = scoreAnalytics(result.value);
+      if (score > bestScore) {
+        bestScore = score;
+        bestAnalytics = result.value;
+      }
     });
-  }
 
-  const settled = await Promise.allSettled(
-    candidates.map(async (url) => {
-      const response = await fetchWithTimeout(url, ANALYTICS_FETCH_TIMEOUT_MS);
-      if (!response.ok) return null;
+    const resolvedAnalytics = bestAnalytics
+      ? mergeAnalytics(bestAnalytics, localFallback)
+      : localFallback;
 
-      const payload = await response.json();
-      return normalizeAnalytics(payload);
-    }),
-  );
-
-  settled.forEach((result) => {
-    if (result.status !== "fulfilled" || !result.value) {
-      return;
-    }
-
-    const score = scoreAnalytics(result.value);
-    if (score > bestScore) {
-      bestScore = score;
-      bestAnalytics = result.value;
-    }
-  });
-
-  const resolvedAnalytics = bestAnalytics
-    ? mergeAnalytics(bestAnalytics, localFallback)
-    : localFallback;
-
-  cachedAnalytics = resolvedAnalytics;
-  cachedAnalyticsAt = Date.now();
-  return resolvedAnalytics;
+    cachedAnalytics = resolvedAnalytics;
+    cachedAnalyticsAt = Date.now();
+    return resolvedAnalytics;
   })();
 
   try {
