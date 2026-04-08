@@ -180,25 +180,86 @@ function normalizeAnalytics(raw) {
     visitors:
       raw?.visitors && typeof raw.visitors === "object" ? raw.visitors : {},
     pages: raw?.pages && typeof raw.pages === "object" ? raw.pages : {},
+    pageDaily:
+      raw?.pageDaily && typeof raw.pageDaily === "object" ? raw.pageDaily : {},
     daily: raw?.daily && typeof raw.daily === "object" ? raw.daily : {},
   };
 }
 
+function getAnalyticsSummaryCandidates() {
+  const configured = String(ANALYTICS_SUMMARY_API || "").trim();
+  const hostFallback =
+    "http://" + window.location.hostname + ":3000/api/analytics/summary";
+  const localhostFallback = "http://localhost:3000/api/analytics/summary";
+  const relativeFallback = "/api/analytics/summary";
+
+  const candidates = [
+    configured,
+    relativeFallback,
+    hostFallback,
+    localhostFallback,
+  ]
+    .filter(Boolean)
+    .filter((value, index, arr) => arr.indexOf(value) === index);
+
+  if (window.location.protocol === "file:") {
+    return [localhostFallback, hostFallback, configured, relativeFallback]
+      .filter(Boolean)
+      .filter((value, index, arr) => arr.indexOf(value) === index);
+  }
+
+  return candidates;
+}
+
 async function fetchAnalyticsSummary() {
-  try {
-    const response = await fetch(ANALYTICS_SUMMARY_API, { cache: "no-store" });
-    if (!response.ok) throw new Error("summary api unavailable");
-    const payload = await response.json();
-    return normalizeAnalytics(payload);
-  } catch (_) {
+  const candidates = getAnalyticsSummaryCandidates();
+  let bestAnalytics = null;
+  let bestScore = -1;
+
+  function scoreAnalytics(analytics) {
+    const totalsScore =
+      Number(analytics?.totals?.pageViews || 0) +
+      Number(analytics?.totals?.clicks || 0);
+    const visitorsScore = Object.keys(analytics?.visitors || {}).length;
+    const dailyScore = Object.values(analytics?.daily || {}).reduce(
+      (acc, day) => acc + Number(day?.views || 0) + Number(day?.clicks || 0),
+      0,
+    );
+
+    return totalsScore + visitorsScore + dailyScore;
+  }
+
+  for (const url of candidates) {
     try {
-      const local = JSON.parse(
-        localStorage.getItem(ANALYTICS_LOCAL_FALLBACK_KEY) || "null",
-      );
-      return normalizeAnalytics(local || emptyAnalytics());
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) {
+        continue;
+      }
+
+      const payload = await response.json();
+      const analytics = normalizeAnalytics(payload);
+      const score = scoreAnalytics(analytics);
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestAnalytics = analytics;
+      }
     } catch (_) {
-      return emptyAnalytics();
+      // Try next candidate endpoint.
     }
+  }
+
+  if (bestAnalytics) {
+    return bestAnalytics;
+  }
+
+  try {
+    const local = JSON.parse(
+      localStorage.getItem(ANALYTICS_LOCAL_FALLBACK_KEY) || "null",
+    );
+    return normalizeAnalytics(local || emptyAnalytics());
+  } catch (_) {
+    return emptyAnalytics();
   }
 }
 
@@ -351,9 +412,17 @@ async function renderDashboard(produtos) {
     (acc, key) => acc + Number(analytics.daily?.[key]?.clicks || 0),
     0,
   );
+  const hasRangeData = rangeKeys.some((key) => {
+    const day = analytics.daily?.[key];
+    return day && (Number(day.views || 0) > 0 || Number(day.clicks || 0) > 0);
+  });
   const visitors = Object.keys(analytics.visitors || {}).length;
-  const views = rangeViews;
-  const clicks = rangeClicks;
+  const views = hasRangeData
+    ? rangeViews
+    : Number(analytics.totals?.pageViews || 0);
+  const clicks = hasRangeData
+    ? rangeClicks
+    : Number(analytics.totals?.clicks || 0);
   const ctr = views > 0 ? (clicks / views) * 100 : 0;
 
   const totalStock = produtos.reduce(

@@ -13,7 +13,12 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body > * {
+  max-width: 100%;
 }
 
 /* Navbar sobre o vídeo */
@@ -251,12 +256,17 @@ body {
 .footer {
   background-color: rgb(31, 31, 31);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   color: rgb(216, 215, 215);
   font-family: "Lato", sans-serif;
   font-size: 2.2vh;
   text-align: center;
   letter-spacing: 0.2cap;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  box-sizing: border-box;
   padding-bottom: 0.8rem;
 }
 .redes-sociais {
@@ -285,10 +295,13 @@ body {
 }
 .developer img {
   width: 20vh;
+  max-width: 100%;
   margin-top: 1vh;
 }
 .footer-logo img {
+  display: block;
   width: 100%;
+  max-width: 100%;
   margin-bottom: -4px;
   background-color: rgb(175, 175, 175);
 }
