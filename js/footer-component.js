@@ -25,7 +25,7 @@
 
       <div class="developer">
         <p>DESENVOLVIDO <br />POR:</p>
-        <a href="https://github.com/LuizMura" target="_blank" rel="noopener noreferrer">
+        <a href="https://luizmura.github.io/Profile/" target="_blank" rel="noopener noreferrer">
           <img src="img/index/luiz.png" alt="Desenvolvedor Luiz Mura" />
         </a>
       </div>
