@@ -40,8 +40,14 @@ let idEditando = null;
 let trafficChart = null;
 let stylesChart = null;
 let cachedProdutos = [];
+let cachedAnalytics = null;
+let cachedAnalyticsAt = 0;
+let analyticsInFlight = null;
 let currentRangeDays = 7;
 let adminInitialized = false;
+
+const ANALYTICS_CACHE_TTL_MS = 30000;
+const ANALYTICS_FETCH_TIMEOUT_MS = 1800;
 
 const prompt = document.getElementById("produto-prompt");
 const tituloPrompt = document.getElementById("titulo-prompt");
@@ -264,7 +270,20 @@ function readLocalAnalyticsFallback() {
 }
 
 async function fetchAnalyticsSummary() {
+  const cacheIsFresh =
+    cachedAnalytics && Date.now() - cachedAnalyticsAt < ANALYTICS_CACHE_TTL_MS;
+
+  if (cacheIsFresh) {
+    return cachedAnalytics;
+  }
+
+  if (analyticsInFlight) {
+    return analyticsInFlight;
+  }
+
+  analyticsInFlight = (async () => {
   const candidates = getAnalyticsSummaryCandidates();
+  const localFallback = readLocalAnalyticsFallback();
   let bestAnalytics = null;
   let bestScore = -1;
 
@@ -281,31 +300,54 @@ async function fetchAnalyticsSummary() {
     return totalsScore + visitorsScore + dailyScore;
   }
 
-  for (const url of candidates) {
-    try {
-      const response = await fetch(url, { cache: "no-store" });
-      if (!response.ok) {
-        continue;
-      }
+  function fetchWithTimeout(url, timeoutMs) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+    return fetch(url, {
+      cache: "no-store",
+      signal: controller.signal,
+    }).finally(() => {
+      clearTimeout(timeoutId);
+    });
+  }
+
+  const settled = await Promise.allSettled(
+    candidates.map(async (url) => {
+      const response = await fetchWithTimeout(url, ANALYTICS_FETCH_TIMEOUT_MS);
+      if (!response.ok) return null;
 
       const payload = await response.json();
-      const analytics = normalizeAnalytics(payload);
-      const score = scoreAnalytics(analytics);
+      return normalizeAnalytics(payload);
+    }),
+  );
 
-      if (score > bestScore) {
-        bestScore = score;
-        bestAnalytics = analytics;
-      }
-    } catch (_) {
-      // Try next candidate endpoint.
+  settled.forEach((result) => {
+    if (result.status !== "fulfilled" || !result.value) {
+      return;
     }
-  }
 
-  if (bestAnalytics) {
-    return mergeAnalytics(bestAnalytics, readLocalAnalyticsFallback());
-  }
+    const score = scoreAnalytics(result.value);
+    if (score > bestScore) {
+      bestScore = score;
+      bestAnalytics = result.value;
+    }
+  });
 
-  return readLocalAnalyticsFallback();
+  const resolvedAnalytics = bestAnalytics
+    ? mergeAnalytics(bestAnalytics, localFallback)
+    : localFallback;
+
+  cachedAnalytics = resolvedAnalytics;
+  cachedAnalyticsAt = Date.now();
+  return resolvedAnalytics;
+  })();
+
+  try {
+    return await analyticsInFlight;
+  } finally {
+    analyticsInFlight = null;
+  }
 }
 
 function atualizarABVEIBU() {
@@ -446,8 +488,8 @@ function renderCharts(analytics, produtos) {
   });
 }
 
-async function renderDashboard(produtos) {
-  const analytics = await fetchAnalyticsSummary();
+async function renderDashboard(produtos, analyticsOverride = null) {
+  const analytics = analyticsOverride || (await fetchAnalyticsSummary());
   const rangeKeys = buildRangeDays(currentRangeDays);
   const rangeViews = rangeKeys.reduce(
     (acc, key) => acc + Number(analytics.daily?.[key]?.views || 0),
@@ -524,6 +566,7 @@ async function carregarProdutos() {
   const lista = document.getElementById("lista-produtos");
   lista.innerHTML = "";
 
+  const analyticsPromise = fetchAnalyticsSummary();
   const snapshot = await getDocs(collection(db, "produtos"));
   const produtos = snapshot.docs
     .map((docItem) => ({ id: docItem.id, ...docItem.data() }))
@@ -558,7 +601,7 @@ async function carregarProdutos() {
     lista.appendChild(tr);
   });
 
-  await renderDashboard(produtos);
+  await renderDashboard(produtos, await analyticsPromise);
 }
 
 async function removerProduto(id) {
