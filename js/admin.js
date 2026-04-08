@@ -188,8 +188,10 @@ function normalizeAnalytics(raw) {
 
 function getAnalyticsSummaryCandidates() {
   const configured = String(ANALYTICS_SUMMARY_API || "").trim();
+  const protocol =
+    window.location.protocol === "file:" ? "http:" : window.location.protocol;
   const hostFallback =
-    "http://" + window.location.hostname + ":3000/api/analytics/summary";
+    protocol + "//" + window.location.hostname + ":3000/api/analytics/summary";
   const localhostFallback = "http://localhost:3000/api/analytics/summary";
   const relativeFallback = "/api/analytics/summary";
 
@@ -209,6 +211,56 @@ function getAnalyticsSummaryCandidates() {
   }
 
   return candidates;
+}
+
+function mergeAnalytics(base, extra) {
+  const merged = normalizeAnalytics(base || emptyAnalytics());
+  const other = normalizeAnalytics(extra || emptyAnalytics());
+
+  merged.totals.pageViews += Number(other.totals?.pageViews || 0);
+  merged.totals.clicks += Number(other.totals?.clicks || 0);
+
+  Object.entries(other.visitors || {}).forEach(([visitorId, payload]) => {
+    merged.visitors[visitorId] = payload;
+  });
+
+  Object.entries(other.pages || {}).forEach(([page, values]) => {
+    const target = merged.pages[page] || { views: 0, clicks: 0 };
+    target.views += Number(values?.views || 0);
+    target.clicks += Number(values?.clicks || 0);
+    merged.pages[page] = target;
+  });
+
+  Object.entries(other.daily || {}).forEach(([dayKey, values]) => {
+    const target = merged.daily[dayKey] || { views: 0, clicks: 0 };
+    target.views += Number(values?.views || 0);
+    target.clicks += Number(values?.clicks || 0);
+    merged.daily[dayKey] = target;
+  });
+
+  Object.entries(other.pageDaily || {}).forEach(([dayKey, dayPages]) => {
+    merged.pageDaily[dayKey] = merged.pageDaily[dayKey] || {};
+
+    Object.entries(dayPages || {}).forEach(([page, values]) => {
+      const target = merged.pageDaily[dayKey][page] || { views: 0, clicks: 0 };
+      target.views += Number(values?.views || 0);
+      target.clicks += Number(values?.clicks || 0);
+      merged.pageDaily[dayKey][page] = target;
+    });
+  });
+
+  return merged;
+}
+
+function readLocalAnalyticsFallback() {
+  try {
+    const local = JSON.parse(
+      localStorage.getItem(ANALYTICS_LOCAL_FALLBACK_KEY) || "null",
+    );
+    return normalizeAnalytics(local || emptyAnalytics());
+  } catch (_) {
+    return emptyAnalytics();
+  }
 }
 
 async function fetchAnalyticsSummary() {
@@ -250,17 +302,10 @@ async function fetchAnalyticsSummary() {
   }
 
   if (bestAnalytics) {
-    return bestAnalytics;
+    return mergeAnalytics(bestAnalytics, readLocalAnalyticsFallback());
   }
 
-  try {
-    const local = JSON.parse(
-      localStorage.getItem(ANALYTICS_LOCAL_FALLBACK_KEY) || "null",
-    );
-    return normalizeAnalytics(local || emptyAnalytics());
-  } catch (_) {
-    return emptyAnalytics();
-  }
+  return readLocalAnalyticsFallback();
 }
 
 function atualizarABVEIBU() {
