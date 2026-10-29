@@ -598,3 +598,122 @@ aside {
     width: 20px;
   }
 }
+
+/* =========================================
+   PRODUTO INDISPONÍVEL
+========================================= */
+
+.card-imagem-wrap .pelicula-indisponivel {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.52);
+}
+
+/* Selo centralizado sobre a imagem */
+
+.selo-indisponivel {
+  display: inline-block;
+
+  padding: 10px 16px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.18);
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   BOTÃO DESABILITADO
+========================================= */
+
+.card-cerveja.is-indisponivel .botao-add-carrinho {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Não altera a aparência das cervejas disponíveis */
+
+.card-cerveja:not(.is-indisponivel) .card-imagem-wrap .pelicula-indisponivel {
+  display: none;
+}
+
+/* Ajustes para telas pequenas */
+
+@media (max-width: 480px) {
+  .selo-indisponivel {
+    padding: 8px 10px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Área da imagem do produto */
+.card-imagem-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Película escura sobre produtos indisponíveis */
+.pelicula-indisponivel {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.62);
+  pointer-events: none;
+}
+
+/* Selo INDIPONÍVEL */
+.selo-indisponivel {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+
+/* Aparência do botão desativado */
+.botao-add-carrinho:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+/* Indicação visual de produto indisponível */
+.card-cerveja.is-indisponivel .card-imagem-wrap img {
+  filter: grayscale(0.7);
+}
+
+/* Contador do carrinho */
+.card-cart-counter {
+  display: none;
+}
+
+.card-cart-counter.is-visible {
+  display: inline-flex;
+}
+
+/* Garante que a película fique sobre a imagem */
+.card-cerveja.is-indisponivel .pelicula-indisponivel {
+  display: flex;
+}
